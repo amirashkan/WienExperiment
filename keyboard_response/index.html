@@ -36,12 +36,30 @@
                         <td> <input id = "birthdayBox" type="number" name = "birthday"></td>
                     </tr>
                     <tr>
-                        <td>Höchste abgeschlossene Ausbildung: (Dropdown möglich?) </td>
-                        <td><input id = "educationBox" type="text" name = "education"></td> 
+                        <td>Höchste abgeschlossene Ausbildung: </td>
+                        <td>
+                            <select id="educationBox" name="education">
+                                <option value=optEdu1>Volksschule/Grundschule</option>
+                                <option value=optEdu2>Hauptschule</option>
+                                <option value=optEdu3>Handelsschule/mittlere Reife</option>
+                                <option value=optEdu4>Lehre</option>
+                                <option value=optEdu5>Matura/Abitur</option>
+                                <option value=optEdu6>Diplomlehrgang</option>
+                                <option value=optEdu7>Fachhochschule</option>
+                                <option value=optEdu8>Universität: Bachelor</option>
+                                <option value=optEdu9>Universität: Diplom/Master/Magister</option>
+                                <option value=optEdu10>Universität: Dr./Ph.D. oder höher</option>
+                            </select>
+                        </td> 
+              
                     </tr>
                     <tr>
                         <td>Sind Sie derzeit Student oder haben Sie ein Studium abgeschlossen? (Auswahl Ja / Nein) </td>
-                        <td><input id = "studentBox" type="text" name = "student"></td> 
+                        <td><select id = "studentBox" name = "student">
+                                <option>Ja</option> 
+                                <option>Nein</option>
+                            </select>
+                        </td> 
                     </tr>
                     <tr>
                         <td>Bitte geben Sie ihr Hauptstudienfach an: </td>
