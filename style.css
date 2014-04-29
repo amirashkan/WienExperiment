@@ -4,8 +4,8 @@ body{
 
 .outerContainer {
     display: block;
-    width: 100px; /* width of parent */
-    height: 100px; /* height of parent */
+    width: 1000px; /* width of parent */
+    height: 1000px; /* height of parent */
     overflow: hidden;
 }
 .outerContainer .innerContainer {
