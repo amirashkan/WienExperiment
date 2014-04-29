@@ -165,7 +165,7 @@ document.getElementById("btnExperiment").addEventListener("click",
         function() {
             trial_number++;
             $('#txtExperiment').text('Round '.concat(trial_number));
-            if (trial_number == 3 || trial_number == 6) {
+            if (trial_number == 4 || trial_number == 7) { 
                 document.getElementById('divExperiment').style.display = 'None';
                 document.getElementById('divManipulation').style.display = 'Inline'; }
             else if (trial_number == 9){
