@@ -35,6 +35,8 @@ if(debug_mode){
     document.getElementById('hidden_div').style.display = 'Inline'
 };
 
+    //set a two digit mask to the birthdaybox so that the user is required to write a two digit number 
+    $("#birthdayBox").mask("99");
 // add event listener to buttons
 document.getElementById("btnHide").addEventListener("click", 
         // clicking the button executes the following anonymus function
