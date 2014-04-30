@@ -35,8 +35,33 @@ if(debug_mode){
     document.getElementById('hidden_div').style.display = 'Inline'
 };
 
+$(document).ready(function () {
+    // here happens some validation magic
+    $('#frmDemographic').validate({
+        rules: {
+            birthday: { required: true },
+            country: { required: true },
+            mothertongue: { required: true },
+            studyfield: { required: true }
+        },
+        // fade in and out elements that are not filled out
+        highlight: function(element, errorClass) {
+            $(element).fadeOut(function() {
+                $(element).fadeIn();
+            })},
+        // give us some messages
+        messages: {
+            birthday: "Bitte ausfüllen",
+            country: "Bitte ausfüllen",
+            mothertongue: "Bitte ausfüllen",
+            studyfield: "Bitte ausfüllen"
+        }
+    }); 
+
     //set a two digit mask to the birthdaybox so that the user is required to write a two digit number 
     $("#birthdayBox").mask("99");
+});
+
 // add event listener to buttons
 document.getElementById("btnHide").addEventListener("click", 
         // clicking the button executes the following anonymus function
@@ -60,9 +85,12 @@ document.getElementById("btnTreatment").addEventListener("click",
         false)
 document.getElementById("btnStart").addEventListener("click", 
         function() {
-            document.getElementById('divDemographic').style.display = 'None';
-            document.getElementById('divInstructions').style.display = 'Inline';
-            sendData(user_data_address, "#frmDemographic")
+            if($('#frmDemographic').valid())
+            {
+                document.getElementById('divDemographic').style.display = 'None';
+                document.getElementById('divInstructions').style.display = 'Inline';
+                sendData(user_data_address, "#frmDemographic")
+            }
         },
         false)
 document.getElementById("btnInstructions").addEventListener("click", 
