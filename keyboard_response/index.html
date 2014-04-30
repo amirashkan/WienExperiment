@@ -99,12 +99,10 @@
  </br>
 Bitte lesen Sie die nachstehenden Ausführungen gewissenhaft durch.</br>
 Hier wird Ihnen alles mitgeteilt, was Sie für die Teilnahme am Experiment wissen müssen.</br> 
-Falls Sie etwas nicht verstehen, melden Sie sich bitte. Ihre Frage wird dann an Ihrem Platz beantwortet. </br>
+Falls Sie etwas nicht verstehen, melden Sie sich bitte. </br>
  </br>
-Das heutige Experiment untersucht kognitive Aspekte bei der Bearbeitung von Anagrammen. </br>
-Die Teilnahme an dem Experiment ist natürlich anonym. Alle Daten die wir erheben werden zudem vertraulich behandelt.</br> 
-Zudem ist die Teilnahme freiwillig und Sie haben die Möglichkeit jederzeit abzubrechen. 
-
+Wir untersuchen kognitive Aspekte bei der Bearbeitung von Worträtseln. </br>
+Die Teilnahme an dem Experiment ist anonym und freiwillig. Alle Daten die wir erheben werden zudem vertraulich behandelt.</br>
 			</div>
 			<p id = 'txtBelowInstructions'>
                 <button id = "btnInstructions">Weiter</button>
@@ -119,16 +117,16 @@ Zudem ist die Teilnahme freiwillig und Sie haben die Möglichkeit jederzeit abzu
 			<p id = 'txtAboveExamples' style="display:none">Some examples</p>
 			<div id = 'divExamplesHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
 			<p id = 'txtInExamples'>
-                Das heutige Experiment untersucht ihre Leistung bei der Lösung von Worträtseln.</br>
-                Bei den Worträtseln handelt es sich um Buchstaben, die durch Umstellen <br> 
-		der Reihenfolge ein sinnvolles Wort ergeben.</br>
+                Ihre Aufgabe ist es, Buchstabenreihen zu sinnvollen Wörter umzustellen.</br>
                 Jeder Buchstabe wird dabei nur einmal verwendet. <br></br>
                 
-                Hier ist ein Beispiel:  smesre  -- messer <br></br>
+                Hier finden Sie ein Beispiel:  SMESRE  -- MESSER <br></br>
                 
                 Die Lösungen sind dabei immer Nomen im Singular und entstammen dem deutschen Duden. </br>
                 Bitte versuchen Sie die folgenden Beispiele zu lösen, um sich mit der Aufgabe vertraut zu machen.<br><br>
                 </p>
+
+<!-- Hier sollte jetzt ein Button kommen „Beispiele starten“ und auf der nächsten Seite die 12 Beispiel -->
 
                 <table width="100%" >
                     <tr>
@@ -155,9 +153,14 @@ Zudem ist die Teilnahme freiwillig und Sie haben die Möglichkeit jederzeit abzu
 
 		<!-- Fragebogen 2 Seite 1 -->
 		<div id='divQuestionnaire' align = "center" style="display:none; margin-right:100px; margin-left:100px; margin-top:50px;">
-			<p id = 'txtAboveQuestionnaire'>Die folgenden Fragen beziehen sich auf die Aufgabe, die Sie gerade durch die Beispiele kennengelernt haben.</p>
+			<p id = 'txtAboveQuestionnaire'>Der nachfolgende Fragebogen besteht aus 22 Fragen, die sich auf die eben bearbeitete Aufgabe beziehen.</p>
 			<div id = 'divQuestionnaireHolder' align = "left" style="width:80%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
-                <form id = "frmQuestionnaire1" style="display:inline;" method ="POST" action ="save_Questionnaire.php">
+			<p id = 'txtInQuestionnaire‘>
+                Beurteilen Sie pro Aussage, wie sehr Sie persönlich dem darin angesprochenen Inhalt zustimmen.</br>
+		Es steht Ihnen dafür eine siebenstufige Skala zur Verfügung. Antworten Sie Bitte offen und spontan</br> 
+		</br></br> Wenn Sie bereit sind klicken Sie auf Start. 
+                	</p>               
+ <form id = "frmQuestionnaire1" style="display:inline;" method ="POST" action ="save_Questionnaire.php">
                     <table>
                         <thead>
                             <tr>
@@ -250,7 +253,6 @@ Zudem ist die Teilnahme freiwillig und Sie haben die Möglichkeit jederzeit abzu
 
 		<!-- Fragebogen 2 Seite 2--> 
 		<div id='divQuestionnaire' align = "center" style="display:inline; margin-right:100px; margin-left:100px; margin-top:50px;">
-			<p id = 'txtAboveQuestionnaire'>Die folgenden Fragen beziehen sich auf die Aufgabe, die Sie gerade durch die Beispiele kennengelernt haben.</p>
 			<div id = 'divQuestionnaireHolder' align = "left" style="width:80%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
 
 <form id = "frmQuestionnaire2" style="display:inline;“ method ="POST" action ="save_Questionnaire.php">
@@ -337,7 +339,6 @@ Zudem ist die Teilnahme freiwillig und Sie haben die Möglichkeit jederzeit abzu
 
         <!-- Fragebogen 2 Seite 3 -->
 		<div id='divQuestionnaire' align = "center" style="display:none; margin-right:100px; margin-left:100px; margin-top:50px;">
-			<p id = 'txtAboveQuestionnaire'>Please choose some answers</p>
 			<div id = 'divQuestionnaireHolder' align = "left" style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
                 <form id = "frmQuestionnaire" style="display:inline;" method ="POST" action ="save_Questionnaire.php">
                     <table>
@@ -439,7 +440,6 @@ Zudem ist die Teilnahme freiwillig und Sie haben die Möglichkeit jederzeit abzu
                 Ihre Aufgabe wird es sein alle Worträtsel in möglichst kurzer Zeit zu lösen. Insgesamt werden Ihnen 9 Seiten mit jeweils 8 Rätseln vorgegeben.
                 Die Zeit wird dabei für jede Seite einzeln gemessen. Sie können mit der Bearbeitung nur fortfahren, wenn Sie alle Lösungen auf einer Seite gefunden haben.
                 Sollten Sie einmal keine Lösung für ein Rätsel finden, wird Ihnen nach einiger Zeit angeboten mit der nächsten Seite fortzufahren.
-
 			</div>
 			<p id = 'txtBelowInstructions2'>
                 <button id = "btnInstructions2">Weiter</button>
