@@ -177,48 +177,19 @@ document.getElementById("btnExperiment").addEventListener("click",
             }        
         },
         false);
+
 document.getElementById("btnManipulation").addEventListener("click", 
         function() {
-            // 2go
-            if (treatment < 2) { 
-                if ($('#cbManipulation1').prop('checked') &&
-                    $('#cbManipulation2').prop('checked') &&
-                    $('#cbManipulation3').prop('checked') &&
-                    !$('#cbManipulation4').prop('checked') &&
-                    !$('#cbManipulation5').prop('checked') &&
-                    !$('#cbManipulation6').prop('checked') &&
-                    !$('#cbManipulation7').prop('checked') &&
-                    !$('#cbManipulation8').prop('checked') &&
-                    !$('#cbManipulation9').prop('checked') )
-                {
-                    document.getElementById('divManipulation').style.display = 'None';
-                    document.getElementById('divExperiment').style.display = 'Inline';
-                }
-                else {
-                    console.log("wrong selection!!");
-                    console.log($('#cbManipulation2').prop('checked'));
-                }
+            if ($('#cbManipulation1').prop('checked') && $('#cbManipulation2').prop('checked') &&
+                $('#cbManipulation3').prop('checked') && !$('#cbManipulation4').prop('checked') &&
+                !$('#cbManipulation5').prop('checked') && !$('#cbManipulation6').prop('checked') &&
+                !$('#cbManipulation7').prop('checked') && !$('#cbManipulation8').prop('checked') &&
+                !$('#cbManipulation9').prop('checked') )
+            {
+                // TODO: save manipulation test
             }
-            // 2date
-            else if (treatment >= 2) {
-                if (!$('#cbManipulation1').prop('checked') &&
-                    !$('#cbManipulation2').prop('checked') &&
-                    !$('#cbManipulation3').prop('checked') &&
-                    !$('#cbManipulation4').prop('checked') &&
-                    !$('#cbManipulation5').prop('checked') &&
-                    !$('#cbManipulation6').prop('checked') &&
-                    $('#cbManipulation7').prop('checked') &&
-                    $('#cbManipulation8').prop('checked') &&
-                    $('#cbManipulation9').prop('checked') )
-                {
-                    document.getElementById('divManipulation').style.display = 'None';
-                    document.getElementById('divExperiment').style.display = 'Inline';
-                }
-                else {
-                    console.log("wrong selection!!");
-                    console.log($('#cbManipulation2').prop('checked'));
-                }
-
+            document.getElementById('divManipulation').style.display = 'None';
+            document.getElementById('divExperiment').style.display = 'Inline';
             }
 
         },
