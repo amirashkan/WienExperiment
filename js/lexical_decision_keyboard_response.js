@@ -11,14 +11,14 @@ var logging_box_ids = new Array('paradigmBox', 'timeBox', 'subjectBox', 'trialBo
 var variables_to_log = new Array('paradigm', 'experiment_start_time', 'subject_nr', 'trial_number', 'stimuli_number', 'probe', 'code', 'response', 'rt');
 
 // DEBUG stuff
-var debug_mode = true // Set as true to show extra information, false to run experiment normally.
+var debug_mode = false // Set as true to show extra information, false to run experiment normally.
 var error_feedback = false
 
 // variables to log
 var paradigm = 'press_key';
 var experiment_start_time = Date();
 var subject_nr 
-var trial_number = 1;
+var trial_number = 0;
 var stimuli_number
 var anagram
 var solution
@@ -187,6 +187,7 @@ document.getElementById("btnInstructions3").addEventListener("click",
         false);
 
 function start_experiment() {
+    trial_number++;
     $('#txtExperiment').text('Round '.concat(trial_number));
     document.getElementById('divExperiment').style.display = 'Inline';
 }
@@ -194,17 +195,19 @@ function start_experiment() {
 document.getElementById("btnExperiment").addEventListener("click", 
         function() {
             trial_number++;
-            $('#txtExperiment').text('Round '.concat(trial_number));
             if (trial_number == 4 || trial_number == 7) { 
                 document.getElementById('divExperiment').style.display = 'None';
-                document.getElementById('divManipulation').style.display = 'Inline'; }
-            else if (trial_number == 9){
+                document.getElementById('divManipulation').style.display = 'Inline'; 
+            }
+            else if (trial_number == 10) {
                 document.getElementById('divExperiment').style.display = 'None';
                 document.getElementById('divDebrief').style.display = 'Inline';
+                // only in this case, we need to return
+                return;
             }
-            else {
-                //TODO: Clear screen, and present new series of anagrams
-            }        
+            // TODO: Clear screen, and present new series of anagrams
+            // update the screen anytime
+            $('#txtExperiment').text('Round '.concat(trial_number));
         },
         false);
 
@@ -220,8 +223,6 @@ document.getElementById("btnManipulation").addEventListener("click",
             }
             document.getElementById('divManipulation').style.display = 'None';
             document.getElementById('divExperiment').style.display = 'Inline';
-            }
-
         },
         false);
 
