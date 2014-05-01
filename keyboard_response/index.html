@@ -594,9 +594,39 @@
 		style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
 			<p id = 'txtAboveExperiment' style="display:none">This is the experiment</p>
 			<div id = 'divExperimentHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
-				<p id = 'txtExperiment' style="font-size:30px; font-weight:bold;">Example Text</p> <!--This doesn't behave as it should for long text-->
-			</div>
-			<p id = 'txtBelowExperiment'>
+                <p id = 'txtExperiment' style="font-size:30px; font-weight:bold;">Example Text</p>
+
+                <form id = "frmExperiment" style="display:inline;" action ="save_Questionnaire.php">
+                    <table width="100%" >
+                        <tr>
+                            <td id='tdexp1'>IONL: </td> <td>  <input id = "expBox1" name = "exp1"> </td>
+                        </tr>
+                        <tr>
+                            <td id='tdexp2'>REAB: </td> <td>  <input id = "expBox2" name = "exp2"> </td>
+                        </tr>
+                        <tr>
+                            <td id='tdexp3'>UMAP: </td> <td>  <input id = "expBox3" name = "exp3"> </td>
+                        </tr>
+                        <tr>
+                            <td id='tdexp4'>UMAP: </td> <td>  <input id = "expBox4" name = "exp4"> </td>
+                        </tr>
+                        <tr>
+                            <td id='tdexp5'>UMAP: </td> <td>  <input id = "expBox5" name = "exp5"> </td>
+                        </tr>
+                        <tr>
+                            <td id='tdexp6'>UMAP: </td> <td>  <input id = "expBox6" name = "exp6"> </td>
+                        </tr>
+                        <tr>
+                            <td id='tdexp7'>UMAP: </td> <td>  <input id = "expBox7" name = "exp7"> </td>
+                        </tr>
+                        <tr>
+                            <td id='tdexp8'>UMAP: </td> <td>  <input id = "expBox8" name = "exp8"> </td>
+                        </tr>
+                    </table>
+                </form>
+
+            </div>
+            <p id = 'txtBelowExperiment'>
                 <button id = "btnExperiment">Weiter</button>
 			</p>
 		</div>
