@@ -60,6 +60,9 @@ $(document).ready(function () {
 
     //set a two digit mask to the birthdaybox so that the user is required to write a two digit number 
     $("#birthdayBox").mask("99");
+    $("#example1Box").mask("aaaa");
+    $("#example2Box").mask("aaaa");
+    $("#example3Box").mask("aaaa");
 });
 
 // add event listener to buttons
@@ -105,7 +108,7 @@ document.getElementById("btnExamples").addEventListener("click",
             if ($('#example1Box').val().toUpperCase() == 'LION' &&
                 $('#example2Box').val().toUpperCase() == 'BEAR' &&
                 $('#example3Box').val().toUpperCase() == 'PUMA') {
-                console.log('LION is the correct answer');
+                console.log('All answers are correct');
                 // and the party goes on...
                 document.getElementById('divExamples').style.display = 'None';
                 document.getElementById('divQuestionnaire').style.display = 'Inline';
