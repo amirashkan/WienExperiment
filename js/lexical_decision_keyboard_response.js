@@ -102,10 +102,17 @@ document.getElementById("btnInstructions").addEventListener("click",
             document.getElementById('divExamples').style.display = 'Inline';
         },
         false);
+var isExamples = true;
 document.getElementById("btnExamples").addEventListener("click", 
         function() {
+            if (isExamples)
+            {
+                isExamples = false;
+                document.getElementById('txtInExamples').style.display = 'none';
+                document.getElementById('frmExamples').style.display = 'inline';
+            }
             // TODO: show user if she makes a mistake
-            if ($('#example1Box').val().toUpperCase() == 'LION' &&
+            else if ($('#example1Box').val().toUpperCase() == 'LION' &&
                 $('#example2Box').val().toUpperCase() == 'BEAR' &&
                 $('#example3Box').val().toUpperCase() == 'PUMA') {
                 console.log('All answers are correct');
