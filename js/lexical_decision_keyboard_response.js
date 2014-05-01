@@ -215,14 +215,8 @@ document.getElementById("btnToDate").addEventListener("click",
             document.getElementById('divInstructions3').style.display = 'Inline';
         },
         false);
-document.getElementById("btnInstructions3").addEventListener("click", 
-        function() {
-            document.getElementById('divInstructions3').style.display = 'None';
-            start_experiment();
-        },
-        false);
-
 function start_experiment() {
+    start_experiment();
     trial_number++;
     $('#txtExperiment').text('Round '.concat(trial_number));
     document.getElementById('divExperiment').style.display = 'Inline';
