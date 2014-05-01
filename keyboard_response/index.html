@@ -134,6 +134,7 @@
 
 <!-- Hier sollte jetzt ein Button kommen "Beispiele starten" und auf der nächsten Seite die 12 Beispiele -->
 
+            <form id = "frmExamples" style="display:inline;" action ="save_Questionnaire.php">
                 <table width="100%" >
                     <tr>
                         <td>IONL: </td> <td>  <input id = "example1Box" name = "example1"> </td>
@@ -145,6 +146,7 @@
                         <td>UMAP: </td> <td>  <input id = "example3Box" name = "example3"> </td>
                     </tr>
                 </table>
+            </form>
 
 
 			</div>
@@ -463,9 +465,11 @@
                 Die Worträtsel werden alle diesem Oberthema zuzuordnen sein.</br></br></br>
                 Bitte wählen Sie eine der Kategorien aus:</br></br>
                 <form id = "frmIntrinsic" style="display:inline;" method ="POST" action ="save_Demographic.php">
-                    <input type="radio" name="rdIntrinsic" value="1">1. Menschen und ihre Umgebung</br>
-                    <input type="radio" name="rdIntrinsic" value="2">2. Natur und Tiere</br>
-                    <input type="radio" name="rdIntrinsic" value="3">3. Technik und Gebrauchsgegenstände</br>
+                <table>
+                    <tr> <td><input type="radio" name="rdIntrinsic" value="1">1. Menschen und ihre Umgebung</td></tr>
+                    <tr><td><input type="radio" name="rdIntrinsic" value="2">2. Natur und Tiere</td></tr>
+                    <tr><td><input type="radio" name="rdIntrinsic" value="3">3. Technik und Gebrauchsgegenstände</td></tr>
+                </table>
                 </form>
 			</div>
 			<p id = 'txtBelowIntrinsic'>
