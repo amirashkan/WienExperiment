@@ -82,16 +82,16 @@ document.getElementById("btnTreatment").addEventListener("click",
             else {
                 console.log('everything fine, choose -> '.concat(treatment));
                 document.getElementById('divTreatment').style.display = 'None';
-                document.getElementById('divDemographic').style.display = 'Inline';
+                document.getElementById('divInstructions').style.display = 'Inline';
             }
         },
         false)
-document.getElementById("btnStart").addEventListener("click", 
+document.getElementById("btnEnde").addEventListener("click", 
         function() {
             if($('#frmDemographic').valid())
             {
                 document.getElementById('divDemographic').style.display = 'None';
-                document.getElementById('divInstructions').style.display = 'Inline';
+                document.getElementById('divDebrief').style.display = 'Inline';
                 sendData(user_data_address, "#frmDemographic")
             }
         },
@@ -204,7 +204,7 @@ document.getElementById("btnExperiment").addEventListener("click",
             }
             else if (trial_number == 10) {
                 document.getElementById('divExperiment').style.display = 'None';
-                document.getElementById('divDebrief').style.display = 'Inline';
+                document.getElementById('divDemographic').style.display = 'Inline';
                 // only in this case, we need to return
                 return;
             }
