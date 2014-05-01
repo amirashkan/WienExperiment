@@ -128,6 +128,32 @@ document.getElementById("btnQuestionnaire").addEventListener("click",
             
             // show next stage
             document.getElementById('divQuestionnaire').style.display = 'None';
+            document.getElementById('divQuestionnaire2').style.display = 'Inline';
+        },
+        false);
+document.getElementById("btnQuestionnaire2").addEventListener("click", 
+        function() {
+            // TODO: save all Answers of Radio Buttons 
+            var q1 = $('input[name=q1]:checked', '#frmQuestionnaire').val();
+            // ... for ...; sendData()...;
+            // TODO: replace questions OR make some other questionaires
+            // ...  frmQuestionaire.question1 = 'some new question' oder so...
+            
+            // show next stage
+            document.getElementById('divQuestionnaire2').style.display = 'None';
+            document.getElementById('divQuestionnaire3').style.display = 'Inline';
+        },
+        false);
+document.getElementById("btnQuestionnaire3").addEventListener("click", 
+        function() {
+            // TODO: save all Answers of Radio Buttons 
+            var q1 = $('input[name=q1]:checked', '#frmQuestionnaire').val();
+            // ... for ...; sendData()...;
+            // TODO: replace questions OR make some other questionaires
+            // ...  frmQuestionaire.question1 = 'some new question' oder so...
+            
+            // show next stage
+            document.getElementById('divQuestionnaire3').style.display = 'None';
             document.getElementById('divInstructions2').style.display = 'Inline';
         },
         false);
