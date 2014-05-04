@@ -120,9 +120,8 @@ document.getElementById("btnExamples").addEventListener("click",
                 document.getElementById('divExamples').style.display = 'None';
                 document.getElementById('divQuestionnaire').style.display = 'Inline';
             }
-            else {
+            else 
                 console.log(document.getElementById('example1Box').value.concat(' is not the right answer'));
-            }
         },
         false);
 document.getElementById("btnQuestionnaire").addEventListener("click", 
@@ -167,11 +166,11 @@ document.getElementById("btnQuestionnaire3").addEventListener("click",
 document.getElementById("btnInstructions2").addEventListener("click", 
         function() {
             document.getElementById('divInstructions2').style.display = 'None';
-            if (treatment == 1 || treatment == 3) {
-                document.getElementById('divIntrinsic').style.display = 'Inline';
-            }
-            else if(treatment == 0 || treatment == 2) {
-                document.getElementById('divExtrinsic').style.display = 'Inline';}
+            // TODO: use choosen decision from 0th screen
+            if (true) 
+                document.getElementById('divToDate').style.display = 'Inline';
+            else 
+                document.getElementById('divToGo').style.display = 'Inline';
         },
         false);
 document.getElementById("btnIntrinsic").addEventListener("click", 
