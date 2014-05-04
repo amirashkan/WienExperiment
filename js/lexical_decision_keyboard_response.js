@@ -178,8 +178,8 @@ document.getElementById("btnIntrinsic").addEventListener("click",
         // nicer text + choice
         function() {
             document.getElementById('divIntrinsic').style.display = 'None';
-            $('#divPresentationHolder').text('Intrinsic Choice: ');
-            document.getElementById('divPresentation').style.display = 'Inline';
+            $('#divPresentationHolderIntrinsic').text('Intrinsic Choice: '.concat(choice));
+            document.getElementById('divPresentationIntrinsic').style.display = 'Inline';
         },
         false);
 document.getElementById("btnExtrinsic").addEventListener("click", 
