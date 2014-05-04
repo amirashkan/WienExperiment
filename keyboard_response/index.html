@@ -158,7 +158,7 @@
 		<!-- Beispiele ENDE -->
 
 		<!-- Fragebogen 2 Seite 1 -->
-		<div id='divQuestionnaire' align = "center" style="display:none; margin-right:100px; margin-left:100px; margin-top:50px;">
+		<div id='divQuestionnaire' align = "center" style="display:inline; margin-right:100px; margin-left:100px; margin-top:50px;">
 			<p id = 'txtAboveQuestionnaire'> </p>
 			<div id = 'divQuestionnaireHolder' align = "left" style="width:80%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
 			<p id = 'txtInQuestionnaire'>
@@ -182,7 +182,7 @@
                             </tr>
                         </thead>
                         <tr align = "center">
-                            <th id="question1">Ich habe diese Tätigkeit sehr gerne gemacht.</th>
+                            <th id="question1"><p id='pQuest1'>Ich habe diese Tätigkeit sehr gerne gemacht.</p></th>
                             <td><input type="radio" name="q1" value="1"></td>
                             <td><input type="radio" name="q1" value="2"></td>
                             <td><input type="radio" name="q1" value="3"></td>
@@ -252,6 +252,7 @@
                             <td><input type="radio" name="q7" value="7"></td>
                         </tr>
                     </table>
+			<p id = 'txtBelowQuestionnaire1' style="color: red"> </p>
                 </form>
 			</div><br>
 			<button id = "btnQuestionnaire">Weiter</button>
@@ -337,6 +338,7 @@
                             <td><input type="radio" name="q6" value="7"></td>
                         </tr>
                     </table>
+                    <p id = 'txtBelowQuestionnaire2' style="color: red"> </p>
                 </form>
         		</div><br>
 			<button id = "btnQuestionnaire2">Weiter</button>
@@ -346,7 +348,7 @@
         <!-- Fragebogen 2 Seite 3 -->
 		<div id='divQuestionnaire3' align = "center" style="display:none; margin-right:100px; margin-left:100px; margin-top:50px;">
 			<div id = 'divQuestionnaireHolder3' align = "left" style="width:80%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
-                <form id = "frmQuestionnaire" style="display:inline;" method ="POST" action ="save_Questionnaire.php">
+                <form id = "frmQuestionnaire3" style="display:inline;" method ="POST" action ="save_Questionnaire.php">
                     <table>
                         <thead>
                             <tr>
@@ -431,6 +433,7 @@
                             <td><input type="radio" name="q7" value="7"></td>
                         </tr>
                     </table>
+                    <p id = 'txtBelowQuestionnaire3' style="color: red"> </p>
                 </form>
 			</div><br>
 			<button id = "btnQuestionnaire3">Weiter</button>

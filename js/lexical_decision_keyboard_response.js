@@ -58,6 +58,82 @@ $(document).ready(function () {
         }
     }); 
 
+    $('#frmQuestionnaire1').validate({
+        rules: {
+            q1:{ required:true},
+            q2:{ required:true},
+            q3:{ required:true},
+            q4:{ required:true},
+            q5:{ required:true},
+            q6:{ required:true},
+            q7:{ required:true}
+        },
+
+        messages: {
+            q1: "",
+            q2: "",
+            q3: "",
+            q4: "",
+            q5: "",
+            q6: "",
+            q7: ""
+        }, 
+
+        highlight: function(element, errorClass){
+            document.getElementById('txtBelowQuestionnaire1').innerHTML = 'Bitte markieren Sie eine Antwort zu jeder Frage';
+        }
+        });
+    $('#frmQuestionnaire2').validate({
+        rules: {
+            q1:{ required:true},
+            q2:{ required:true},
+            q3:{ required:true},
+            q4:{ required:true},
+            q5:{ required:true},
+            q6:{ required:true},
+            q7:{ required:true}
+        },
+
+        messages: {
+            q1: "",
+            q2: "",
+            q3: "",
+            q4: "",
+            q5: "",
+            q6: "",
+            q7: ""
+        }, 
+
+        highlight: function(element, errorClass){
+            document.getElementById('txtBelowQuestionnaire2').innerHTML = 'Bitte markieren Sie eine Antwort zu jeder Frage';
+        }
+        });
+    $('#frmQuestionnaire3').validate({
+        rules: {
+            q1:{ required:true},
+            q2:{ required:true},
+            q3:{ required:true},
+            q4:{ required:true},
+            q5:{ required:true},
+            q6:{ required:true},
+            q7:{ required:true}
+        },
+
+        messages: {
+            q1: "",
+            q2: "",
+            q3: "",
+            q4: "",
+            q5: "",
+            q6: "",
+            q7: ""
+        }, 
+
+        highlight: function(element, errorClass){
+            document.getElementById('txtBelowQuestionnaire3').innerHTML = 'Bitte markieren Sie eine Antwort zu jeder Frage';
+        }
+        });
+
     //set a two digit mask to the birthdaybox so that the user is required to write a two digit number 
     $("#birthdayBox").mask("99");
     $("#example1Box").mask("aaaa");
@@ -133,8 +209,10 @@ document.getElementById("btnQuestionnaire").addEventListener("click",
             // ...  frmQuestionaire.question1 = 'some new question' oder so...
             
             // show next stage
-            document.getElementById('divQuestionnaire').style.display = 'None';
-            document.getElementById('divQuestionnaire2').style.display = 'Inline';
+            if($('#frmQuestionnaire1').valid()) {
+                document.getElementById('divQuestionnaire').style.display = 'None';
+                document.getElementById('divQuestionnaire2').style.display = 'Inline';
+            }
         },
         false);
 document.getElementById("btnQuestionnaire2").addEventListener("click", 
@@ -146,8 +224,10 @@ document.getElementById("btnQuestionnaire2").addEventListener("click",
             // ...  frmQuestionaire.question1 = 'some new question' oder so...
             
             // show next stage
-            document.getElementById('divQuestionnaire2').style.display = 'None';
-            document.getElementById('divQuestionnaire3').style.display = 'Inline';
+            if($('#frmQuestionnaire2').valid()) {
+                document.getElementById('divQuestionnaire2').style.display = 'None';
+                document.getElementById('divQuestionnaire3').style.display = 'Inline';
+            }
         },
         false);
 document.getElementById("btnQuestionnaire3").addEventListener("click", 
@@ -159,8 +239,10 @@ document.getElementById("btnQuestionnaire3").addEventListener("click",
             // ...  frmQuestionaire.question1 = 'some new question' oder so...
             
             // show next stage
-            document.getElementById('divQuestionnaire3').style.display = 'None';
-            document.getElementById('divInstructions2').style.display = 'Inline';
+            if($('#frmQuestionnaire3').valid()) {
+                document.getElementById('divQuestionnaire3').style.display = 'None';
+                document.getElementById('divInstructions2').style.display = 'Inline';
+            }
         },
         false);
 document.getElementById("btnInstructions2").addEventListener("click", 
