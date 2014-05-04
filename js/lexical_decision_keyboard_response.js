@@ -230,8 +230,6 @@ document.getElementById("btnQuestionnaire").addEventListener("click",
         false);
 document.getElementById("btnQuestionnaire2").addEventListener("click", 
         function() {
-            // TODO: save all Answers of Radio Buttons 
-            var q1 = $('input[name=q1]:checked', '#frmQuestionnaire').val();
             // show next stage
             if($('#frmQuestionnaire2').valid()) {
                 document.getElementById('divQuestionnaire2').style.display = 'None';
@@ -241,8 +239,6 @@ document.getElementById("btnQuestionnaire2").addEventListener("click",
         false);
 document.getElementById("btnQuestionnaire3").addEventListener("click", 
         function() {
-            // TODO: save all Answers of Radio Buttons 
-            var q1 = $('input[name=q1]:checked', '#frmQuestionnaire').val();
             // show next stage
             if($('#frmQuestionnaire3').valid()) {
                 document.getElementById('divQuestionnaire3').style.display = 'None';
