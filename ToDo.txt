@@ -3,7 +3,6 @@
 3. Automatisches Einlesen der Anagramm + Randomisierung) [60min]
 4. Passe masked anagramm an die Länge der Wörter an [5min]
 5. Einbauen der Intrsischen/Extrinsischen Wahl [17min]
-6. Reihenfolge Questionnaire -> Erklärung -> Statusbalken -> Autonomie -> Ausgang -> Experiment [15min]
 7. Statusbalken Fotos einfügen [15min]
 8. benutze intrinsic choice um Anagramme auszugeben [10min]
 9. Speicherung der Eingaben [60min]
