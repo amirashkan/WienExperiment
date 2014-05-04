@@ -16,6 +16,7 @@ var error_feedback = false
 
 // variables to log
 var paradigm = 'press_key';
+var choosenTreatment
 var experiment_start_time = Date();
 var subject_nr 
 var trial_number = 0;
@@ -165,13 +166,13 @@ document.getElementById("btnHide").addEventListener("click",
         false)
 document.getElementById("btnTreatment").addEventListener("click", 
         function() {
-            treatment = $('input[name=rdTreatment]:checked', '#frmTreatment').val()
-            if( treatment == undefined)
+            choosenTreatment = $('input[name=rdTreatment]:checked', '#frmTreatment').val()
+            if( choosenTreatment == undefined)
             {
                 console.log('Please check one of the treatments');
             }
             else {
-                console.log('everything fine, choose -> '.concat(treatment));
+                console.log('everything fine, choose -> '.concat(choosenTreatment));
                 document.getElementById('divTreatment').style.display = 'None';
                 document.getElementById('divInstructions').style.display = 'Inline';
             }
@@ -202,7 +203,6 @@ document.getElementById("btnExamples").addEventListener("click",
                 document.getElementById('txtInExamples').style.display = 'none';
                 document.getElementById('frmExamples').style.display = 'inline';
             }
-            // TODO: show user if she makes a mistake
             else if ($('#example1Box').val().toUpperCase() == 'LION' &&
                 $('#example2Box').val().toUpperCase() == 'BEAR' &&
                 $('#example3Box').val().toUpperCase() == 'PUMA') {
@@ -212,7 +212,7 @@ document.getElementById("btnExamples").addEventListener("click",
                 document.getElementById('divQuestionnaire').style.display = 'Inline';
             }
             else 
-                console.log(document.getElementById('example1Box').value.concat(' is not the right answer'));
+                console.log('these are not the right answers');
         },
         false);
 document.getElementById("btnQuestionnaire").addEventListener("click", 
@@ -220,8 +220,6 @@ document.getElementById("btnQuestionnaire").addEventListener("click",
             // TODO: save all Answers of Radio Buttons 
             var q1 = $('input[name=q1]:checked', '#frmQuestionnaire').val();
             // ... for ...; sendData()...;
-            // TODO: replace questions OR make some other questionaires
-            // ...  frmQuestionaire.question1 = 'some new question' oder so...
             
             // show next stage
             if($('#frmQuestionnaire1').valid()) {
@@ -234,10 +232,6 @@ document.getElementById("btnQuestionnaire2").addEventListener("click",
         function() {
             // TODO: save all Answers of Radio Buttons 
             var q1 = $('input[name=q1]:checked', '#frmQuestionnaire').val();
-            // ... for ...; sendData()...;
-            // TODO: replace questions OR make some other questionaires
-            // ...  frmQuestionaire.question1 = 'some new question' oder so...
-            
             // show next stage
             if($('#frmQuestionnaire2').valid()) {
                 document.getElementById('divQuestionnaire2').style.display = 'None';
@@ -249,10 +243,6 @@ document.getElementById("btnQuestionnaire3").addEventListener("click",
         function() {
             // TODO: save all Answers of Radio Buttons 
             var q1 = $('input[name=q1]:checked', '#frmQuestionnaire').val();
-            // ... for ...; sendData()...;
-            // TODO: replace questions OR make some other questionaires
-            // ...  frmQuestionaire.question1 = 'some new question' oder so...
-            
             // show next stage
             if($('#frmQuestionnaire3').valid()) {
                 document.getElementById('divQuestionnaire3').style.display = 'None';
@@ -263,16 +253,14 @@ document.getElementById("btnQuestionnaire3").addEventListener("click",
 document.getElementById("btnInstructions2").addEventListener("click", 
         function() {
             document.getElementById('divInstructions2').style.display = 'None';
-            // TODO: use choosen decision from 0th screen
-            if (true) 
+            // first two treatments are 2go
+            if (choosenTreatment > 2) 
                 document.getElementById('divToDate').style.display = 'Inline';
             else 
                 document.getElementById('divToGo').style.display = 'Inline';
         },
         false);
 document.getElementById("btnIntrinsic").addEventListener("click", 
-        // TODO: here has to happen some magic, to select option 1,2 or 3 (keyboard/Radiobutton?)
-        // nicer text + choice
         function() {
             if($('#frmIntrinsic').valid()) {
                 document.getElementById('divIntrinsic').style.display = 'None';
@@ -282,14 +270,14 @@ document.getElementById("btnIntrinsic").addEventListener("click",
         },
         false);
 document.getElementById("btnExtrinsic").addEventListener("click", 
-        // TODO: magically (randomly) asign one of the 3 options
-        // nicer text + choice
         function() {
             document.getElementById('divExtrinsic').style.display = 'None';
+            var randomExtrinsic = Math.ceil(Math.random()*3);
+            console.log("choosen number for extrinsic: ".concat(randomExtrinsic));
             // present randomly choosen treatment
-            if (randombla < 1/3) 
+            if (randomExtrinsic < 1/3) 
                 document.getElementById('divPresentation').style.display = 'Inline';
-            else if (randombla >= 1/3 && randombla < 2/3)
+            else if (randomExtrinsic >= 1/3 && randomExtrinsic < 2/3)
                 document.getElementById('divPresentation2').style.display = 'Inline';
             else
                 document.getElementById('divPresentation3').style.display = 'Inline';
