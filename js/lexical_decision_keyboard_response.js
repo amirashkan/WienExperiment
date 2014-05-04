@@ -205,13 +205,19 @@ document.getElementById("btnPresentation").addEventListener("click",
 document.getElementById("btnToGo").addEventListener("click", 
         function() {
             document.getElementById('divToGo').style.display = 'None';
-            document.getElementById('divInstructions3').style.display = 'Inline';
+            if (treatment == 1 || treatment == 3) 
+                document.getElementById('divIntrinsic').style.display = 'Inline';
+            else if(treatment == 0 || treatment == 2)
+                document.getElementById('divExtrinsic').style.display = 'Inline';
         },
         false);
 document.getElementById("btnToDate").addEventListener("click", 
         function() {
             document.getElementById('divToDate').style.display = 'None';
-            document.getElementById('divInstructions3').style.display = 'Inline';
+            if (treatment == 1 || treatment == 3) 
+                document.getElementById('divIntrinsic').style.display = 'Inline';
+            else if(treatment == 0 || treatment == 2)
+                document.getElementById('divExtrinsic').style.display = 'Inline';
         },
         false);
 function start_experiment() {
