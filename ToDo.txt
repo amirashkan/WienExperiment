@@ -1,5 +1,4 @@
 1. Feedback (checkt Chris morgen) 
-2. Anhalten bei Questionnaire/Intrinsic Wahl [60min]
 3. Automatisches Einlesen der Anagramm + Randomisierung) [60min]
 4. Passe masked anagramm an die Länge der Wörter an [5min]
 5. Einbauen der Intrsischen/Extrinsischen Wahl [17min]

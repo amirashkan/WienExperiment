@@ -108,6 +108,7 @@ $(document).ready(function () {
             document.getElementById('txtBelowQuestionnaire2').innerHTML = 'Bitte markieren Sie eine Antwort zu jeder Frage';
         }
         });
+
     $('#frmQuestionnaire3').validate({
         rules: {
             q1:{ required:true},
@@ -131,6 +132,20 @@ $(document).ready(function () {
 
         highlight: function(element, errorClass){
             document.getElementById('txtBelowQuestionnaire3').innerHTML = 'Bitte markieren Sie eine Antwort zu jeder Frage';
+        }
+        });
+
+    $('#frmIntrinsic').validate({
+        rules: {
+            rdIntrinsic:{ required:true}
+        },
+
+        messages: {
+            rdIntrinsic: ""
+        }, 
+
+        highlight: function(element, errorClass){
+            document.getElementById('txtBelowIntrinsic').innerHTML = 'Bitte markieren Sie eine Antwort';
         }
         });
 
@@ -259,9 +274,11 @@ document.getElementById("btnIntrinsic").addEventListener("click",
         // TODO: here has to happen some magic, to select option 1,2 or 3 (keyboard/Radiobutton?)
         // nicer text + choice
         function() {
-            document.getElementById('divIntrinsic').style.display = 'None';
-            $('#divPresentationHolderIntrinsic').text('Intrinsic Choice: '.concat(choice));
-            document.getElementById('divPresentationIntrinsic').style.display = 'Inline';
+            if($('#frmIntrinsic').valid()) {
+                document.getElementById('divIntrinsic').style.display = 'None';
+                $('#divPresentationHolderIntrinsic').text('Intrinsic Choice: '.concat(choice));
+                document.getElementById('divPresentationIntrinsic').style.display = 'Inline';
+            }
         },
         false);
 document.getElementById("btnExtrinsic").addEventListener("click", 
