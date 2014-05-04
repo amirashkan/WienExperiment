@@ -107,8 +107,7 @@
                 Hier wird ihnen alles mitgeteilt, was Sie für die Teilnahme am Experiment wissen müssen.</br> 
                 Falls sie etwas nicht verstehen, melden Sie sich bitte. </br>
                 </br>
-                Wir untersuchen kognitive Aspekte bei der Bearbeitung von Worträtseln. </br>
-                Die Teilnahme an dem Experiment ist anonym und freiwillig.</br> Alle Daten, die wir erheben werden zudem vertraulich behandelt.</br>
+                 Die Teilnahme an dem Experiment ist anonym und freiwillig.</br> Alle Daten, die wir erheben werden zudem vertraulich behandelt.</br>
 			</div>
 			<p id = 'txtBelowInstructions'>
                 <button id = "btnInstructions">Weiter</button>
@@ -122,15 +121,17 @@
 		style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
 			<p id = 'txtAboveExamples' style="display:none">Some examples</p>
 			<div id = 'divExamplesHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
-			<p id = 'txtInExamples'>
-                Ihre Aufgabe ist es Buchstabenreihen zu sinnvollen Wörter umzustellen.</br>
+			<p id = 'txtInExamples'>	
+		Das Experiment untersucht kognitive Aspekte bei der Bearbeitung von Worträtseln.</br></br>
+		Ihre Aufgabe ist es Buchstabenreihen zu sinnvollen Wörter umzustellen.</br>
                 Jeder Buchstabe wird dabei nur einmal verwendet. <br></br>
                 
                 Hier finden Sie ein Beispiel:  SMESRE  -- MESSER <br></br>
                 
-                Die Lösungen sind dabei immer Nomen im Singular und entstammen dem deutschen Duden.</b> 
-		Namen sind nicht zulässig.</br></br>
-                Bitte lösen Sie die folgenden Beispiele, um sich mit der Aufgabe vertraut zu machen.<br><br>
+                Die Lösungen sind dabei immer Nomen im Singular und entstammen dem deutschen Duden.</b></br> 
+		Namen sind nicht zulässig. Groß- oder Kleinschreibung spielt dabei keine Rolle.
+		</br></br>               
+ 		Bitte lösen Sie die  Beispiele auf der folgenden Seite, um sich mit der Aufgabe vertraut zu machen.<br><br>
                 </p>
 
 <!-- Hier sollte jetzt ein Button kommen "Beispiele starten" und auf der nächsten Seite die 12 Beispiele -->
@@ -162,23 +163,23 @@
 			<p id = 'txtAboveQuestionnaire'> </p>
 			<div id = 'divQuestionnaireHolder' align = "left" style="width:80%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
 			<p id = 'txtInQuestionnaire'>
-		Der nachfolgende Fragebogen besteht aus 22 Fragen, die sich auf die eben bearbeitete Aufgabe beziehen.</br></br>                		Beurteilen Sie pro Aussage, wie sehr Sie persönlich dem darin angesprochenen Inhalt zustimmen.</br>
+		Der nachfolgende Fragebogen besteht aus 22 Fragen, die sich auf die eben bearbeitete Aufgabe beziehen.</br></br>                		Beurteilen Sie bitte pro Aussage, wie sehr Sie persönlich dem darin angesprochenen Inhalt zustimmen.</br>
 		Dafür steht Ihnen eine siebenstufige Skala zur Verfügung.
 		Versuchen Sie einfach spontan und offen zu antworten.</br> 
-		</br></br> 
+		</br>
                 	</p>               
  <form id = "frmQuestionnaire1" style="display:inline;" method ="POST" action ="save_Questionnaire.php">
                     <table>
                         <thead>
                             <tr>
                                 <th style="width:48px"></th>
-                                <th style="width:48px">1 trifft nicht zu</th>
+                                <th style="width:48px">1 stimmt gar nicht</th>
                                 <th style="width:48px">2</th>
                                 <th style="width:48px">3</th>
-                                <th style="width:48px">4 somewhat true</th>
+                                <th style="width:48px">4 stimmt teilweise</th>
                                 <th style="width:48px">5</th>
                                 <th style="width:48px">6</th>
-                                <th style="width:48px">7 trifft zu</th>
+                                <th style="width:48px">7 stimmt genau</th>
                             </tr>
                         </thead>
                         <tr align = "center">
@@ -259,22 +260,29 @@
 		</div>
         <!-- Fragebogen ENDE --> 
 
+<!-- Es können ruhig 2-3 Seiten zusammengefasst werden--> 
+
+
 		<!-- Fragebogen 2 Seite 2--> 
 		<div id='divQuestionnaire2' align = "center" style="display:none; margin-right:100px; margin-left:100px; margin-top:50px;">
 			<div id = 'divQuestionnaireHolder2' align = "left" style="width:80%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
-
-<form id = 'frmQuestionnaire2' style="display:inline;" method ="POST" action ="save_Questionnaire.php">
+			<p id = 'txtInQuestionnaire'>
+		Der nachfolgende Fragebogen besteht aus 22 Fragen, die sich auf die eben bearbeitete Aufgabe beziehen.</br></br>                		Beurteilen Sie bitte pro Aussage, wie sehr Sie persönlich dem darin angesprochenen Inhalt zustimmen.</br>
+		Dafür steht Ihnen eine siebenstufige Skala zur Verfügung.
+		Versuchen Sie einfach spontan und offen zu antworten.</br> 
+		</br>
+                	</p> <form id = 'frmQuestionnaire2' style="display:inline;" method ="POST" action ="save_Questionnaire.php">
                     <table>
                         <thead>
                             <tr>
                                 <th style="width:48px"></th>
-                                <th style="width:48px">1 trifft voll zu</th>
+                                <th style="width:48px">1 stimmt gar nicht</th>
                                 <th style="width:48px">2</th>
                                 <th style="width:48px">3</th>
-                                <th style="width:48px">4</th>
+                                <th style="width:48px">4 stimmt teilweise</th>
                                 <th style="width:48px">5</th>
                                 <th style="width:48px">6</th>
-                                <th style="width:48px">7 trifft garnicht zu</th>
+                                <th style="width:48px">7 stimmt genau</th>
                             </tr>
                         </thead>
                         <tr align = "center">
@@ -348,18 +356,24 @@
         <!-- Fragebogen 2 Seite 3 -->
 		<div id='divQuestionnaire3' align = "center" style="display:none; margin-right:100px; margin-left:100px; margin-top:50px;">
 			<div id = 'divQuestionnaireHolder3' align = "left" style="width:80%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
-                <form id = "frmQuestionnaire3" style="display:inline;" method ="POST" action ="save_Questionnaire.php">
+		<p id = 'txtInQuestionnaire'>
+		Der nachfolgende Fragebogen besteht aus 22 Fragen, die sich auf die eben bearbeitete Aufgabe beziehen.</br></br>                		Beurteilen Sie bitte pro Aussage, wie sehr Sie persönlich dem darin angesprochenen Inhalt zustimmen.</br>
+		Dafür steht Ihnen eine siebenstufige Skala zur Verfügung.
+		Versuchen Sie einfach spontan und offen zu antworten.</br> 
+		</br>
+                	</p>                 
+				<form id = "frmQuestionnaire" style="display:inline;" method ="POST" action ="save_Questionnaire.php">
                     <table>
                         <thead>
                             <tr>
                                 <th style="width:48px"></th>
-                                <th style="width:48px">1 trifft nicht zu</th>
+                                <th style="width:48px">1 stimmt gar nicht</th>
                                 <th style="width:48px">2</th>
                                 <th style="width:48px">3</th>
-                                <th style="width:48px">4 somewhat true</th>
+                                <th style="width:48px">4 stimmt teilweise</th>
                                 <th style="width:48px">5</th>
                                 <th style="width:48px">6</th>
-                                <th style="width:48px">7 trifft zu</th>
+                                <th style="width:48px">7 stimmt genau</th>
                             </tr>
                         </thead>
                         <tr align = "center">
@@ -446,11 +460,13 @@
 		style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
 			<p id = 'txtAboveInstructions2' style="display:none">Welcome instructions2</p>
 			<div id = 'divInstructionsHolder2' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
-                Ihre Aufgabe wird es nun sein alle Worträtsel in möglichst kurzer Zeit zu lösen.</br></br> 
+              
+		Nun beginnt der Hauptteil des Experiments.</br>
+		Ihre Aufgabe wird es sein alle Worträtsel in möglichst kurzer Zeit zu lösen.</br></br> 
 		Insgesamt werden Ihnen 9 Seiten mit jeweils 8 Rätseln vorgegeben.</br>
 		Die Zeit wird dabei für jede Seite einzeln gemessen.</br></br>
 		Sie können mit der Bearbeitung nur fortfahren, wenn Sie alle Aufgaben einer Seite gelöst haben.</br>
-                Sollten Sie einmal keine Lösung für ein Rätsel finden, wird Ihnen nach einiger Zeit angeboten mit der 			nächsten Seite fortzufahren.
+                Sollten Sie einmal keine Lösung für ein Rätsel finden, wird Ihnen nach einiger Zeit angeboten mit der nächsten Seite fortzufahren.
 			</div>
 			<p id = 'txtBelowInstructions2'>
                 <button id = "btnInstructions2">Weiter</button>
@@ -505,12 +521,17 @@
 		style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
 			<p id = 'txtAbovePresentation' style="display:none">Presentation of anagram task</p>
 			<div id = 'divPresentationHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
-                Ihnen wurde die Kategorie "Menschen und ihre Umwelt" zugewiesen.
-                Unter diese Kategorie fallen:
-                - Nahrungsmittel (z.B. Früchte)
-                - Unterhaltung (z.B. Sportarten)
-                - Bezeichnungen für Menschen (z.B. Tante, Onkel, etc.)
-                - Elemente der Gesellschaft und Kultur (z.B. Finanzen, menschliche Tugenden)
+                Ihnen wurde die Kategorie "Menschen und ihre Umwelt" zugewiesen.</br></br>
+                Unter diese Kategorie fallen:</br>
+                - Nahrungsmittel (z.B. Früchte)</br>
+                - Unterhaltung (z.B. Sportarten)</br>
+                - Bezeichnungen für Menschen (z.B. Tante, Onkel, etc.)</br>
+                - Elemente der Gesellschaft und Kultur (z.B. Finanzen, menschliche Tugenden)</br>
+		</br><br>
+		Der Hauptteil wird nun beginnen.</br>
+		Ihr Ziel ist es alle 9 Seiten so schnell wie möglich abzuschließen.</br></br>
+		Klicken Sie auf „weiter“ um mit der Bearbeitung zu beginnen.
+
 			</div>
 			<p id = 'txtBelowPresentation'>
                 <button id = "btnPresentation">Weiter</button>
@@ -568,11 +589,11 @@
 		style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
 			<p id = 'txtAboveToGo' style="display:none">Welcome ToGo</p>
 			<div id = 'divToGoHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
-                Ein Balken im oberen Teil des Bildschirmes wird ihren Fortschritt anzeigen.
-                Er wird sie informieren, wie viele Seiten noch zu bearbeiten sind.<br></br>
+                Im weiteren Verlauf des Experiments wird Ihnen ein Balken im oberen Teil des Bildschirmes ihren Fortschritt anzeigen.
+                Er zeigt an, wie viele Seiten noch zu bearbeiten sind.<br></br>
                 Dieser Fortschrittsbalken zeigt an, dass Sie noch 7 Seiten bearbeiten müssen:<br><br>
                 _ _ _ _ _ _ _ x x<br><br>
-                Hier ein Beispiel: Bitte geben Sie an, wie viele Seiten sie auf Basis des unten angezeigten Balkens noch bearbeiten müssen:
+                Hier ein Beispiel: Bitte geben Sie an, wie viele Seiten Sie noch bearbeiten müssen:
                 <br><br>
                 _ _ _ _ _ x x x x<br><br>
                 "Ich habe noch ____  Seite(n) zu bearbeiten.“</br></br>
