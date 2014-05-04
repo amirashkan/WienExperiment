@@ -187,19 +187,37 @@ document.getElementById("btnExtrinsic").addEventListener("click",
         // nicer text + choice
         function() {
             document.getElementById('divExtrinsic').style.display = 'None';
-            $('#divPresentationHolder').text('Extrinsic Choice: ');
-            document.getElementById('divPresentation').style.display = 'Inline';
+            // present randomly choosen treatment
+            if (randombla < 1/3) 
+                document.getElementById('divPresentation').style.display = 'Inline';
+            else if (randombla >= 1/3 && randombla < 2/3)
+                document.getElementById('divPresentation2').style.display = 'Inline';
+            else
+                document.getElementById('divPresentation3').style.display = 'Inline';
         },
         false);
 document.getElementById("btnPresentation").addEventListener("click", 
-        // TODO: magically (randomly) asign one of the 3 options
         function() {
             document.getElementById('divPresentation').style.display = 'None';
-            // TODO: use choosen decision from 0th screen
-            if (true) {
-                document.getElementById('divToDate').style.display = 'Inline';}
-            else {
-                document.getElementById('divToGo').style.display = 'Inline';}
+            document.getElementById('divExperiment').style.display = 'inline';
+        },
+        false);
+document.getElementById("btnPresentation2").addEventListener("click", 
+        function() {
+            document.getElementById('divPresentation2').style.display = 'None';
+            document.getElementById('divExperiment').style.display = 'inline';
+        },
+        false);
+document.getElementById("btnPresentation3").addEventListener("click", 
+        function() {
+            document.getElementById('divPresentation3').style.display = 'None';
+            document.getElementById('divExperiment').style.display = 'inline';
+        },
+        false);
+document.getElementById("btnPresentationIntrinsic").addEventListener("click", 
+        function() {
+            document.getElementById('divPresentationIntrinsic').style.display = 'None';
+            document.getElementById('divExperiment').style.display = 'inline';
         },
         false);
 document.getElementById("btnToGo").addEventListener("click", 
