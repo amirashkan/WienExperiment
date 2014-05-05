@@ -201,6 +201,7 @@ document.getElementById("btnExamples").addEventListener("click",
             {
                 isExamples = false;
                 document.getElementById('txtInExamples').style.display = 'none';
+                document.getElementById('txtAboveExamples').style.display = 'inline';
                 document.getElementById('frmExamples').style.display = 'inline';
             }
             else if ($('#example1Box').val().toUpperCase() == 'LION' &&
