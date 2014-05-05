@@ -206,9 +206,19 @@ document.getElementById("btnExamples").addEventListener("click",
                 document.getElementById('txtAboveExamples').style.display = 'none';
                 document.getElementById('frmExamples').style.display = 'inline';
             }
-            else if ($('#example1Box').val().toUpperCase() == 'LION' &&
-                $('#example2Box').val().toUpperCase() == 'BEAR' &&
-                $('#example3Box').val().toUpperCase() == 'PUMA') {
+            else if ($('#expBox1').val().toUpperCase() == 'GAST' &&
+                $('#expBox2').val().toUpperCase() == 'BROT' &&
+                $('#expBox2').val().toUpperCase() == 'BUBE' &&
+                $('#expBox2').val().toUpperCase() == 'PILZ' &&
+                $('#expBox2').val().toUpperCase() == 'KAMM' &&
+                $('#expBox2').val().toUpperCase() == 'SCHUH' &&
+                $('#expBox2').val().toUpperCase() == 'LEINE' &&
+                $('#expBox2').val().toUpperCase() == 'HORN' &&
+                $('#expBox2').val().toUpperCase() == 'KOPIE' &&
+                $('#expBox2').val().toUpperCase() == 'SEIL' &&
+                $('#expBox2').val().toUpperCase() == 'RAUCH' &&
+                $('#expBox2').val().toUpperCase() == 'HEBEL')
+                {
                 console.log('All answers are correct');
                 // and the party goes on...
                 document.getElementById('divExamples').style.display = 'None';
