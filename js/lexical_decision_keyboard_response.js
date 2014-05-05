@@ -331,16 +331,28 @@ function start_experiment() {
 
 document.getElementById("btnExperiment").addEventListener("click", 
         function() {
-            trial_number++;
-            if (trial_number == 4 || trial_number == 7) { 
-                document.getElementById('divExperiment').style.display = 'None';
-                document.getElementById('divManipulation').style.display = 'Inline'; 
+            // if all anagrams are solved correctly or it took them longer 
+            // as the meanTime of all participants of the prestudy 
+            if (validateInput() || stageTime > meanTime){
+                trial_number++;
+                if (trial_number == 4 || trial_number == 7) { 
+                    document.getElementById('divExperiment').style.display = 'None';
+                    document.getElementById('divManipulation').style.display = 'Inline'; 
+                }
+                else if (trial_number == 10) {
+                    document.getElementById('divExperiment').style.display = 'None';
+                    document.getElementById('divDemographic').style.display = 'Inline';
+                    // only in this case, we need to return
+                    return;
+                }
             }
-            else if (trial_number == 10) {
-                document.getElementById('divExperiment').style.display = 'None';
-                document.getElementById('divDemographic').style.display = 'Inline';
-                // only in this case, we need to return
-                return;
+
+            // the input isn't correct and there is still some time left
+            else {
+                // indicate how many anagrams are wrong
+                document.getElementById('txtBelowExperiment').style.display = 'inline';
+                document.getElementById('txtBelowExperiment').innerHTML = 'You have still '.concat("2").concat(' anagrams wrong');
+
             }
             // TODO: Clear screen, and present new series of anagrams
             // update the screen anytime
