@@ -108,6 +108,24 @@ $(document).ready(function () {
         }
         });
 
+    // add a custom method to check anagrams
+    jQuery.validator.addMethod("checkAnagram", 
+            function(value, element, params) {
+                // checks first example 
+                return value.toUpperCase() == "GAST";
+            },
+            // display error message
+            jQuery.validator.format("Bitte geben Sie die korrekte Lösung an"));
+
+    $('#frmExamples').validate({
+        rules: {
+            example1: "checkAnagram"
+        },
+        highlight: function(element, errorClass) {
+            $(element).fadeOut(function() { $(element).fadeIn(); })
+        }
+        });
+
     $('#frmIntrinsic').validate({
         rules: {
             rdIntrinsic:{ required:true}
