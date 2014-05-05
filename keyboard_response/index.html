@@ -13,10 +13,24 @@
             <p id = 'txtAboveTreatment' style="display:inline text-align:center">Auswahl Kondition</p>
             <div id = 'divTreatmentHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
                 <form id = "frmTreatment" style="display:inline;" method ="POST" action ="save_Demographic.php">
-                    <input type="radio" name="rdTreatment" value="1">2goExt</br>
-                    <input type="radio" name="rdTreatment" value="2">2goInt</br>
-                    <input type="radio" name="rdTreatment" value="3">2dateExt</br>
-                    <input type="radio" name="rdTreatment" value="4">2dateInt</br>
+                    <table>
+                        <tr>
+                            <td> <label for="rdTreatment">2goExt</label></td>
+                            <td><input type="radio" name="rdTreatment" value="1"></td>
+                        </tr>
+                        <tr>
+                            <td> <label for="rdTreatment">2goInt</label></td>
+                            <td><input type="radio" name="rdTreatment" value="2"></td>
+                        </tr>
+                        <tr>
+                            <td> <label for="rdTreatment">2dateExt</label></td>
+                            <td><input type="radio" name="rdTreatment" value="3"></td>
+                        </tr>
+                        <tr>
+                            <td> <label for="rdTreatment">2dateInt</label></td>
+                            <td><input type="radio" name="rdTreatment" value="4"></td>
+                        </tr>
+                    </table>
                 </form>
             </div>
             <p id = 'txtBelowTreatment'>
