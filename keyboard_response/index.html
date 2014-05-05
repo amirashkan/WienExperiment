@@ -119,7 +119,7 @@
 		<!-- Beispiele -->
 		<div id='divExamples' align = "center"
 		style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
-			<p id = 'txtAboveExamples' style="display:none">Some examples</p>
+			<p id = 'txtAboveExamples' style="display:none">Kann wieder weg</p>
 			<div id = 'divExamplesHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
 			<p id = 'txtInExamples'>	
 		Das Experiment untersucht kognitive Aspekte bei der Bearbeitung von Worträtseln.</br></br>
@@ -135,7 +135,10 @@
                 </p>
 
 <!-- Hier sollte jetzt ein Button kommen "Beispiele starten" und auf der nächsten Seite die 12 Beispiele -->
-
+<p id = 'txtAboveExamples2'>    
+        Die Lösungen sind dabei immer Nomen im Singular und entstammen dem deutschen Duden.</b></br> 
+        Namen sind nicht zulässig. Groß- oder Kleinschreibung spielt keine Rolle.</br></br>
+                </p>
             <form id = "frmExamples" style="display:none;" action ="save_Questionnaire.php">
                 <table width="100%" >
                     <tr>
@@ -172,17 +175,17 @@
                         <thead>
                             <tr>
                                 <th style="width:48px"></th>
-                                <th style="width:48px">1 stimmt gar nicht</th>
-                                <th style="width:48px">2</th>
+                                <th style="width:48px">1 trifft überhaupt nicht zu</th>
+                                <th style="width:48px">2 </th>
                                 <th style="width:48px">3</th>
-                                <th style="width:48px">4 stimmt teilweise</th>
+                                <th style="width:48px">4 teils, teils</th>
                                 <th style="width:48px">5</th>
                                 <th style="width:48px">6</th>
-                                <th style="width:48px">7 stimmt genau</th>
+                                <th style="width:48px">7 trifft völlig zu/th>
                             </tr>
                         </thead>
                         <tr align = "center">
-                            <th id="question1"><p id='pQuest1'>Ich habe diese Tätigkeit sehr gerne gemacht.</p></th>
+                            <th id="question1"><p id='pQuest1'>Während dieser Tätigkeit habe ich darüber nachgedacht, wie sehr sie mir gefällt.</p></th>
                             <td><input type="radio" name="q1" value="1"></td>
                             <td><input type="radio" name="q1" value="2"></td>
                             <td><input type="radio" name="q1" value="3"></td>
@@ -192,7 +195,7 @@
                             <td><input type="radio" name="q1" value="7"></td>
                         </tr>
                         <tr align = "center">
-                            <th>Diese Aktivität hat Spaß gemacht.</th>
+                            <th>Ich habe mich während dieser Tätigkeit überhaupt nicht nervös gefühlt.</th>
                             <td><input type="radio" name="q2" value="1"></td>
                             <td><input type="radio" name="q2" value="2"></td>
                             <td><input type="radio" name="q2" value="3"></td>
@@ -202,7 +205,7 @@
                             <td><input type="radio" name="q2" value="7"></td>
                         </tr>
                         <tr align = "center">
-                            <th>Ich habe mir gedacht, dass diese Aufgabe langweilig ist</th>
+                            <th>Ich glaube, dass ich eine Wahl hatte, diese Tätigkeit auszuüben.</th>
                             <td><input type="radio" name="q3" value="1"></td>
                             <td><input type="radio" name="q3" value="2"></td>
                             <td><input type="radio" name="q3" value="3"></td>
@@ -212,7 +215,7 @@
                             <td><input type="radio" name="q3" value="7"></td>
                         </tr>
                         <tr align = "center">
-                            <th>Diese Tätigkeit konnte meine Aufmerksamkeit überhaupt nicht halten</th>
+                            <th>Ich denke, ich bin ziemlich gut bei dieser Tätigkeit</th>
                             <td><input type="radio" name="q4" value="1"></td>
                             <td><input type="radio" name="q4" value="2"></td>
                             <td><input type="radio" name="q4" value="3"></td>
@@ -222,7 +225,7 @@
                             <td><input type="radio" name="q4" value="7"></td>
                         </tr>
                         <tr align = "center">
-                            <th>Ich würde diese Aufgabe als sehr interessant beschreiben.</th>
+                            <th>Ich fand die Tätigkeit sehr interessant.</th>
                             <td><input type="radio" name="q5" value="1"></td>
                             <td><input type="radio" name="q5" value="2"></td>
                             <td><input type="radio" name="q5" value="3"></td>
@@ -232,7 +235,7 @@
                             <td><input type="radio" name="q5" value="7"></td>
                         </tr>
                         <tr align = "center">
-                            <th>I dachte, dass diese Tätigkeit recht unterhaltsam war.</th>
+                            <th>Ich fühlte mich während dieser Tätigkeit sehr angespannt.</th>
                             <td><input type="radio" name="q6" value="1"></td>
                             <td><input type="radio" name="q6" value="2"></td>
                             <td><input type="radio" name="q6" value="3"></td>
@@ -242,7 +245,7 @@
                             <td><input type="radio" name="q6" value="7"></td>
                         </tr>
                         <tr align = "center">
-                            <th>Während ich mit der Aufgabe beschäftig war, habe ich daran gedacht, wie viel Spaß sie mir macht.</th>
+                            <th>Ich denke, verglichen mit anderen Studenten war ich ziemlich gut bei dieser Tätigkeit.</th>
                             <td><input type="radio" name="q7" value="1"></td>
                             <td><input type="radio" name="q7" value="2"></td>
                             <td><input type="radio" name="q7" value="3"></td>
@@ -273,19 +276,19 @@
                 	</p> <form id = 'frmQuestionnaire2' style="display:inline;" method ="POST" action ="save_Questionnaire.php">
                     <table>
                         <thead>
-                            <tr>
+                           <tr>
                                 <th style="width:48px"></th>
-                                <th style="width:48px">1 stimmt gar nicht</th>
-                                <th style="width:48px">2</th>
+                                <th style="width:48px">1 trifft überhaupt nicht zu</th>
+                                <th style="width:48px">2 </th>
                                 <th style="width:48px">3</th>
-                                <th style="width:48px">4 stimmt teilweise</th>
+                                <th style="width:48px">4 teils, teils</th>
                                 <th style="width:48px">5</th>
                                 <th style="width:48px">6</th>
-                                <th style="width:48px">7 stimmt genau</th>
+                                <th style="width:48px">7 trifft völlig zu/th>
                             </tr>
                         </thead>
                         <tr align = "center">
-                            <th>Ich denke, dass ich ziemlich gut in dieser Tätigkeit bin</th>
+                            <th>Diese Tätigkeit hat Spaß gemacht.</th>
                             <td><input type="radio" name="q1" value="1"></td>
                             <td><input type="radio" name="q1" value="2"></td>
                             <td><input type="radio" name="q1" value="3"></td>
@@ -295,7 +298,17 @@
                             <td><input type="radio" name="q1" value="7"></td>
                         </tr>
                         <tr align = "center">
-                            <th>Ich denke ich habe die Aufgabe im Vergleich zu anderen ziemlich gut gelöst.</th>
+                            <th>Ich war bei dieser Tätigkeit sehr entspannt. </th>
+                            <td><input type="radio" name="q1" value="1"></td>
+                            <td><input type="radio" name="q1" value="2"></td>
+                            <td><input type="radio" name="q1" value="3"></td>
+                            <td><input type="radio" name="q1" value="4"></td>
+                            <td><input type="radio" name="q1" value="5"></td>
+                            <td><input type="radio" name="q1" value="6"></td>
+                            <td><input type="radio" name="q1" value="7"></td>
+                        </tr>
+                        <tr align = "center">
+                            <th>Mir gefiel die Ausübung dieser Tätigkeit sehr gut.</th>
                             <td><input type="radio" name="q2" value="1"></td>
                             <td><input type="radio" name="q2" value="2"></td>
                             <td><input type="radio" name="q2" value="3"></td>
@@ -305,7 +318,7 @@
                             <td><input type="radio" name="q2" value="7"></td>
                         </tr>
                         <tr align = "center">
-                            <th>Nachdem ich an dieser Aufgabe für eine Weile gearbeitet habe, fühle ich mich recht kompetent.</th>
+                            <th>Ich war nicht wirklich frei in der Wahl, diese Aufgabe zu bearbeiten.</th>
                             <td><input type="radio" name="q3" value="1"></td>
                             <td><input type="radio" name="q3" value="2"></td>
                             <td><input type="radio" name="q3" value="3"></td>
@@ -315,7 +328,17 @@
                             <td><input type="radio" name="q3" value="7"></td>
                         </tr>
                         <tr align = "center">
-                            <th>Ich bin zufrieden mit meiner Leistung bei dieser Aufgabe.</th>
+                            <th>Ich bin mit meiner Leistung bei dieser Aufgabe zufrieden.</th>
+                            <td><input type="radio" name="q3" value="1"></td>
+                            <td><input type="radio" name="q3" value="2"></td>
+                            <td><input type="radio" name="q3" value="3"></td>
+                            <td><input type="radio" name="q3" value="4"></td>
+                            <td><input type="radio" name="q3" value="5"></td>
+                            <td><input type="radio" name="q3" value="6"></td>
+                            <td><input type="radio" name="q3" value="7"></td>
+                        </tr>
+                        <tr align = "center">
+                            <th>Ich war ängstlich, während ich an dieser Aufgabe gearbeitet habe.</th>
                             <td><input type="radio" name="q4" value="1"></td>
                             <td><input type="radio" name="q4" value="2"></td>
                             <td><input type="radio" name="q4" value="3"></td>
@@ -325,7 +348,7 @@
                             <td><input type="radio" name="q4" value="7"></td>
                         </tr>
                         <tr align = "center">
-                            <th>Ich war recht fähig bei dieser Tätigkeit.</th>
+                            <th>Ich empfand diese Tätigkeit als langweilig.</th>
                             <td><input type="radio" name="q5" value="1"></td>
                             <td><input type="radio" name="q5" value="2"></td>
                             <td><input type="radio" name="q5" value="3"></td>
@@ -333,16 +356,6 @@
                             <td><input type="radio" name="q5" value="5"></td>
                             <td><input type="radio" name="q5" value="6"></td>
                             <td><input type="radio" name="q5" value="7"></td>
-                        </tr>
-                        <tr align = "center">
-                            <th>Dies war eine Tätigkeit die ich nicht gut konnte.</th>
-                            <td><input type="radio" name="q6" value="1"></td>
-                            <td><input type="radio" name="q6" value="2"></td>
-                            <td><input type="radio" name="q6" value="3"></td>
-                            <td><input type="radio" name="q6" value="4"></td>
-                            <td><input type="radio" name="q6" value="5"></td>
-                            <td><input type="radio" name="q6" value="6"></td>
-                            <td><input type="radio" name="q6" value="7"></td>
                         </tr>
                     </table>
                     <p id = 'txtBelowQuestionnaire2' style="color: red"> </p>
@@ -364,69 +377,19 @@
 				<form id = "frmQuestionnaire3" style="display:inline;" method ="POST" action ="save_Questionnaire.php">
                     <table>
                         <thead>
-                            <tr>
+                           <tr>
                                 <th style="width:48px"></th>
-                                <th style="width:48px">1 stimmt gar nicht</th>
-                                <th style="width:48px">2</th>
+                                <th style="width:48px">1 trifft überhaupt nicht zu</th>
+                                <th style="width:48px">2 </th>
                                 <th style="width:48px">3</th>
-                                <th style="width:48px">4 stimmt teilweise</th>
+                                <th style="width:48px">4 teils, teils</th>
                                 <th style="width:48px">5</th>
                                 <th style="width:48px">6</th>
-                                <th style="width:48px">7 stimmt genau</th>
+                                <th style="width:48px">7 trifft völlig zu/th>
                             </tr>
                         </thead>
                         <tr align = "center">
-                            <th>I enjoyed doing this activity very much</th>
-                            <td><input type="radio" name="q1" value="1"></td>
-                            <td><input type="radio" name="q1" value="2"></td>
-                            <td><input type="radio" name="q1" value="3"></td>
-                            <td><input type="radio" name="q1" value="4"></td>
-                            <td><input type="radio" name="q1" value="5"></td>
-                            <td><input type="radio" name="q1" value="6"></td>
-                            <td><input type="radio" name="q1" value="7"></td>
-                        </tr>
-                        <tr align = "center">
-                            <th>This activity was fun to do.</th>
-                            <td><input type="radio" name="q2" value="1"></td>
-                            <td><input type="radio" name="q2" value="2"></td>
-                            <td><input type="radio" name="q2" value="3"></td>
-                            <td><input type="radio" name="q2" value="4"></td>
-                            <td><input type="radio" name="q2" value="5"></td>
-                            <td><input type="radio" name="q2" value="6"></td>
-                            <td><input type="radio" name="q2" value="7"></td>
-                        </tr>
-                        <tr align = "center">
-                            <th>I thought this was a boring activity</th>
-                            <td><input type="radio" name="q3" value="1"></td>
-                            <td><input type="radio" name="q3" value="2"></td>
-                            <td><input type="radio" name="q3" value="3"></td>
-                            <td><input type="radio" name="q3" value="4"></td>
-                            <td><input type="radio" name="q3" value="5"></td>
-                            <td><input type="radio" name="q3" value="6"></td>
-                            <td><input type="radio" name="q3" value="7"></td>
-                        </tr>
-                        <tr align = "center">
-                            <th>This activity did not hold my attention at all</th>
-                            <td><input type="radio" name="q4" value="1"></td>
-                            <td><input type="radio" name="q4" value="2"></td>
-                            <td><input type="radio" name="q4" value="3"></td>
-                            <td><input type="radio" name="q4" value="4"></td>
-                            <td><input type="radio" name="q4" value="5"></td>
-                            <td><input type="radio" name="q4" value="6"></td>
-                            <td><input type="radio" name="q4" value="7"></td>
-                        </tr>
-                        <tr align = "center">
-                            <th>I would describe this activity as very interesting</th>
-                            <td><input type="radio" name="q5" value="1"></td>
-                            <td><input type="radio" name="q5" value="2"></td>
-                            <td><input type="radio" name="q5" value="3"></td>
-                            <td><input type="radio" name="q5" value="4"></td>
-                            <td><input type="radio" name="q5" value="5"></td>
-                            <td><input type="radio" name="q5" value="6"></td>
-                            <td><input type="radio" name="q5" value="7"></td>
-                        </tr>
-                        <tr align = "center">
-                            <th>I thought this activity was quite enjoyable</th>
+                            <th>Ich empfand als würde ich tun was ich wollte, während ich die Aufgaben bearbeitete</th>
                             <td><input type="radio" name="q6" value="1"></td>
                             <td><input type="radio" name="q6" value="2"></td>
                             <td><input type="radio" name="q6" value="3"></td>
@@ -436,14 +399,74 @@
                             <td><input type="radio" name="q6" value="7"></td>
                         </tr>
                         <tr align = "center">
-                            <th>While I was doing this activity, I was thinking about how much I enjoyed it</th>
-                            <td><input type="radio" name="q7" value="1"></td>
-                            <td><input type="radio" name="q7" value="2"></td>
-                            <td><input type="radio" name="q7" value="3"></td>
-                            <td><input type="radio" name="q7" value="4"></td>
-                            <td><input type="radio" name="q7" value="5"></td>
-                            <td><input type="radio" name="q7" value="6"></td>
-                            <td><input type="radio" name="q7" value="7"></td>
+                            <th>Ich war recht geschickt bei dieser Tätigkeit.</th>
+                            <td><input type="radio" name="q6" value="1"></td>
+                            <td><input type="radio" name="q6" value="2"></td>
+                            <td><input type="radio" name="q6" value="3"></td>
+                            <td><input type="radio" name="q6" value="4"></td>
+                            <td><input type="radio" name="q6" value="5"></td>
+                            <td><input type="radio" name="q6" value="6"></td>
+                            <td><input type="radio" name="q6" value="7"></td>
+                        </tr>
+                        <tr align = "center">
+                            <th>Ich dachte, dass die Tätigkeit sehr interessant ist.</th>
+                            <td><input type="radio" name="q1" value="1"></td>
+                            <td><input type="radio" name="q1" value="2"></td>
+                            <td><input type="radio" name="q1" value="3"></td>
+                            <td><input type="radio" name="q1" value="4"></td>
+                            <td><input type="radio" name="q1" value="5"></td>
+                            <td><input type="radio" name="q1" value="6"></td>
+                            <td><input type="radio" name="q1" value="7"></td>
+                        </tr>
+                        <tr align = "center">
+                            <th>Ich fühlte mich während dieser Tätigkeit unter Druck.</th>
+                            <td><input type="radio" name="q2" value="1"></td>
+                            <td><input type="radio" name="q2" value="2"></td>
+                            <td><input type="radio" name="q2" value="3"></td>
+                            <td><input type="radio" name="q2" value="4"></td>
+                            <td><input type="radio" name="q2" value="5"></td>
+                            <td><input type="radio" name="q2" value="6"></td>
+                            <td><input type="radio" name="q2" value="7"></td>
+                        </tr>
+                        <tr align = "center">
+                            <th>Ich hatte das Gefühl, dass ich die Aufgabe tun musste.</th>
+                            <td><input type="radio" name="q3" value="1"></td>
+                            <td><input type="radio" name="q3" value="2"></td>
+                            <td><input type="radio" name="q3" value="3"></td>
+                            <td><input type="radio" name="q3" value="4"></td>
+                            <td><input type="radio" name="q3" value="5"></td>
+                            <td><input type="radio" name="q3" value="6"></td>
+                            <td><input type="radio" name="q3" value="7"></td>
+                        </tr>
+                        <tr align = "center">
+                            <th>Ich würde diese Tätigkeit also recht unterhaltsam beschreiben.</th>
+                            <td><input type="radio" name="q4" value="1"></td>
+                            <td><input type="radio" name="q4" value="2"></td>
+                            <td><input type="radio" name="q4" value="3"></td>
+                            <td><input type="radio" name="q4" value="4"></td>
+                            <td><input type="radio" name="q4" value="5"></td>
+                            <td><input type="radio" name="q4" value="6"></td>
+                            <td><input type="radio" name="q4" value="7"></td>
+                        </tr>
+                        <tr align = "center">
+                            <th>Ich übte die Tätigkeit aus, weil ich keine Wahl hatte.</th>
+                            <td><input type="radio" name="q5" value="1"></td>
+                            <td><input type="radio" name="q5" value="2"></td>
+                            <td><input type="radio" name="q5" value="3"></td>
+                            <td><input type="radio" name="q5" value="4"></td>
+                            <td><input type="radio" name="q5" value="5"></td>
+                            <td><input type="radio" name="q5" value="6"></td>
+                            <td><input type="radio" name="q5" value="7"></td>
+                        </tr>
+                        <tr align = "center">
+                            <th>Nach längerer Beschäftigung mit dieser Tätigkeit fühlte ich mich ziemlich kompetent.</th>
+                            <td><input type="radio" name="q6" value="1"></td>
+                            <td><input type="radio" name="q6" value="2"></td>
+                            <td><input type="radio" name="q6" value="3"></td>
+                            <td><input type="radio" name="q6" value="4"></td>
+                            <td><input type="radio" name="q6" value="5"></td>
+                            <td><input type="radio" name="q6" value="6"></td>
+                            <td><input type="radio" name="q6" value="7"></td>
                         </tr>
                     </table>
                     <p id = 'txtBelowQuestionnaire3' style="color: red"> </p>

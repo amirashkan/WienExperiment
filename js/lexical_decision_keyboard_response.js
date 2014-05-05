@@ -192,6 +192,7 @@ document.getElementById("btnInstructions").addEventListener("click",
         function() {
             document.getElementById('divInstructions').style.display = 'None';
             document.getElementById('divExamples').style.display = 'Inline';
+            document.getElementById('txtAboveExamples2').style.display = 'None';
         },
         false);
 var isExamples = true;
@@ -201,7 +202,8 @@ document.getElementById("btnExamples").addEventListener("click",
             {
                 isExamples = false;
                 document.getElementById('txtInExamples').style.display = 'none';
-                document.getElementById('txtAboveExamples').style.display = 'inline';
+                document.getElementById('txtAboveExamples2').style.display = 'inline';
+                document.getElementById('txtAboveExamples').style.display = 'none';
                 document.getElementById('frmExamples').style.display = 'inline';
             }
             else if ($('#example1Box').val().toUpperCase() == 'LION' &&
