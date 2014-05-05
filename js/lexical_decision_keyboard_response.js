@@ -37,6 +37,8 @@ if(debug_mode){
 };
 
 $(document).ready(function () {
+	jQuery.validator.messages.required = "";
+    
     // here happens some validation magic
     $('#frmDemographic').validate({
         rules: {
@@ -70,16 +72,6 @@ $(document).ready(function () {
             q7:{ required:true}
         },
 
-        messages: {
-            q1: "",
-            q2: "",
-            q3: "",
-            q4: "",
-            q5: "",
-            q6: "",
-            q7: ""
-        }, 
-
         highlight: function(element, errorClass){
             document.getElementById('txtBelowQuestionnaire1').innerHTML = 'Bitte markieren Sie eine Antwort zu jeder Frage';
         }
@@ -94,16 +86,6 @@ $(document).ready(function () {
             q6:{ required:true},
             q7:{ required:true}
         },
-
-        messages: {
-            q1: "",
-            q2: "",
-            q3: "",
-            q4: "",
-            q5: "",
-            q6: "",
-            q7: ""
-        }, 
 
         highlight: function(element, errorClass){
             document.getElementById('txtBelowQuestionnaire2').innerHTML = 'Bitte markieren Sie eine Antwort zu jeder Frage';
@@ -121,16 +103,6 @@ $(document).ready(function () {
             q7:{ required:true}
         },
 
-        messages: {
-            q1: "",
-            q2: "",
-            q3: "",
-            q4: "",
-            q5: "",
-            q6: "",
-            q7: ""
-        }, 
-
         highlight: function(element, errorClass){
             document.getElementById('txtBelowQuestionnaire3').innerHTML = 'Bitte markieren Sie eine Antwort zu jeder Frage';
         }
@@ -140,10 +112,6 @@ $(document).ready(function () {
         rules: {
             rdIntrinsic:{ required:true}
         },
-
-        messages: {
-            rdIntrinsic: ""
-        }, 
 
         highlight: function(element, errorClass){
             document.getElementById('txtBelowIntrinsic').innerHTML = 'Bitte markieren Sie eine Antwort';
