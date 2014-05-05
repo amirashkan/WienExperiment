@@ -5,3 +5,6 @@
 7. Statusbalken Fotos einfügen [15min]
 8. benutze intrinsic choice um Anagramme auszugeben [10min]
 9. Speicherung der Eingaben [60min]
+
+
+Start der Erhebung: 09.05
