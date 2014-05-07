@@ -6,6 +6,7 @@
 9. Speicherung der Eingaben [60min]
 10.Feedback bei Examples (bisher nur bei oberste Zeile) bei allen Wörtern
 11.Fade in/out kann weg, Text neben Lösung reicht. (Das Feld blinkt bei jeder Änderung)
+12. Fragebogen vor Demographie (am Ende)
 
 
 Start der Erhebung: 09.05
