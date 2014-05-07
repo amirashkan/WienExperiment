@@ -274,12 +274,20 @@ document.getElementById("btnExtrinsic").addEventListener("click",
             var randomExtrinsic = Math.ceil(Math.random()*3);
             console.log("choosen number for extrinsic: ".concat(randomExtrinsic));
             // present randomly choosen treatment
-            if (randomExtrinsic < 1/3) 
+            if (randomExtrinsic == 1) {
                 document.getElementById('divPresentation').style.display = 'Inline';
-            else if (randomExtrinsic >= 1/3 && randomExtrinsic < 2/3)
+                choice = 1;
+            }
+            else if (randomExtrinsic == 2) {
                 document.getElementById('divPresentation2').style.display = 'Inline';
-            else
+                choice = 2;
+            }
+            else {
                 document.getElementById('divPresentation3').style.display = 'Inline';
+                choice = 3;
+            }
+            console.log('Extrinsic Choice: '.concat(choice));
+    
         },
         false);
 document.getElementById("btnPresentation").addEventListener("click", 
