@@ -26,7 +26,6 @@ var anagram
 var solution
 var response
 var rt
-var treatment
 
 // Do not change
 var random_order = generate_random_list(number_of_trials);
@@ -263,18 +262,18 @@ document.getElementById("btnInstructions2").addEventListener("click",
 document.getElementById("btnToGo").addEventListener("click", 
         function() {
             document.getElementById('divToGo').style.display = 'None';
-            if (treatment == 1 || treatment == 3) 
+            if (choosenTreatment == 1 || choosenTreatment == 3) 
                 document.getElementById('divIntrinsic').style.display = 'Inline';
-            else if(treatment == 0 || treatment == 2)
+            else if(choosenTreatment == 0 || choosenTreatment == 2)
                 document.getElementById('divExtrinsic').style.display = 'Inline';
         },
         false);
 document.getElementById("btnToDate").addEventListener("click", 
         function() {
             document.getElementById('divToDate').style.display = 'None';
-            if (treatment == 1 || treatment == 3) 
+            if (choosenTreatment == 1 || choosenTreatment == 3) 
                 document.getElementById('divIntrinsic').style.display = 'Inline';
-            else if(treatment == 0 || treatment == 2)
+            else if(choosenTreatment == 0 || choosenTreatment == 2)
                 document.getElementById('divExtrinsic').style.display = 'Inline';
         },
         false);
