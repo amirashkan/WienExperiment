@@ -281,8 +281,13 @@ document.getElementById("btnIntrinsic").addEventListener("click",
         function() {
             if($('#frmIntrinsic').valid()) {
                 document.getElementById('divIntrinsic').style.display = 'None';
-                $('#divPresentationHolderIntrinsic').text('Intrinsic Choice: '.concat(choice));
+                var choice = $('input[name=rdIntrinsic]:checked', '#frmIntrinsic').val();
+                //$('#divPresentationHolderIntrinsic').text('Intrinsic Choice: '.concat(choice));
+                console.log('Intrinsic Choice: '.concat(choice));
                 document.getElementById('divPresentationIntrinsic').style.display = 'Inline';
+            }
+            else {
+                console.log('something does not work with intrinsic');
             }
         },
         false);
