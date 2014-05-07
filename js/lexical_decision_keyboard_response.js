@@ -17,6 +17,7 @@ var error_feedback = false
 // variables to log
 var paradigm = 'press_key';
 var choosenTreatment
+var choosenCategory
 var experiment_start_time = Date();
 var subject_nr 
 var trial_number = 0;
@@ -281,9 +282,9 @@ document.getElementById("btnIntrinsic").addEventListener("click",
         function() {
             if($('#frmIntrinsic').valid()) {
                 document.getElementById('divIntrinsic').style.display = 'None';
-                var choice = $('input[name=rdIntrinsic]:checked', '#frmIntrinsic').val();
-                //$('#divPresentationHolderIntrinsic').text('Intrinsic Choice: '.concat(choice));
-                console.log('Intrinsic Choice: '.concat(choice));
+                choosenCategory = $('input[name=rdIntrinsic]:checked', '#frmIntrinsic').val();
+                //$('#divPresentationHolderIntrinsic').text('Intrinsic choosenCategory: '.concat(choosenCategory));
+                console.log('Intrinsic choosenCategory: '.concat(choosenCategory));
                 document.getElementById('divPresentationIntrinsic').style.display = 'Inline';
             }
             else {
@@ -299,17 +300,17 @@ document.getElementById("btnExtrinsic").addEventListener("click",
             // present randomly choosen treatment
             if (randomExtrinsic == 1) {
                 document.getElementById('divPresentation').style.display = 'Inline';
-                choice = 1;
+                choosenCategory = 1;
             }
             else if (randomExtrinsic == 2) {
                 document.getElementById('divPresentation2').style.display = 'Inline';
-                choice = 2;
+                choosenCategory = 2;
             }
             else {
                 document.getElementById('divPresentation3').style.display = 'Inline';
-                choice = 3;
+                choosenCategory = 3;
             }
-            console.log('Extrinsic Choice: '.concat(choice));
+            console.log('Extrinsic choosenCategory: '.concat(choosenCategory));
     
         },
         false);
