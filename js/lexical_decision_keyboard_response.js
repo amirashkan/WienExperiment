@@ -259,6 +259,24 @@ document.getElementById("btnInstructions2").addEventListener("click",
                 document.getElementById('divToGo').style.display = 'Inline';
         },
         false);
+document.getElementById("btnToGo").addEventListener("click", 
+        function() {
+            document.getElementById('divToGo').style.display = 'None';
+            if (treatment == 1 || treatment == 3) 
+                document.getElementById('divIntrinsic').style.display = 'Inline';
+            else if(treatment == 0 || treatment == 2)
+                document.getElementById('divExtrinsic').style.display = 'Inline';
+        },
+        false);
+document.getElementById("btnToDate").addEventListener("click", 
+        function() {
+            document.getElementById('divToDate').style.display = 'None';
+            if (treatment == 1 || treatment == 3) 
+                document.getElementById('divIntrinsic').style.display = 'Inline';
+            else if(treatment == 0 || treatment == 2)
+                document.getElementById('divExtrinsic').style.display = 'Inline';
+        },
+        false);
 document.getElementById("btnIntrinsic").addEventListener("click", 
         function() {
             if($('#frmIntrinsic').valid()) {
@@ -311,25 +329,7 @@ document.getElementById("btnPresentation3").addEventListener("click",
 document.getElementById("btnPresentationIntrinsic").addEventListener("click", 
         function() {
             document.getElementById('divPresentationIntrinsic').style.display = 'None';
-            document.getElementById('divExperiment').style.display = 'inline';
-        },
-        false);
-document.getElementById("btnToGo").addEventListener("click", 
-        function() {
-            document.getElementById('divToGo').style.display = 'None';
-            if (treatment == 1 || treatment == 3) 
-                document.getElementById('divIntrinsic').style.display = 'Inline';
-            else if(treatment == 0 || treatment == 2)
-                document.getElementById('divExtrinsic').style.display = 'Inline';
-        },
-        false);
-document.getElementById("btnToDate").addEventListener("click", 
-        function() {
-            document.getElementById('divToDate').style.display = 'None';
-            if (treatment == 1 || treatment == 3) 
-                document.getElementById('divIntrinsic').style.display = 'Inline';
-            else if(treatment == 0 || treatment == 2)
-                document.getElementById('divExtrinsic').style.display = 'Inline';
+            start_experiment();
         },
         false);
 function start_experiment() {
