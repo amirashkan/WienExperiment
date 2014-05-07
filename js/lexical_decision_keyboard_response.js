@@ -311,19 +311,19 @@ document.getElementById("btnExtrinsic").addEventListener("click",
 document.getElementById("btnPresentation").addEventListener("click", 
         function() {
             document.getElementById('divPresentation').style.display = 'None';
-            document.getElementById('divExperiment').style.display = 'inline';
+            start_experiment();
         },
         false);
 document.getElementById("btnPresentation2").addEventListener("click", 
         function() {
             document.getElementById('divPresentation2').style.display = 'None';
-            document.getElementById('divExperiment').style.display = 'inline';
+            start_experiment();
         },
         false);
 document.getElementById("btnPresentation3").addEventListener("click", 
         function() {
             document.getElementById('divPresentation3').style.display = 'None';
-            document.getElementById('divExperiment').style.display = 'inline';
+            start_experiment();
         },
         false);
 document.getElementById("btnPresentationIntrinsic").addEventListener("click", 
@@ -333,7 +333,6 @@ document.getElementById("btnPresentationIntrinsic").addEventListener("click",
         },
         false);
 function start_experiment() {
-    start_experiment();
     trial_number++;
     $('#txtExperiment').text('Round '.concat(trial_number));
     document.getElementById('divExperiment').style.display = 'Inline';
