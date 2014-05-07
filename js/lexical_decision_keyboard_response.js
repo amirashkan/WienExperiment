@@ -339,7 +339,6 @@ document.getElementById("btnPresentationIntrinsic").addEventListener("click",
         false);
 function start_experiment() {
     trial_number++;
-    $('#txtExperiment').text('Round '.concat(trial_number));
     document.getElementById('divExperiment').style.display = 'Inline';
 }
 
