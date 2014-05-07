@@ -16,8 +16,8 @@ var error_feedback = false
 
 // variables to log
 var paradigm = 'press_key';
-var choosenTreatment
-var choosenCategory
+var choosenTreatment = 1
+var choosenCategory = 1
 var experiment_start_time = Date();
 var subject_nr 
 var trial_number = 0;
@@ -253,7 +253,7 @@ document.getElementById("btnInstructions2").addEventListener("click",
         function() {
             document.getElementById('divInstructions2').style.display = 'None';
             // first two treatments are 2go
-            if (choosenTreatment > 2) 
+            if (choosenTreatment > 1) 
                 document.getElementById('divToDate').style.display = 'Inline';
             else 
                 document.getElementById('divToGo').style.display = 'Inline';
@@ -294,21 +294,18 @@ document.getElementById("btnIntrinsic").addEventListener("click",
 document.getElementById("btnExtrinsic").addEventListener("click", 
         function() {
             document.getElementById('divExtrinsic').style.display = 'None';
-            var randomExtrinsic = Math.ceil(Math.random()*3);
-            console.log("choosen number for extrinsic: ".concat(randomExtrinsic));
+            var random_extrinsic = Math.floor(Math.random()*3);
+
             // present randomly choosen treatment
-            if (randomExtrinsic == 1) {
+            if (random_extrinsic == 1)
                 document.getElementById('divPresentation').style.display = 'Inline';
-                choosenCategory = 1;
-            }
-            else if (randomExtrinsic == 2) {
+            else if (random_extrinsic == 2)
                 document.getElementById('divPresentation2').style.display = 'Inline';
-                choosenCategory = 2;
-            }
-            else {
+            else 
                 document.getElementById('divPresentation3').style.display = 'Inline';
-                choosenCategory = 3;
-            }
+                
+            // save random value
+            choosenCategory = random_extrinsic;
             console.log('Extrinsic choosenCategory: '.concat(choosenCategory));
     
         },
