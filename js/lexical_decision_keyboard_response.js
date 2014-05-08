@@ -412,26 +412,6 @@ function load_stimuli()
     }
 }
 
-function validate_input() {
-    // call validation
-    $('#frmExperiment').valid();
-    // check all solutions 
-    var isEverythingCorrect = true;
-    for (var i=0; i<8; i++) {
-        var selector = 'exp' + i;
-        if($('input[name='+ selector +']', '#frmExperiment').val().toUpperCase() != solutions[choosenCategory][8 * trial_number + i])
-            isEverythingCorrect = false;
-    }
-
-    if (isEverythingCorrect)
-        console.log('All answers are correct');
-    else {
-        document.getElementById('txtBelowExperiment').style.display = 'inline';
-        document.getElementById('txtBelowExperiment').innerHTML = 'Bitte vervollständigen Sie alle Beispielaufgaben richtig.';
-        console.log('these are not the right answers for the solution');
-    }
-    return isEverythingCorrect;
-}
 document.getElementById("btnExperiment").addEventListener("click", 
         function() {
             // if all anagrams are solved correctly or it took them longer 
