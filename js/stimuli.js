@@ -20,7 +20,7 @@ var solutions = [
     ]
 ];
 
-
+var examples = ['GAST' , 'BROT' , 'BUBE' , 'PILZ' , 'KAMM' , 'SCHUH' , 'LEINE' , 'HORN' , 'KOPIE' , 'SEIL' , 'RAUCH', 'HEBEL' ]
 
 // If using error_feedback, you need to define the possible codes, and 
 // the correct response for each.
