@@ -373,17 +373,17 @@ function start_experiment() {
 function load_stimuli()
 {
     // load 
-    for (var i=1; i<9; i++) {
-        current_stimuli[i] = anagrams[choosenCategory][8 * trial_number + i-1];
+    for (var i=0; i<8; i++) {
+        current_stimuli[i] = anagrams[choosenCategory][8 * trial_number + i];
     }
-    // fill into table
-    for (var i=1; i<9; i++) {
+
+    // write into table
+    for (var i=0; i<8; i++) {
         var selector = '#tdexp' + i;
         var selector2 = 'exp' + i;
         // write stimuli at random place 
         $(selector).replaceWith(current_stimuli[random_array[i]]);
     }
-
 }
 
 function validate_input() {
