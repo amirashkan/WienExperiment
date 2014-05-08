@@ -377,6 +377,8 @@ document.getElementById("btnExperiment").addEventListener("click",
             // if all anagrams are solved correctly or it took them longer 
             // as the meanTime of all participants of the prestudy 
             if (validate_input() || stageTime > meanTime){
+                // remove all user input
+                $('input[name='+ selector2 +']', '#frmExperiment').val('')
                 trial_number++;
                 if (trial_number == 4 || trial_number == 7) { 
                     document.getElementById('divExperiment').style.display = 'None';
