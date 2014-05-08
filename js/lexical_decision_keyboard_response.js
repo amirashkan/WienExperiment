@@ -355,7 +355,7 @@ function load_stimuli()
 
 function validate_input() {
     // call validation
-    $('#frmExamples').valid();
+    $('#frmExperiment').valid();
     // check all solutions 
     var isEverythingCorrect = true;
     for (var i=0; i<8; i++) {
