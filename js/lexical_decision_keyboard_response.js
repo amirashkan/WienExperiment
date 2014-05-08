@@ -18,8 +18,9 @@ var error_feedback = false
 var paradigm = 'press_key';
 var choosenTreatment = 1
 var choosenCategory = 1
-var current_stimuli
-var random_array
+var current_stimuli = []
+var current_solutions = []
+var random_array = []
 var stage_time 
 var mean_time = 180;
 var experiment_start_time = Date();
@@ -399,6 +400,7 @@ function load_stimuli()
     // load 
     for (var i=0; i<8; i++) {
         current_stimuli[i] = anagrams[choosenCategory][8 * trial_number + i];
+        current_solutions[i] = solutions[choosenCategory][8 * trial_number + i];
     }
 
     // write into table
@@ -449,7 +451,6 @@ document.getElementById("btnExperiment").addEventListener("click",
                     return;
                 }
             }
-
             // the input isn't correct and there is still some time left
             else {
                 // indicate how many anagrams are wrong
