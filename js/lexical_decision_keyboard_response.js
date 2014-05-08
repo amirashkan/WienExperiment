@@ -160,18 +160,18 @@ $(document).ready(function () {
 
     //set a two digit mask to the birthdaybox so that the user is required to write a two digit number 
     $("#birthdayBox").mask("99");
-    $("#exampleBox1").mask("aaaa");
-    $("#exampleBox2").mask("aaaa");
-    $("#exampleBox3").mask("aaaa");
-    $("#exampleBox4").mask("aaaa");
-    $("#exampleBox5").mask("aaaa");
-    $("#exampleBox6").mask("aaaa");
-    $("#exampleBox7").mask("aaaa");
-    $("#exampleBox8").mask("aaaa");
-    $("#exampleBox9").mask("aaaa");
-    $("#exampleBox10").mask("aaaa");
-    $("#exampleBox11").mask("aaaa");
-    $("#exampleBox12").mask("aaaa");
+//    $("#exampleBox1").mask("aaaa");
+//    $("#exampleBox2").mask("aaaa");
+//    $("#exampleBox3").mask("aaaa");
+//    $("#exampleBox4").mask("aaaa");
+//    $("#exampleBox5").mask("aaaa");
+//    $("#exampleBox6").mask("aaaa");
+//    $("#exampleBox7").mask("aaaa");
+//    $("#exampleBox8").mask("aaaa");
+//    $("#exampleBox9").mask("aaaa");
+//    $("#exampleBox10").mask("aaaa");
+//    $("#exampleBox11").mask("aaaa");
+//    $("#exampleBox12").mask("aaaa");
 });
 
 // add event listener to buttons
