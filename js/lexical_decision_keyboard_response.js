@@ -437,8 +437,8 @@ document.getElementById("btnExperiment").addEventListener("click",
             else {
                 // indicate how many anagrams are wrong
                 document.getElementById('txtBelowExperiment').style.display = 'inline';
-                document.getElementById('txtBelowExperiment').innerHTML = 'You have still '.concat("2").concat(' anagrams wrong');
-
+                document.getElementById('txtBelowExperiment').innerHTML = 'Bitte vervollständigen Sie alle Aufgaben richtig.'
+             console.log("input incorrect or still time left");
             }
             // TODO: Clear screen, and present new series of anagrams
             // update the screen anytime
