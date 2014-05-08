@@ -193,6 +193,7 @@ document.getElementById("btnInstructions").addEventListener("click",
 var isExamples = true;
 document.getElementById("btnExamples").addEventListener("click", 
         function() {
+            // first click reveals examples
             if (isExamples)
             {
                 isExamples = false;
@@ -201,25 +202,15 @@ document.getElementById("btnExamples").addEventListener("click",
                 document.getElementById('txtAboveExamples').style.display = 'none';
                 document.getElementById('frmExamples').style.display = 'inline';
             }
-            else if ($('#frmExamples').valid() &&
-                $('#exampleBox1').val().toUpperCase() == 'GAST' &&
-                $('#exampleBox2').val().toUpperCase() == 'BROT' &&
-                $('#exampleBox3').val().toUpperCase() == 'BUBE' &&
-                $('#exampleBox4').val().toUpperCase() == 'PILZ' &&
-                $('#exampleBox5').val().toUpperCase() == 'KAMM' &&
-                $('#exampleBox6').val().toUpperCase() == 'SCHUH' &&
-                $('#exampleBox7').val().toUpperCase() == 'LEINE' &&
-                $('#exampleBox8').val().toUpperCase() == 'HORN' &&
-                $('#exampleBox9').val().toUpperCase() == 'KOPIE' &&
-                $('#exampleBox10').val().toUpperCase() == 'SEIL' &&
-                $('#exampleBox11').val().toUpperCase() == 'RAUCH' &&
-                $('#exampleBox12').val().toUpperCase() == 'HEBEL')
-                {
-                console.log('All answers are correct');
+            // now it checks user input
+            else if ($('#frmExamples').valid())
+            {
                 // and the party goes on...
                 document.getElementById('divExamples').style.display = 'None';
                 document.getElementById('divQuestionnaire').style.display = 'Inline';
+                console.log('All answers are correct');
             }
+            // input wasn't right
             else {
                 document.getElementById('txtBelowExamples').style.display = 'inline';
                 document.getElementById('txtBelowExamples').innerHTML = 'Bitte vervollständigen Sie alle Beispielaufgaben richtig.';
