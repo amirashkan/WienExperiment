@@ -143,9 +143,9 @@ $(document).ready(function () {
             example11: "checkAnagram",
             example12: "checkAnagram"
         },
-        highlight: function(element, errorClass) {
-            $(element).fadeOut(function() { $(element).fadeIn(); })
-        }
+//        highlight: function(element, errorClass) {
+//           $(element).fadeOut(function() { $(element).fadeIn(); })
+//      }
         });
 
     $('#frmIntrinsic').validate({
