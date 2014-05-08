@@ -114,8 +114,9 @@ $(document).ready(function () {
                 // checks any anagram 
                 //console.log("value: " + value);
                 //console.log("element: " + element.name);
-                var number = element.name.replace(/[^0-9]/g, '')
-                return value.toUpperCase() == "GAST";
+                // retrieve element number and decrement, to get the array position
+                var number = element.name.replace(/[^0-9]/g, '') - 1
+                return value.toUpperCase() == examples[number];
             },
             // display error message
             jQuery.validator.format("Bitte geben Sie die korrekte Lösung an"));
@@ -123,7 +124,18 @@ $(document).ready(function () {
     $('#frmExamples').validate({
         rules: {
             example1: "checkAnagram",
-            example2: "checkAnagram"
+            example2: "checkAnagram",
+            example3: "checkAnagram",
+            example3: "checkAnagram",
+            example4: "checkAnagram",
+            example5: "checkAnagram",
+            example6: "checkAnagram",
+            example7: "checkAnagram",
+            example8: "checkAnagram",
+            example9: "checkAnagram",
+            example10: "checkAnagram",
+            example11: "checkAnagram",
+            example12: "checkAnagram"
         },
         highlight: function(element, errorClass) {
             $(element).fadeOut(function() { $(element).fadeIn(); })
