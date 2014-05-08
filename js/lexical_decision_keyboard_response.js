@@ -110,14 +110,12 @@ $(document).ready(function () {
         }
         });
 
-    // add a custom method to check anagrams
-    jQuery.validator.addMethod("checkAnagram", 
+    // add a custom method to check examples
+    jQuery.validator.addMethod("checkExamples", 
             function(value, element) {
-                // checks any anagram 
-                //console.log("value: " + value);
-                //console.log("element: " + element.name);
                 // retrieve element number and decrement, to get the array position
-                var number = element.name.replace(/[^0-9]/g, '') - 1
+                var number = element.name.replace(/[^0-9]/g, '') - 1;
+                // and return if it's the right solution
                 return value.toUpperCase() == examples[number];
             },
             // display error message
@@ -131,23 +129,23 @@ $(document).ready(function () {
 
     $('#frmExamples').validate({
         rules: {
-            example1: "checkAnagram",
-            example2: "checkAnagram",
-            example3: "checkAnagram",
-            example3: "checkAnagram",
-            example4: "checkAnagram",
-            example5: "checkAnagram",
-            example6: "checkAnagram",
-            example7: "checkAnagram",
-            example8: "checkAnagram",
-            example9: "checkAnagram",
-            example10: "checkAnagram",
-            example11: "checkAnagram",
-            example12: "checkAnagram"
-        },
-//        highlight: function(element, errorClass) {
-//           $(element).fadeOut(function() { $(element).fadeIn(); })
-//      }
+            example1: "checkExamples",
+            example2: "checkExamples",
+            example3: "checkExamples",
+            example3: "checkExamples",
+            example4: "checkExamples",
+            example5: "checkExamples",
+            example6: "checkExamples",
+            example7: "checkExamples",
+            example8: "checkExamples",
+            example9: "checkExamples",
+            example10: "checkExamples",
+            example11: "checkExamples",
+            example12: "checkExamples"
+        }
+        });
+    
+
         });
 
     $('#frmIntrinsic').validate({
