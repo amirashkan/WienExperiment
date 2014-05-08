@@ -255,7 +255,7 @@ document.getElementById("btnExamples").addEventListener("click",
             {
                 // and the party goes on...
                 document.getElementById('divExamples').style.display = 'None';
-                document.getElementById('divQuestionnaire').style.display = 'Inline';
+                document.getElementById('divInstructions2').style.display = 'Inline';
                 console.log('All answers are correct');
             }
             // input wasn't right
@@ -293,7 +293,7 @@ document.getElementById("btnQuestionnaire3").addEventListener("click",
             // show next stage
             if($('#frmQuestionnaire3').valid()) {
                 document.getElementById('divQuestionnaire3').style.display = 'None';
-                document.getElementById('divInstructions2').style.display = 'Inline';
+                document.getElementById('divDebrief').style.display = 'Inline';
             }
         },
         false);
@@ -428,7 +428,7 @@ document.getElementById("btnExperiment").addEventListener("click",
                 }
                 else if (trial_number == 10) {
                     document.getElementById('divExperiment').style.display = 'None';
-                    document.getElementById('divDemographic').style.display = 'Inline';
+                    document.getElementById('divQuestionnaire').style.display = 'Inline';
                     // only in this case, we need to return
                     return;
                 }
