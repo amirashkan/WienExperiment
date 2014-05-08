@@ -440,10 +440,6 @@ document.getElementById("btnExperiment").addEventListener("click",
                 document.getElementById('txtBelowExperiment').innerHTML = 'Bitte vervollständigen Sie alle Aufgaben richtig.'
              console.log("input incorrect or still time left");
             }
-            // TODO: Clear screen, and present new series of anagrams
-            // update the screen anytime
-            $('#tdexp1').replaceWith(anagrams[0][trial_number]);
-            $('#txtExperiment').text('Round '.concat(trial_number));
         },
         false);
 
