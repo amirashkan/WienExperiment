@@ -353,11 +353,31 @@ function load_stimuli()
 
 }
 
+function validate_input() {
+    // call validation
+    $('#frmExamples').valid();
+    // check all solutions 
+    var isEverythingCorrect = true;
+    for (var i=0; i<8; i++) {
+        var selector = '#expBox' + i;
+        if($(selector).val().toUpperCase() != solutions[choosenCategory][8 * trial_number + i])
+            isEverythingCorrect = false;
+    }
+
+    if (isEverythingCorrect)
+        console.log('All answers are correct');
+    else {
+        document.getElementById('txtBelowExperiment').style.display = 'inline';
+        document.getElementById('txtBelowExperiment').innerHTML = 'Bitte vervollständigen Sie alle Beispielaufgaben richtig.';
+        console.log('these are not the right answers for the solution');
+    }
+    return isEverythingCorrect;
+}
 document.getElementById("btnExperiment").addEventListener("click", 
         function() {
             // if all anagrams are solved correctly or it took them longer 
             // as the meanTime of all participants of the prestudy 
-            if (validateInput() || stageTime > meanTime){
+            if (validate_input() || stageTime > meanTime){
                 trial_number++;
                 if (trial_number == 4 || trial_number == 7) { 
                     document.getElementById('divExperiment').style.display = 'None';
