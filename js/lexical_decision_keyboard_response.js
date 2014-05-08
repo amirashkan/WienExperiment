@@ -339,6 +339,7 @@ function start_experiment() {
     console.log('start exp with trial: ' + trial_number);
     document.getElementById('divExperiment').style.display = 'Inline';
     load_stimuli();
+    //randomize_stimuli();
 }
 
 function load_stimuli()
