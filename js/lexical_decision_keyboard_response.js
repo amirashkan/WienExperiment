@@ -358,8 +358,8 @@ function validate_input() {
     // check all solutions 
     var isEverythingCorrect = true;
     for (var i=0; i<8; i++) {
-        var selector = '#expBox' + i;
-        if($(selector).val().toUpperCase() != solutions[choosenCategory][8 * trial_number + i])
+        var selector = 'exp' + i;
+        if($('input[name='+ selector +']', '#frmExperiment').val('').toUpperCase() != solutions[choosenCategory][8 * trial_number + i])
             isEverythingCorrect = false;
     }
 
