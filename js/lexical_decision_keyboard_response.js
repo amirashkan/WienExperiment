@@ -146,6 +146,29 @@ $(document).ready(function () {
         });
     
 
+    // add a custom method to check anagrams
+    jQuery.validator.addMethod("checkAnagrams", 
+            function(value, element) {
+                // retrieve element number and decrement, to get the position of the current element (in array notation)
+                var number = parseInt(element.name.replace(/[^0-9]/g, ''));
+                // find position of randomized element in current_solutions
+                return value.toUpperCase() == current_solutions[random_array[number]];
+            },
+            // display error messages
+            jQuery.validator.format("Bitte geben Sie die korrekte Lösung an"));
+
+    $('#frmExperiment').validate({
+        rules: {
+            exp0: "checkAnagrams",
+            exp1: "checkAnagrams",
+            exp2: "checkAnagrams",
+            exp3: "checkAnagrams",
+            exp3: "checkAnagrams",
+            exp4: "checkAnagrams",
+            exp5: "checkAnagrams",
+            exp6: "checkAnagrams",
+            exp7: "checkAnagrams"
+        }
         });
 
     $('#frmIntrinsic').validate({
