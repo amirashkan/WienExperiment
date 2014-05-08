@@ -337,6 +337,20 @@ document.getElementById("btnPresentationIntrinsic").addEventListener("click",
 function start_experiment() {
     trial_number++;
     document.getElementById('divExperiment').style.display = 'Inline';
+    load_stimuli();
+}
+
+function load_stimuli()
+{
+    // load 
+    for (var i=1; i<9; i++) {
+        var selector = '#tdexp' + i;
+        var selector2 = '#expBox' + i;
+        $(selector).replaceWith(anagrams[choosenCategory][8 * trial_number + i-1]);
+        $('input[id='+selector2+']').val('2');
+        console.log(i);
+    }
+
 }
 
 document.getElementById("btnExperiment").addEventListener("click", 
