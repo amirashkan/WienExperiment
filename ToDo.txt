@@ -1,8 +1,6 @@
 7. Statusbalken Fotos einfügen [15min]
 8. benutze intrinsic choice um Anagramme auszugeben [10min]
 9. Speicherung der Eingaben [60min]
-10.Feedback bei Examples (bisher nur bei oberste Zeile) bei allen Wörtern
-11.Fade in/out kann weg, Text neben Lösung reicht. (Das Feld blinkt bei jeder Änderung)
 12. Fragebogen vor Demographie (am Ende)
 
 
