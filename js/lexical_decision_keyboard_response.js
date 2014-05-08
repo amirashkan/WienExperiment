@@ -336,6 +336,7 @@ document.getElementById("btnPresentationIntrinsic").addEventListener("click",
         false);
 function start_experiment() {
     trial_number++;
+    console.log('start exp with trial: ' + trial_number);
     document.getElementById('divExperiment').style.display = 'Inline';
     load_stimuli();
 }
