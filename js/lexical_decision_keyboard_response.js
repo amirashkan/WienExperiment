@@ -121,6 +121,12 @@ $(document).ready(function () {
             // display error message
             jQuery.validator.format("Bitte geben Sie die korrekte Lösung an"));
 
+
+    // select all example input fields and write hans into them
+    //$("[name*='example']").each( function(){ console.log($(this).val("hans"));} );
+    //$( "#myinput" ).rules( "add", { minlength: 2 });
+    //console.log("hier is wat los");
+
     $('#frmExamples').validate({
         rules: {
             example1: "checkAnagram",
