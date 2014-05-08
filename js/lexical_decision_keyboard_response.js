@@ -110,8 +110,11 @@ $(document).ready(function () {
 
     // add a custom method to check anagrams
     jQuery.validator.addMethod("checkAnagram", 
-            function(value, element, params) {
-                // checks first example 
+            function(value, element) {
+                // checks any anagram 
+                //console.log("value: " + value);
+                //console.log("element: " + element.name);
+                var number = element.name.replace(/[^0-9]/g, '')
                 return value.toUpperCase() == "GAST";
             },
             // display error message
@@ -119,7 +122,8 @@ $(document).ready(function () {
 
     $('#frmExamples').validate({
         rules: {
-            example1: "checkAnagram"
+            example1: "checkAnagram",
+            example2: "checkAnagram"
         },
         highlight: function(element, errorClass) {
             $(element).fadeOut(function() { $(element).fadeIn(); })
