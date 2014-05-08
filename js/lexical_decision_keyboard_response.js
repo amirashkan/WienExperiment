@@ -24,6 +24,8 @@ var random_array = []
 var stage_time 
 var mean_time = 180;
 var experiment_start_time = Date();
+var p1 = 1/3;
+var p2 = 1/3;
 var subject_nr 
 var trial_number = 0;
 var stimuli_number
@@ -342,18 +344,22 @@ document.getElementById("btnIntrinsic").addEventListener("click",
 document.getElementById("btnExtrinsic").addEventListener("click", 
         function() {
             document.getElementById('divExtrinsic').style.display = 'None';
-            var random_extrinsic = Math.floor(Math.random()*3);
+            var random_extrinsic = Math.random();
 
             // present randomly choosen treatment
-            if (random_extrinsic == 1)
+            if (random_extrinsic < p1) {
                 document.getElementById('divPresentation').style.display = 'Inline';
-            else if (random_extrinsic == 2)
+                choosenCategory = 1;
+            }
+            else if (random_extrinsic >= p1 && random_extrinsic < p2) {
                 document.getElementById('divPresentation2').style.display = 'Inline';
-            else 
+                choosenCategory = 2;
+            }
+            else  {
                 document.getElementById('divPresentation3').style.display = 'Inline';
+                choosenCategory = 3;
+            }
                 
-            // save random value
-            choosenCategory = random_extrinsic;
             console.log('Extrinsic choosenCategory: '.concat(choosenCategory));
     
         },
