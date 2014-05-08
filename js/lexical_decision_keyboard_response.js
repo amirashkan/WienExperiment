@@ -18,6 +18,8 @@ var error_feedback = false
 var paradigm = 'press_key';
 var choosenTreatment = 1
 var choosenCategory = 1
+var current_stimuli
+var random_array
 var experiment_start_time = Date();
 var subject_nr 
 var trial_number = 0;
@@ -360,17 +362,26 @@ function start_experiment() {
     trial_number++;
     console.log('start exp with trial: ' + trial_number);
     document.getElementById('divExperiment').style.display = 'Inline';
+    // generate stimuli order
+    random_array = generate_random_list(8);
+    // TODO: save random_array for each trial
+    // ...
+    // fill in stimuli
     load_stimuli();
-    //randomize_stimuli();
 }
 
 function load_stimuli()
 {
     // load 
     for (var i=1; i<9; i++) {
+        current_stimuli[i] = anagrams[choosenCategory][8 * trial_number + i-1];
+    }
+    // fill into table
+    for (var i=1; i<9; i++) {
         var selector = '#tdexp' + i;
         var selector2 = 'exp' + i;
-        $(selector).replaceWith(anagrams[choosenCategory][8 * trial_number + i-1]);
+        // write stimuli at random place 
+        $(selector).replaceWith(current_stimuli[random_array[i]]);
     }
 
 }
