@@ -20,6 +20,8 @@ var choosenTreatment = 1
 var choosenCategory = 1
 var current_stimuli
 var random_array
+var stage_time 
+var mean_time = 180;
 var experiment_start_time = Date();
 var subject_nr 
 var trial_number = 0;
@@ -381,6 +383,7 @@ document.getElementById("btnPresentationIntrinsic").addEventListener("click",
         false);
 function start_experiment() {
     trial_number++;
+    stage_time = Date.now();
     console.log('start exp with trial: ' + trial_number);
     document.getElementById('divExperiment').style.display = 'Inline';
     // generate stimuli order
@@ -431,7 +434,7 @@ document.getElementById("btnExperiment").addEventListener("click",
         function() {
             // if all anagrams are solved correctly or it took them longer 
             // as the meanTime of all participants of the prestudy 
-            if (validate_input() || stageTime > meanTime){
+            if ($('#frmExperiment').valid()/* || stage_time > mean_time*/){
                 // remove all user input
                 $('input[name='+ selector2 +']', '#frmExperiment').val('')
                 trial_number++;
