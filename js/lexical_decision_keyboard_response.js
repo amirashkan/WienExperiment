@@ -423,11 +423,18 @@ document.getElementById("btnExperiment").addEventListener("click",
             // if all anagrams are solved correctly or it took them longer 
             // as the meanTime of all participants of the prestudy 
             if ($('#frmExperiment').valid()/* || stage_time > mean_time*/){
-                // remove all user input
-                for (var i=0; i<8; i++) 
-                    $('exp'+i).val('')
-
+                // update trial number 
                 trial_number++;
+                // remove all user input
+                for (var i=0; i<8; i++) {
+                    $('input[name=exp'+ i +']', '#frmExperiment').val('');
+                }
+                // TODO: save random_array for each trial
+                // ...
+                random_array = generate_random_list(8);
+                // fill in stimuli
+                load_stimuli();
+
                 if (trial_number == 4 || trial_number == 7) { 
                     document.getElementById('divExperiment').style.display = 'None';
                     document.getElementById('divManipulation').style.display = 'Inline'; 
