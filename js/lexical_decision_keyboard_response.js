@@ -438,7 +438,9 @@ document.getElementById("btnExperiment").addEventListener("click",
             // as the meanTime of all participants of the prestudy 
             if ($('#frmExperiment').valid()/* || stage_time > mean_time*/){
                 // remove all user input
-                $('input[name='+ selector2 +']', '#frmExperiment').val('')
+                for (var i=0; i<8; i++) 
+                    $('exp'+i).val('')
+
                 trial_number++;
                 if (trial_number == 4 || trial_number == 7) { 
                     document.getElementById('divExperiment').style.display = 'None';
