@@ -419,6 +419,11 @@ function load_stimuli()
         // write stimuli at random place 
         $(selector).text(current_stimuli[random_array[i]]);
     }
+
+    if (choosenTreatment < 2) 
+        $("#progress").attr("src","../images/2go"+trial_number+"Blocks.jpg");
+    else if(choosenTreatment == 0 || choosenTreatment == 2)
+        $("#progress").attr("src","../images/2date"+trial_number+"Blocks.jpg");
 }
 
 document.getElementById("btnExperiment").addEventListener("click", 
