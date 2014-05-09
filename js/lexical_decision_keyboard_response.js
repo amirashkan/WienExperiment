@@ -405,8 +405,9 @@ function load_stimuli()
 {
     // load 
     for (var i=0; i<8; i++) {
-        current_stimuli[i] = anagrams[choosenCategory][8 * trial_number + i];
-        current_solutions[i] = solutions[choosenCategory][8 * trial_number + i];
+        // save stimuli for this round
+        current_stimuli[i] = anagrams[choosenCategory - 1][8 * (trial_number-1) + i];
+        current_solutions[i] = solutions[choosenCategory - 1][8 * (trial_number-1) + i];
     }
 
     // write into table
