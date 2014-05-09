@@ -15,12 +15,11 @@ var debug_mode = false // Set as true to show extra information, false to run ex
 var error_feedback = false
 
 // variables to log
-var paradigm = 'press_key';
-var choosenTreatment = 1
-var choosenCategory = 1
-var current_stimuli = []
-var current_solutions = []
-var random_array = []
+var choosenTreatment
+var choosenCategory 
+var current_stimuli
+var current_solutions 
+var random_array 
 var stage_time 
 var mean_time = 180;
 var experiment_start_time = Date();
