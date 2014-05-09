@@ -396,8 +396,6 @@ function start_experiment() {
     document.getElementById('divExperiment').style.display = 'Inline';
     // generate stimuli order
     random_array = generate_random_list(8);
-    // TODO: save random_array for each trial
-    // ...
     // fill in stimuli
     load_stimuli();
 }
@@ -419,10 +417,14 @@ function load_stimuli()
         $(selector).text(current_stimuli[random_array[i]]);
     }
 
+    // present progress bar
     if (choosenTreatment < 2) 
         $("#progress").attr("src","../images/2go"+trial_number+"Blocks.jpg");
     else if(choosenTreatment == 0 || choosenTreatment == 2)
         $("#progress").attr("src","../images/2date"+trial_number+"Blocks.jpg");
+    
+    // TODO: save random_array for each trial
+    // ...
 }
 
 document.getElementById("btnExperiment").addEventListener("click", 
