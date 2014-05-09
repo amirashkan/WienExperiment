@@ -477,18 +477,3 @@ document.getElementById("btnManipulation").addEventListener("click",
             document.getElementById('divExperiment').style.display = 'Inline';
         },
         false);
-
-    
-function trial_stage0() {
-    stimuli_number = random_order[trial_number];
-    anagram = anagrams[stimuli_number];
-    solution = solutions[stimuli_number];
-    show_fixation(ITI);
-    setTimeout("trial_stage1()", ITI);
-};
-
-function trial_stage1() {
-    start_time = (Date.now());
-    show_text(anagram);
-    get_keyboard_response('YN');
-};
