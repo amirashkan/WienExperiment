@@ -414,7 +414,7 @@ function load_stimuli()
         var selector = '#tdexp' + i;
         var selector2 = 'exp' + i;
         // write stimuli at random place 
-        $(selector).replaceWith(current_stimuli[random_array[i]]);
+        $(selector).text(current_stimuli[random_array[i]]);
     }
 }
 
