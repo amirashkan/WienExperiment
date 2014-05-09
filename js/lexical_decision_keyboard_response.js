@@ -188,6 +188,8 @@ $(document).ready(function () {
 
     //set a two digit mask to the birthdaybox so that the user is required to write a two digit number 
     $("#birthdayBox").mask("99");
+    $("#toGoInput").mask("9");
+    $("#toDateInput").mask("9");
 //    $("#exampleBox1").mask("aaaa");
 //    $("#exampleBox2").mask("aaaa");
 //    $("#exampleBox3").mask("aaaa");
