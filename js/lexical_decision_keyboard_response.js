@@ -43,15 +43,15 @@ if(debug_mode){
 };
 
 $(document).ready(function () {
-	jQuery.validator.messages.required = "";
-    
+    jQuery.validator.messages.required = "";
+
     // here happens some validation magic
     $('#frmDemographic').validate({
         rules: {
             birthday: { required: true },
-            country: { required: true },
-            mothertongue: { required: true },
-            studyfield: { required: true }
+        country: { required: true },
+        mothertongue: { required: true },
+        studyfield: { required: true }
         },
         // fade in and out elements that are not filled out
         highlight: function(element, errorClass) {
@@ -61,58 +61,58 @@ $(document).ready(function () {
         // give us some messages
         messages: {
             birthday: "Bitte ausfüllen",
-            country: "Bitte ausfüllen",
-            mothertongue: "Bitte ausfüllen",
-            studyfield: "Bitte ausfüllen"
+        country: "Bitte ausfüllen",
+        mothertongue: "Bitte ausfüllen",
+        studyfield: "Bitte ausfüllen"
         }
     }); 
 
     $('#frmQuestionnaire1').validate({
         rules: {
             q1:{ required:true},
-            q2:{ required:true},
-            q3:{ required:true},
-            q4:{ required:true},
-            q5:{ required:true},
-            q6:{ required:true},
-            q7:{ required:true}
+        q2:{ required:true},
+        q3:{ required:true},
+        q4:{ required:true},
+        q5:{ required:true},
+        q6:{ required:true},
+        q7:{ required:true}
         },
 
         highlight: function(element, errorClass){
             document.getElementById('txtBelowQuestionnaire1').innerHTML = 'Bitte markieren Sie eine Antwort zu jeder Frage';
         }
-        });
+    });
     $('#frmQuestionnaire2').validate({
         rules: {
             q1:{ required:true},
-            q2:{ required:true},
-            q3:{ required:true},
-            q4:{ required:true},
-            q5:{ required:true},
-            q6:{ required:true},
-            q7:{ required:true}
+        q2:{ required:true},
+        q3:{ required:true},
+        q4:{ required:true},
+        q5:{ required:true},
+        q6:{ required:true},
+        q7:{ required:true}
         },
 
         highlight: function(element, errorClass){
             document.getElementById('txtBelowQuestionnaire2').innerHTML = 'Bitte markieren Sie eine Antwort zu jeder Frage';
         }
-        });
+    });
 
     $('#frmQuestionnaire3').validate({
         rules: {
             q1:{ required:true},
-            q2:{ required:true},
-            q3:{ required:true},
-            q4:{ required:true},
-            q5:{ required:true},
-            q6:{ required:true},
-            q7:{ required:true}
+        q2:{ required:true},
+        q3:{ required:true},
+        q4:{ required:true},
+        q5:{ required:true},
+        q6:{ required:true},
+        q7:{ required:true}
         },
 
         highlight: function(element, errorClass){
             document.getElementById('txtBelowQuestionnaire3').innerHTML = 'Bitte markieren Sie eine Antwort zu jeder Frage';
         }
-        });
+    });
 
     // add a custom method to check examples
     jQuery.validator.addMethod("checkExamples", 
@@ -134,21 +134,21 @@ $(document).ready(function () {
     $('#frmExamples').validate({
         rules: {
             example1: "checkExamples",
-            example2: "checkExamples",
-            example3: "checkExamples",
-            example3: "checkExamples",
-            example4: "checkExamples",
-            example5: "checkExamples",
-            example6: "checkExamples",
-            example7: "checkExamples",
-            example8: "checkExamples",
-            example9: "checkExamples",
-            example10: "checkExamples",
-            example11: "checkExamples",
-            example12: "checkExamples"
+        example2: "checkExamples",
+        example3: "checkExamples",
+        example3: "checkExamples",
+        example4: "checkExamples",
+        example5: "checkExamples",
+        example6: "checkExamples",
+        example7: "checkExamples",
+        example8: "checkExamples",
+        example9: "checkExamples",
+        example10: "checkExamples",
+        example11: "checkExamples",
+        example12: "checkExamples"
         }
-        });
-    
+    });
+
 
     // add a custom method to check anagrams
     jQuery.validator.addMethod("checkAnagrams", 
@@ -164,16 +164,16 @@ $(document).ready(function () {
     $('#frmExperiment').validate({
         rules: {
             exp0: "checkAnagrams",
-            exp1: "checkAnagrams",
-            exp2: "checkAnagrams",
-            exp3: "checkAnagrams",
-            exp3: "checkAnagrams",
-            exp4: "checkAnagrams",
-            exp5: "checkAnagrams",
-            exp6: "checkAnagrams",
-            exp7: "checkAnagrams"
+        exp1: "checkAnagrams",
+        exp2: "checkAnagrams",
+        exp3: "checkAnagrams",
+        exp3: "checkAnagrams",
+        exp4: "checkAnagrams",
+        exp5: "checkAnagrams",
+        exp6: "checkAnagrams",
+        exp7: "checkAnagrams"
         }
-        });
+    });
 
     $('#frmIntrinsic').validate({
         rules: {
@@ -183,24 +183,24 @@ $(document).ready(function () {
         highlight: function(element, errorClass){
             document.getElementById('txtBelowIntrinsic').innerHTML = 'Bitte markieren Sie eine Antwort';
         }
-        });
+    });
 
     //set a two digit mask to the birthdaybox so that the user is required to write a two digit number 
     $("#birthdayBox").mask("99");
     $("#toGoInput").mask("9");
     $("#toDateInput").mask("9");
-//    $("#exampleBox1").mask("aaaa");
-//    $("#exampleBox2").mask("aaaa");
-//    $("#exampleBox3").mask("aaaa");
-//    $("#exampleBox4").mask("aaaa");
-//    $("#exampleBox5").mask("aaaa");
-//    $("#exampleBox6").mask("aaaa");
-//    $("#exampleBox7").mask("aaaa");
-//    $("#exampleBox8").mask("aaaa");
-//    $("#exampleBox9").mask("aaaa");
-//    $("#exampleBox10").mask("aaaa");
-//    $("#exampleBox11").mask("aaaa");
-//    $("#exampleBox12").mask("aaaa");
+    //    $("#exampleBox1").mask("aaaa");
+    //    $("#exampleBox2").mask("aaaa");
+    //    $("#exampleBox3").mask("aaaa");
+    //    $("#exampleBox4").mask("aaaa");
+    //    $("#exampleBox5").mask("aaaa");
+    //    $("#exampleBox6").mask("aaaa");
+    //    $("#exampleBox7").mask("aaaa");
+    //    $("#exampleBox8").mask("aaaa");
+    //    $("#exampleBox9").mask("aaaa");
+    //    $("#exampleBox10").mask("aaaa");
+    //    $("#exampleBox11").mask("aaaa");
+    //    $("#exampleBox12").mask("aaaa");
 });
 
 // add event listener to buttons
@@ -212,28 +212,28 @@ document.getElementById("btnHide").addEventListener("click",
         false)
 document.getElementById("btnTreatment").addEventListener("click", 
         function() {
-            choosenTreatment = $('input[name=rdTreatment]:checked', '#frmTreatment').val()
+            choosenTreatment = $('input[name=rdTreatment]:checked', '#frmTreatment').val();
             if( choosenTreatment == undefined)
-            {
-                console.log('Please check one of the treatments');
-            }
-            else {
-                console.log('everything fine, choose -> '.concat(choosenTreatment));
-                document.getElementById('divTreatment').style.display = 'None';
-                document.getElementById('divInstructions').style.display = 'Inline';
-            }
-        },
-        false)
+{
+    console.log('Please check one of the treatments');
+}
+else {
+    console.log('everything fine, choose -> '.concat(choosenTreatment));
+    document.getElementById('divTreatment').style.display = 'None';
+    document.getElementById('divInstructions').style.display = 'Inline';
+}
+},
+false)
 document.getElementById("btnEnde").addEventListener("click", 
         function() {
             if($('#frmDemographic').valid())
-            {
-                document.getElementById('divDemographic').style.display = 'None';
-                document.getElementById('divDebrief').style.display = 'Inline';
-                sendData(user_data_address, "#frmDemographic")
-            }
-        },
-        false)
+{
+    document.getElementById('divDemographic').style.display = 'None';
+    document.getElementById('divDebrief').style.display = 'Inline';
+    sendData(user_data_address, "#frmDemographic")
+}
+},
+false)
 document.getElementById("btnInstructions").addEventListener("click", 
         function() {
             document.getElementById('divInstructions').style.display = 'None';
@@ -241,40 +241,41 @@ document.getElementById("btnInstructions").addEventListener("click",
             document.getElementById('txtAboveExamples2').style.display = 'None';
         },
         false);
+
 var isExamples = true;
 document.getElementById("btnExamples").addEventListener("click", 
         function() {
             // first click reveals examples
             if (isExamples)
-            {
-                isExamples = false;
-                document.getElementById('txtInExamples').style.display = 'none';
-                document.getElementById('txtAboveExamples2').style.display = 'inline';
-                document.getElementById('txtAboveExamples').style.display = 'none';
-                document.getElementById('frmExamples').style.display = 'inline';
-            }
-            // now it checks user input
-            else if ($('#frmExamples').valid())
-            {
-                // and the party goes on...
-                document.getElementById('divExamples').style.display = 'None';
-                document.getElementById('divInstructions2').style.display = 'Inline';
-                console.log('All answers are correct');
-            }
-            // input wasn't right
-            else {
-                document.getElementById('txtBelowExamples').style.display = 'inline';
-                document.getElementById('txtBelowExamples').innerHTML = 'Bitte vervollständigen Sie alle Beispielaufgaben richtig.';
-                console.log('these are not the right answers');
-            }
-        },
-        false);
+{
+    isExamples = false;
+    document.getElementById('txtInExamples').style.display = 'none';
+    document.getElementById('txtAboveExamples2').style.display = 'inline';
+    document.getElementById('txtAboveExamples').style.display = 'none';
+    document.getElementById('frmExamples').style.display = 'inline';
+}
+// now it checks user input
+else if ($('#frmExamples').valid())
+{
+    // and the party goes on...
+    document.getElementById('divExamples').style.display = 'None';
+    document.getElementById('divInstructions2').style.display = 'Inline';
+    console.log('All answers are correct');
+}
+// input wasn't right
+else {
+    document.getElementById('txtBelowExamples').style.display = 'inline';
+    document.getElementById('txtBelowExamples').innerHTML = 'Bitte vervollständigen Sie alle Beispielaufgaben richtig.';
+    console.log('these are not the right answers');
+}
+},
+    false);
 document.getElementById("btnQuestionnaire").addEventListener("click", 
         function() {
             // TODO: save all Answers of Radio Buttons 
             var q1 = $('input[name=q1]:checked', '#frmQuestionnaire').val();
             // ... for ...; sendData()...;
-            
+
             // show next stage
             if($('#frmQuestionnaire1').valid()) {
                 document.getElementById('divQuestionnaire').style.display = 'None';
@@ -305,27 +306,27 @@ document.getElementById("btnInstructions2").addEventListener("click",
             document.getElementById('divInstructions2').style.display = 'None';
             // first two treatments are 2go
             if (choosenTreatment > 1) 
-                document.getElementById('divToDate').style.display = 'Inline';
+    document.getElementById('divToDate').style.display = 'Inline';
             else 
-                document.getElementById('divToGo').style.display = 'Inline';
+    document.getElementById('divToGo').style.display = 'Inline';
         },
         false);
 document.getElementById("btnToGo").addEventListener("click", 
         function() {
             document.getElementById('divToGo').style.display = 'None';
             if (choosenTreatment == 1 || choosenTreatment == 3) 
-                document.getElementById('divIntrinsic').style.display = 'Inline';
+    document.getElementById('divIntrinsic').style.display = 'Inline';
             else if(choosenTreatment == 0 || choosenTreatment == 2)
-                document.getElementById('divExtrinsic').style.display = 'Inline';
+    document.getElementById('divExtrinsic').style.display = 'Inline';
         },
         false);
 document.getElementById("btnToDate").addEventListener("click", 
         function() {
             document.getElementById('divToDate').style.display = 'None';
             if (choosenTreatment == 1 || choosenTreatment == 3) 
-                document.getElementById('divIntrinsic').style.display = 'Inline';
+    document.getElementById('divIntrinsic').style.display = 'Inline';
             else if(choosenTreatment == 0 || choosenTreatment == 2)
-                document.getElementById('divExtrinsic').style.display = 'Inline';
+    document.getElementById('divExtrinsic').style.display = 'Inline';
         },
         false);
 document.getElementById("btnIntrinsic").addEventListener("click", 
@@ -360,9 +361,9 @@ document.getElementById("btnExtrinsic").addEventListener("click",
                 document.getElementById('divPresentation3').style.display = 'Inline';
                 choosenCategory = 3;
             }
-                
-            console.log('Extrinsic choosenCategory: '.concat(choosenCategory));
-    
+
+console.log('Extrinsic choosenCategory: '.concat(choosenCategory));
+
         },
         false);
 document.getElementById("btnPresentation").addEventListener("click", 
@@ -422,7 +423,7 @@ function load_stimuli()
         $("#progress").attr("src","../images/2go"+trial_number+"Blocks.jpg");
     else if(choosenTreatment == 0 || choosenTreatment == 2)
         $("#progress").attr("src","../images/2date"+trial_number+"Blocks.jpg");
-    
+
     // TODO: save random_array for each trial
     // ...
 }
@@ -459,8 +460,8 @@ document.getElementById("btnExperiment").addEventListener("click",
             else {
                 // indicate how many anagrams are wrong
                 document.getElementById('txtBelowExperiment').style.display = 'inline';
-                document.getElementById('txtBelowExperiment').innerHTML = 'Bitte vervollständigen Sie alle Aufgaben richtig.'
-             console.log("input incorrect or still time left");
+                document.getElementById('txtBelowExperiment').innerHTML = 'Bitte vervollständigen Sie alle Aufgaben richtig.';
+                console.log("input incorrect or still time left");
             }
         },
         false);

@@ -1,782 +1,782 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="../style.css">
-	</head>
-	<body>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
 
 
-        <!-- Treatmentwahl -->
-        <div id='divTreatment' align = "center"
-            style="display: inline; margin-right:100px; margin-left:100px; margin-top:100px;">
-            <p id = 'txtAboveTreatment' style="display:inline text-align:center">Auswahl Kondition</p>
-            <div id = 'divTreatmentHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
-                <form id = "frmTreatment" style="display:inline;" method ="POST" action ="save_Demographic.php">
-                    <table>
-                        <tr>
-                            <td> <label for="rdTreatment">2goExt</label></td>
-                            <td><input type="radio" name="rdTreatment" value="0"></td>
-                        </tr>
-                        <tr>
-                            <td> <label for="rdTreatment">2goInt</label></td>
-                            <td><input type="radio" name="rdTreatment" value="1"></td>
-                        </tr>
-                        <tr>
-                            <td> <label for="rdTreatment">2dateExt</label></td>
-                            <td><input type="radio" name="rdTreatment" value="2"></td>
-                        </tr>
-                        <tr>
-                            <td> <label for="rdTreatment">2dateInt</label></td>
-                            <td><input type="radio" name="rdTreatment" value="3"></td>
-                        </tr>
-                    </table>
-                </form>
-            </div>
-            <p id = 'txtBelowTreatment'>
-            <button id = "btnTreatment">Weiter</button>
+<!-- Treatmentwahl -->
+<div id='divTreatment' align = "center"
+    style="display: inline; margin-right:100px; margin-left:100px; margin-top:100px;">
+    <p id = 'txtAboveTreatment' style="display:inline text-align:center">Auswahl Kondition</p>
+    <div id = 'divTreatmentHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
+        <form id = "frmTreatment" style="display:inline;" method ="POST" action ="save_Demographic.php">
+            <table>
+                <tr>
+                    <td> <label for="rdTreatment">2goExt</label></td>
+                    <td><input type="radio" name="rdTreatment" value="0"></td>
+                </tr>
+                <tr>
+                    <td> <label for="rdTreatment">2goInt</label></td>
+                    <td><input type="radio" name="rdTreatment" value="1"></td>
+                </tr>
+                <tr>
+                    <td> <label for="rdTreatment">2dateExt</label></td>
+                    <td><input type="radio" name="rdTreatment" value="2"></td>
+                </tr>
+                <tr>
+                    <td> <label for="rdTreatment">2dateInt</label></td>
+                    <td><input type="radio" name="rdTreatment" value="3"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <p id = 'txtBelowTreatment'>
+    <button id = "btnTreatment">Weiter</button>
+    </p>
+</div>
+<!-- Treatment ENDE -->
+
+<!-- Fragebogen -->
+<div id='divDemographic' align = "center" style="display:none; margin-right:100px; margin-left:100px; margin-top:50px;">
+    <p id = 'txtAboveDemographic'>Bitte beantworten Sie die folgenden Fragen zu Ihrer Person:</p>
+    <div id = 'divDemographicHolder' align = "left" style="width:80%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
+        <form id = "frmDemographic" style="display:inline;" method ="POST" action ="save_Demographic.php">
+            <table width="100%" >
+                <tr>
+                    <td width="70%">Alter: </td>
+                    <td width="30%"> <input id = "birthdayBox" type="text" name = "birthday"></td>
+                </tr>
+                <tr>
+                    <td>Höchste abgeschlossene Ausbildung: </td>
+                    <td>
+                        <select id="educationBox" name="education">
+                            <option value=optEdu1>Bitte auswählen</option>
+                            <option value=optEdu2>Volksschule/Grundschule</option>
+                            <option value=optEdu3>Hauptschule</option>
+                            <option value=optEdu4>Handelsschule/mittlere Reife</option>
+                            <option value=optEdu5>Lehre</option>
+                            <option value=optEdu6>Matura/Abitur</option>
+                            <option value=optEdu7>Diplomlehrgang</option>
+                            <option value=optEdu8>Fachhochschule</option>
+                            <option value=optEdu9>Universität: Bachelor</option>
+                            <option value=optEdu10>Universität: Diplom/Master/Magister</option>
+                            <option value=optEdu11>Universität: Dr./Ph.D. oder höher</option>
+                        </select>
+                    </td> 
+
+                </tr>
+                <tr>
+                    <td>Sind Sie derzeit Student oder haben Sie ein Studium abgeschlossen? (Auswahl Ja / Nein) </td>
+                    <td><select id = "studentBox" name = "student">
+                            <option>Bitte auswählen</option>                                 
+                            <option>Ja</option> 
+                            <option>Nein</option>
+                        </select>
+                    </td> 
+                </tr>
+                <tr>
+                    <td>Bitte geben Sie ihr Hauptstudienfach an: </td>
+                    <td><input id = "studyfieldBox" type="text" name = "studyfield"></td> 
+                </tr>
+                <tr>
+                    <td>Herkunftsland:</td>
+                    <td><input id = "countryBox" type="text" name = "country"></td>
+                </tr>
+                <tr>
+                    <td>Muttersprache: </td>
+                    <td> <input id = "mothertongueBox" type="text" name = "mothertongue"></td>
+                </tr>
+                <tr>
+                    <td>Wenn ihre Muttesprache nicht Deutsch ist, bitte geben Sie an wie viele Jahre Sie in einem deutsprachigen Land gelebt haben:</td>
+                    <td><input id = "germanyearsBox" name = "germanyears"></td>
+                </tr>
+                <tr>
+                    <td>Wurde bei Ihnen eine diagnostische Entwicklungsstörung der Sprache oder der schulischen Fertigkeiten diagnostiziert (z.B. Lese- Rechtschreibschwäche)?</td>
+                    <td><select id = "diagnostikBox" name = "diagnostik">
+                            <option>Bitte auswählen</option>                                 
+                            <option>Ja</option> 
+                            <option>Nein</option>
+                        </select>
+                    </td> 
+                </tr>
+            </table>
+        </form>
+    </div><br>
+    <button id = "btnEnde">Beende Experiment</button>
+</div>
+<!-- Fragebogen ENDE --> 
+
+
+<!-- Instruktionen -->
+<div id='divInstructions' align = "center"
+    style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
+    <p id = 'txtAboveInstructions' style="display:none">Welcome instructions</p>
+    <div id = 'divInstructionsHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px; ">
+        Herzlich willkommen zum Experiment!</br>
+        </br>
+        Bitte lesen Sie die nachstehenden Ausführungen gewissenhaft durch.</br>
+        Hier wird ihnen alles mitgeteilt, was Sie für die Teilnahme am Experiment wissen müssen.</br> 
+        Falls sie etwas nicht verstehen, melden Sie sich bitte. </br>
+        </br>
+        Die Teilnahme an dem Experiment ist anonym und freiwillig.</br> Alle Daten werden vertraulich behandelt.</br>
+    </div>
+    <p id = 'txtBelowInstructions'>
+    <button id = "btnInstructions">Weiter</button>
+    </p>
+</div>
+<!-- Instruktionen ENDE -->
+
+
+<!-- Beispiele -->
+<div id='divExamples' align = "center"
+    style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
+    <p id = 'txtAboveExamples' style="display:none">Kann wieder weg</p>
+    <div id = 'divExamplesHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
+        <p id = 'txtInExamples'>	
+        Das Experiment untersucht kognitive Aspekte bei der Bearbeitung von Worträtseln.</br></br>
+        Ihre Aufgabe ist es Buchstabenreihen zu sinnvollen Wörter umzustellen.</br>
+        Jeder Buchstabe wird dabei nur einmal verwendet. <br></br>
+
+        Hier finden Sie ein Beispiel:  SMESRE  -- MESSER <br></br>
+
+        Die Lösungen sind dabei immer Nomen im Singular und entstammen dem deutschen Duden.</br>
+        Namen sind nicht zulässig. Groß- oder Kleinschreibung spielt dabei keine Rolle.
+        </br>             
+        Bitte lösen Sie die  Beispiele auf der folgenden Seite, um sich mit der Aufgabe vertraut zu machen.<br><br>
+        </p>
+
+        <form id = "frmExamples" style="display:none;" action ="save_Questionnaire.php">
+            <p id = 'txtAboveExamples2'>    
+            Die Lösungen sind dabei immer Nomen im Singular und entstammen dem deutschen Duden.</br></br> 
+            Namen sind nicht zulässig. Groß- oder Kleinschreibung spielt keine Rolle.</br></br>
             </p>
-        </div>
-        <!-- Treatment ENDE -->
+            <table width="100%" >
+                <tr>
+                    <td width="20%">GTSA: </td> <td>  <input id = "exampleBox1" name = "example1"> </td>
+                </tr>
+                <tr>
+                    <td>TROB: </td> <td>  <input id = "exampleBox2" name = "example2"> </td>
+                </tr>
+                <tr>
+                    <td>BBEU: </td> <td>  <input id = "exampleBox3" name = "example3"> </td>
+                </tr>
+                <tr>
+                    <td>ILPZ: </td> <td>  <input id = "exampleBox4" name = "example4"> </td>
+                </tr>
+                <tr>
+                    <td>MMAK: </td> <td>  <input id = "exampleBox5" name = "example5"> </td>
+                </tr>
+                <tr>
+                    <td>SHUHC: </td> <td>  <input id = "exampleBox6" name = "example6"> </td>
+                </tr>
+                <tr>
+                    <td>EINEL: </td> <td>  <input id = "exampleBox7" name = "example7"> </td>
+                </tr>
+                <tr>
+                    <td>OHRN: </td> <td>  <input id = "exampleBox8" name = "example8"> </td>
+                </tr>
+                <tr>
+                    <td>IPKOE: </td> <td>  <input id = "exampleBox9" name = "example9"> </td>
+                </tr>
+                <tr>
+                    <td>ILSE: </td> <td>  <input id = "exampleBox10" name = "example10"> </td>
+                </tr>
+                <tr>
+                    <td>HRUAC: </td> <td>  <input id = "exampleBox11" name = "example11"> </td>
+                </tr>
+                <tr>
+                    <td>LBEEH: </td> <td>  <input id = "exampleBox12" name = "example12"> </td>
+                </tr>
+            </table>
+        </form>
 
-        <!-- Fragebogen -->
-        <div id='divDemographic' align = "center" style="display:none; margin-right:100px; margin-left:100px; margin-top:50px;">
-            <p id = 'txtAboveDemographic'>Bitte beantworten Sie die folgenden Fragen zu Ihrer Person:</p>
-            <div id = 'divDemographicHolder' align = "left" style="width:80%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
-                <form id = "frmDemographic" style="display:inline;" method ="POST" action ="save_Demographic.php">
-                    <table width="100%" >
-                        <tr>
-                            <td width="70%">Alter: </td>
-                            <td width="30%"> <input id = "birthdayBox" type="text" name = "birthday"></td>
-                        </tr>
-                        <tr>
-                            <td>Höchste abgeschlossene Ausbildung: </td>
-                            <td>
-                                <select id="educationBox" name="education">
-                                    <option value=optEdu1>Bitte auswählen</option>
-                                    <option value=optEdu2>Volksschule/Grundschule</option>
-                                    <option value=optEdu3>Hauptschule</option>
-                                    <option value=optEdu4>Handelsschule/mittlere Reife</option>
-                                    <option value=optEdu5>Lehre</option>
-                                    <option value=optEdu6>Matura/Abitur</option>
-                                    <option value=optEdu7>Diplomlehrgang</option>
-                                    <option value=optEdu8>Fachhochschule</option>
-                                    <option value=optEdu9>Universität: Bachelor</option>
-                                    <option value=optEdu10>Universität: Diplom/Master/Magister</option>
-                                    <option value=optEdu11>Universität: Dr./Ph.D. oder höher</option>
-                                </select>
-                            </td> 
+        <p id = 'txtBelowExamples' style="color:red; display:none"></br> </p>
 
-                        </tr>
-                        <tr>
-                            <td>Sind Sie derzeit Student oder haben Sie ein Studium abgeschlossen? (Auswahl Ja / Nein) </td>
-                            <td><select id = "studentBox" name = "student">
-                                    <option>Bitte auswählen</option>                                 
-                                    <option>Ja</option> 
-                                    <option>Nein</option>
-                                </select>
-                            </td> 
-                        </tr>
-                        <tr>
-                            <td>Bitte geben Sie ihr Hauptstudienfach an: </td>
-                            <td><input id = "studyfieldBox" type="text" name = "studyfield"></td> 
-                        </tr>
-                        <tr>
-                            <td>Herkunftsland:</td>
-                            <td><input id = "countryBox" type="text" name = "country"></td>
-                        </tr>
-                        <tr>
-                            <td>Muttersprache: </td>
-                            <td> <input id = "mothertongueBox" type="text" name = "mothertongue"></td>
-                        </tr>
-                        <tr>
-                            <td>Wenn ihre Muttesprache nicht Deutsch ist, bitte geben Sie an wie viele Jahre Sie in einem deutsprachigen Land gelebt haben:</td>
-                            <td><input id = "germanyearsBox" name = "germanyears"></td>
-                        </tr>
-                        <tr>
-                            <td>Wurde bei Ihnen eine diagnostische Entwicklungsstörung der Sprache oder der schulischen Fertigkeiten diagnostiziert (z.B. Lese- Rechtschreibschwäche)?</td>
-                            <td><select id = "diagnostikBox" name = "diagnostik">
-                                    <option>Bitte auswählen</option>                                 
-                                    <option>Ja</option> 
-                                    <option>Nein</option>
-                                </select>
-                            </td> 
-                        </tr>
-                    </table>
-                </form>
-            </div><br>
-            <button id = "btnEnde">Beende Experiment</button>
-        </div>
-        <!-- Fragebogen ENDE --> 
+    </div>
+    <button id = "btnExamples">Weiter</button>
+</div>
+<!-- Beispiele ENDE -->
 
-
-        <!-- Instruktionen -->
-        <div id='divInstructions' align = "center"
-            style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
-            <p id = 'txtAboveInstructions' style="display:none">Welcome instructions</p>
-            <div id = 'divInstructionsHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px; ">
-                Herzlich willkommen zum Experiment!</br>
-                </br>
-                Bitte lesen Sie die nachstehenden Ausführungen gewissenhaft durch.</br>
-                Hier wird ihnen alles mitgeteilt, was Sie für die Teilnahme am Experiment wissen müssen.</br> 
-                Falls sie etwas nicht verstehen, melden Sie sich bitte. </br>
-                </br>
-                Die Teilnahme an dem Experiment ist anonym und freiwillig.</br> Alle Daten werden vertraulich behandelt.</br>
-            </div>
-            <p id = 'txtBelowInstructions'>
-            <button id = "btnInstructions">Weiter</button>
-            </p>
-        </div>
-        <!-- Instruktionen ENDE -->
-
-
-		<!-- Beispiele -->
-		<div id='divExamples' align = "center"
-            style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
-            <p id = 'txtAboveExamples' style="display:none">Kann wieder weg</p>
-            <div id = 'divExamplesHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
-                <p id = 'txtInExamples'>	
-                Das Experiment untersucht kognitive Aspekte bei der Bearbeitung von Worträtseln.</br></br>
-                Ihre Aufgabe ist es Buchstabenreihen zu sinnvollen Wörter umzustellen.</br>
-                Jeder Buchstabe wird dabei nur einmal verwendet. <br></br>
-
-                Hier finden Sie ein Beispiel:  SMESRE  -- MESSER <br></br>
-
-                Die Lösungen sind dabei immer Nomen im Singular und entstammen dem deutschen Duden.</br>
-                Namen sind nicht zulässig. Groß- oder Kleinschreibung spielt dabei keine Rolle.
-                </br>             
-                Bitte lösen Sie die  Beispiele auf der folgenden Seite, um sich mit der Aufgabe vertraut zu machen.<br><br>
-                </p>
-
-                <form id = "frmExamples" style="display:none;" action ="save_Questionnaire.php">
-                    <p id = 'txtAboveExamples2'>    
-                    Die Lösungen sind dabei immer Nomen im Singular und entstammen dem deutschen Duden.</br></br> 
-                    Namen sind nicht zulässig. Groß- oder Kleinschreibung spielt keine Rolle.</br></br>
-                    </p>
-                    <table width="100%" >
-                        <tr>
-                            <td width="20%">GTSA: </td> <td>  <input id = "exampleBox1" name = "example1"> </td>
-                        </tr>
-                        <tr>
-                            <td>TROB: </td> <td>  <input id = "exampleBox2" name = "example2"> </td>
-                        </tr>
-                        <tr>
-                            <td>BBEU: </td> <td>  <input id = "exampleBox3" name = "example3"> </td>
-                        </tr>
-                        <tr>
-                            <td>ILPZ: </td> <td>  <input id = "exampleBox4" name = "example4"> </td>
-                        </tr>
-                        <tr>
-                            <td>MMAK: </td> <td>  <input id = "exampleBox5" name = "example5"> </td>
-                        </tr>
-                        <tr>
-                            <td>SHUHC: </td> <td>  <input id = "exampleBox6" name = "example6"> </td>
-                        </tr>
-                        <tr>
-                            <td>EINEL: </td> <td>  <input id = "exampleBox7" name = "example7"> </td>
-                        </tr>
-                        <tr>
-                            <td>OHRN: </td> <td>  <input id = "exampleBox8" name = "example8"> </td>
-                        </tr>
-                        <tr>
-                            <td>IPKOE: </td> <td>  <input id = "exampleBox9" name = "example9"> </td>
-                        </tr>
-                        <tr>
-                            <td>ILSE: </td> <td>  <input id = "exampleBox10" name = "example10"> </td>
-                        </tr>
-                        <tr>
-                            <td>HRUAC: </td> <td>  <input id = "exampleBox11" name = "example11"> </td>
-                        </tr>
-                        <tr>
-                            <td>LBEEH: </td> <td>  <input id = "exampleBox12" name = "example12"> </td>
-                        </tr>
-                    </table>
-                </form>
-
-                <p id = 'txtBelowExamples' style="color:red; display:none"></br> </p>
-
-            </div>
-            <button id = "btnExamples">Weiter</button>
-        </div>
-        <!-- Beispiele ENDE -->
-
-        <!-- Fragebogen 2 Seite 1 -->
-        <div id='divQuestionnaire' align = "center" style="display:none; margin-right:100px; margin-left:100px; margin-top:50px;">
-            <p id = 'txtAboveQuestionnaire'> </p>
-            <div id = 'divQuestionnaireHolder' align = "left" style="width:80%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
-                <p id = 'txtInQuestionnaire'>
-                Der nachfolgende Fragebogen besteht aus 22 Fragen, die sich auf die eben bearbeitete Aufgabe beziehen.</br></br>                		Beurteilen Sie bitte pro Aussage, wie sehr Sie persönlich dem darin angesprochenen Inhalt zustimmen.</br>
-                Dafür steht Ihnen eine siebenstufige Skala zur Verfügung.
-                Versuchen Sie einfach spontan und offen zu antworten.</br> 
-                </br>
-                </p>               
- <form id = "frmQuestionnaire1" style="display:inline;" method ="POST" action ="save_Questionnaire.php">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th style="width:48px"></th>
-                                <th style="width:48px">1 trifft überhaupt nicht zu</th>
-                                <th style="width:48px">2 </th>
-                                <th style="width:48px">3</th>
-                                <th style="width:48px">4 teils, teils</th>
-                                <th style="width:48px">5</th>
-                                <th style="width:48px">6</th>
-                                <th style="width:48px">7 trifft völlig zu</th>
-                            </tr>
-                        </thead>
-                        <tr align = "center">
-                            <th><p id='pQuest1'>Während dieser Tätigkeit habe ich darüber nachgedacht, wie sehr sie mir gefällt.</p></th>
-                            <td><input type="radio" name="q1" value="1"></td>
-                            <td><input type="radio" name="q1" value="2"></td>
-                            <td><input type="radio" name="q1" value="3"></td>
-                            <td><input type="radio" name="q1" value="4"></td>
-                            <td><input type="radio" name="q1" value="5"></td>
-                            <td><input type="radio" name="q1" value="6"></td>
-                            <td><input type="radio" name="q1" value="7"></td>
-                        </tr>
-                        <tr align = "center">
-                            <th>Ich habe mich während dieser Tätigkeit überhaupt nicht nervös gefühlt.</th>
-                            <td><input type="radio" name="q2" value="1"></td>
-                            <td><input type="radio" name="q2" value="2"></td>
-                            <td><input type="radio" name="q2" value="3"></td>
-                            <td><input type="radio" name="q2" value="4"></td>
-                            <td><input type="radio" name="q2" value="5"></td>
-                            <td><input type="radio" name="q2" value="6"></td>
-                            <td><input type="radio" name="q2" value="7"></td>
-                        </tr>
-                        <tr align = "center">
-                            <th>Ich glaube, dass ich eine Wahl hatte, diese Tätigkeit auszuüben.</th>
-                            <td><input type="radio" name="q3" value="1"></td>
-                            <td><input type="radio" name="q3" value="2"></td>
-                            <td><input type="radio" name="q3" value="3"></td>
-                            <td><input type="radio" name="q3" value="4"></td>
-                            <td><input type="radio" name="q3" value="5"></td>
-                            <td><input type="radio" name="q3" value="6"></td>
-                            <td><input type="radio" name="q3" value="7"></td>
-                        </tr>
-                        <tr align = "center">
-                            <th>Ich denke, ich bin ziemlich gut bei dieser Tätigkeit</th>
-                            <td><input type="radio" name="q4" value="1"></td>
-                            <td><input type="radio" name="q4" value="2"></td>
-                            <td><input type="radio" name="q4" value="3"></td>
-                            <td><input type="radio" name="q4" value="4"></td>
-                            <td><input type="radio" name="q4" value="5"></td>
-                            <td><input type="radio" name="q4" value="6"></td>
-                            <td><input type="radio" name="q4" value="7"></td>
-                        </tr>
-                        <tr align = "center">
-                            <th>Ich fand die Tätigkeit sehr interessant.</th>
-                            <td><input type="radio" name="q5" value="1"></td>
-                            <td><input type="radio" name="q5" value="2"></td>
-                            <td><input type="radio" name="q5" value="3"></td>
-                            <td><input type="radio" name="q5" value="4"></td>
-                            <td><input type="radio" name="q5" value="5"></td>
-                            <td><input type="radio" name="q5" value="6"></td>
-                            <td><input type="radio" name="q5" value="7"></td>
-                        </tr>
-                        <tr align = "center">
-                            <th>Ich fühlte mich während dieser Tätigkeit sehr angespannt.</th>
-                            <td><input type="radio" name="q6" value="1"></td>
-                            <td><input type="radio" name="q6" value="2"></td>
-                            <td><input type="radio" name="q6" value="3"></td>
-                            <td><input type="radio" name="q6" value="4"></td>
-                            <td><input type="radio" name="q6" value="5"></td>
-                            <td><input type="radio" name="q6" value="6"></td>
-                            <td><input type="radio" name="q6" value="7"></td>
-                        </tr>
-                        <tr align = "center">
-                            <th>Ich denke, verglichen mit anderen Studenten war ich ziemlich gut bei dieser Tätigkeit.</th>
-                            <td><input type="radio" name="q7" value="1"></td>
-                            <td><input type="radio" name="q7" value="2"></td>
-                            <td><input type="radio" name="q7" value="3"></td>
-                            <td><input type="radio" name="q7" value="4"></td>
-                            <td><input type="radio" name="q7" value="5"></td>
-                            <td><input type="radio" name="q7" value="6"></td>
-                            <td><input type="radio" name="q7" value="7"></td>
-                        </tr>
-                    </table>
-			<p id = 'txtBelowQuestionnaire1' style="color: red"> </p>
-                </form>
-			</div><br>
-			<button id = "btnQuestionnaire">Weiter</button>
-		</div>
-        <!-- Fragebogen ENDE --> 
+<!-- Fragebogen 2 Seite 1 -->
+<div id='divQuestionnaire' align = "center" style="display:none; margin-right:100px; margin-left:100px; margin-top:50px;">
+    <p id = 'txtAboveQuestionnaire'> </p>
+    <div id = 'divQuestionnaireHolder' align = "left" style="width:80%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
+        <p id = 'txtInQuestionnaire'>
+        Der nachfolgende Fragebogen besteht aus 22 Fragen, die sich auf die eben bearbeitete Aufgabe beziehen.</br></br>                		Beurteilen Sie bitte pro Aussage, wie sehr Sie persönlich dem darin angesprochenen Inhalt zustimmen.</br>
+        Dafür steht Ihnen eine siebenstufige Skala zur Verfügung.
+        Versuchen Sie einfach spontan und offen zu antworten.</br> 
+        </br>
+        </p>               
+        <form id = "frmQuestionnaire1" style="display:inline;" method ="POST" action ="save_Questionnaire.php">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width:48px"></th>
+                        <th style="width:48px">1 trifft überhaupt nicht zu</th>
+                        <th style="width:48px">2 </th>
+                        <th style="width:48px">3</th>
+                        <th style="width:48px">4 teils, teils</th>
+                        <th style="width:48px">5</th>
+                        <th style="width:48px">6</th>
+                        <th style="width:48px">7 trifft völlig zu</th>
+                    </tr>
+                </thead>
+                <tr align = "center">
+                    <th><p id='pQuest1'>Während dieser Tätigkeit habe ich darüber nachgedacht, wie sehr sie mir gefällt.</p></th>
+                    <td><input type="radio" name="q1" value="1"></td>
+                    <td><input type="radio" name="q1" value="2"></td>
+                    <td><input type="radio" name="q1" value="3"></td>
+                    <td><input type="radio" name="q1" value="4"></td>
+                    <td><input type="radio" name="q1" value="5"></td>
+                    <td><input type="radio" name="q1" value="6"></td>
+                    <td><input type="radio" name="q1" value="7"></td>
+                </tr>
+                <tr align = "center">
+                    <th>Ich habe mich während dieser Tätigkeit überhaupt nicht nervös gefühlt.</th>
+                    <td><input type="radio" name="q2" value="1"></td>
+                    <td><input type="radio" name="q2" value="2"></td>
+                    <td><input type="radio" name="q2" value="3"></td>
+                    <td><input type="radio" name="q2" value="4"></td>
+                    <td><input type="radio" name="q2" value="5"></td>
+                    <td><input type="radio" name="q2" value="6"></td>
+                    <td><input type="radio" name="q2" value="7"></td>
+                </tr>
+                <tr align = "center">
+                    <th>Ich glaube, dass ich eine Wahl hatte, diese Tätigkeit auszuüben.</th>
+                    <td><input type="radio" name="q3" value="1"></td>
+                    <td><input type="radio" name="q3" value="2"></td>
+                    <td><input type="radio" name="q3" value="3"></td>
+                    <td><input type="radio" name="q3" value="4"></td>
+                    <td><input type="radio" name="q3" value="5"></td>
+                    <td><input type="radio" name="q3" value="6"></td>
+                    <td><input type="radio" name="q3" value="7"></td>
+                </tr>
+                <tr align = "center">
+                    <th>Ich denke, ich bin ziemlich gut bei dieser Tätigkeit</th>
+                    <td><input type="radio" name="q4" value="1"></td>
+                    <td><input type="radio" name="q4" value="2"></td>
+                    <td><input type="radio" name="q4" value="3"></td>
+                    <td><input type="radio" name="q4" value="4"></td>
+                    <td><input type="radio" name="q4" value="5"></td>
+                    <td><input type="radio" name="q4" value="6"></td>
+                    <td><input type="radio" name="q4" value="7"></td>
+                </tr>
+                <tr align = "center">
+                    <th>Ich fand die Tätigkeit sehr interessant.</th>
+                    <td><input type="radio" name="q5" value="1"></td>
+                    <td><input type="radio" name="q5" value="2"></td>
+                    <td><input type="radio" name="q5" value="3"></td>
+                    <td><input type="radio" name="q5" value="4"></td>
+                    <td><input type="radio" name="q5" value="5"></td>
+                    <td><input type="radio" name="q5" value="6"></td>
+                    <td><input type="radio" name="q5" value="7"></td>
+                </tr>
+                <tr align = "center">
+                    <th>Ich fühlte mich während dieser Tätigkeit sehr angespannt.</th>
+                    <td><input type="radio" name="q6" value="1"></td>
+                    <td><input type="radio" name="q6" value="2"></td>
+                    <td><input type="radio" name="q6" value="3"></td>
+                    <td><input type="radio" name="q6" value="4"></td>
+                    <td><input type="radio" name="q6" value="5"></td>
+                    <td><input type="radio" name="q6" value="6"></td>
+                    <td><input type="radio" name="q6" value="7"></td>
+                </tr>
+                <tr align = "center">
+                    <th>Ich denke, verglichen mit anderen Studenten war ich ziemlich gut bei dieser Tätigkeit.</th>
+                    <td><input type="radio" name="q7" value="1"></td>
+                    <td><input type="radio" name="q7" value="2"></td>
+                    <td><input type="radio" name="q7" value="3"></td>
+                    <td><input type="radio" name="q7" value="4"></td>
+                    <td><input type="radio" name="q7" value="5"></td>
+                    <td><input type="radio" name="q7" value="6"></td>
+                    <td><input type="radio" name="q7" value="7"></td>
+                </tr>
+            </table>
+            <p id = 'txtBelowQuestionnaire1' style="color: red"> </p>
+        </form>
+    </div><br>
+    <button id = "btnQuestionnaire">Weiter</button>
+</div>
+<!-- Fragebogen ENDE --> 
 
 <!-- Es können ruhig 2-3 Seiten zusammengefasst werden--> 
 
 
-		<!-- Fragebogen 2 Seite 2--> 
-		<div id='divQuestionnaire2' align = "center" style="display:none; margin-right:100px; margin-left:100px; margin-top:50px;">
-			<div id = 'divQuestionnaireHolder2' align = "left" style="width:80%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
-			<p id = 'txtInQuestionnaire2'>
-		Der nachfolgende Fragebogen besteht aus 22 Fragen, die sich auf die eben bearbeitete Aufgabe beziehen.</br></br>                		Beurteilen Sie bitte pro Aussage, wie sehr Sie persönlich dem darin angesprochenen Inhalt zustimmen.</br>
-		Dafür steht Ihnen eine siebenstufige Skala zur Verfügung.
-		Versuchen Sie einfach spontan und offen zu antworten.</br> 
-		</br>
-                	</p> <form id = 'frmQuestionnaire2' style="display:inline;" method ="POST" action ="save_Questionnaire.php">
-                    <table>
-                        <thead>
-                           <tr>
-                                <th style="width:48px"></th>
-                                <th style="width:48px">1 trifft überhaupt nicht zu</th>
-                                <th style="width:48px">2 </th>
-                                <th style="width:48px">3</th>
-                                <th style="width:48px">4 teils, teils</th>
-                                <th style="width:48px">5</th>
-                                <th style="width:48px">6</th>
-                                <th style="width:48px">7 trifft völlig zu</th>
-                            </tr>
-                        </thead>
-                        <tr align = "center">
-                            <th>Diese Tätigkeit hat Spaß gemacht.</th>
-                            <td><input type="radio" name="q1" value="1"></td>
-                            <td><input type="radio" name="q1" value="2"></td>
-                            <td><input type="radio" name="q1" value="3"></td>
-                            <td><input type="radio" name="q1" value="4"></td>
-                            <td><input type="radio" name="q1" value="5"></td>
-                            <td><input type="radio" name="q1" value="6"></td>
-                            <td><input type="radio" name="q1" value="7"></td>
-                        </tr>
-                        <tr align = "center">
-                            <th>Ich war bei dieser Tätigkeit sehr entspannt. </th>
-                            <td><input type="radio" name="q2" value="1"></td>
-                            <td><input type="radio" name="q2" value="2"></td>
-                            <td><input type="radio" name="q2" value="3"></td>
-                            <td><input type="radio" name="q2" value="4"></td>
-                            <td><input type="radio" name="q2" value="5"></td>
-                            <td><input type="radio" name="q2" value="6"></td>
-                            <td><input type="radio" name="q2" value="7"></td>
-                        </tr>
-                        <tr align = "center">
-                            <th>Mir gefiel die Ausübung dieser Tätigkeit sehr gut.</th>
-                            <td><input type="radio" name="q3" value="1"></td>
-                            <td><input type="radio" name="q3" value="2"></td>
-                            <td><input type="radio" name="q3" value="3"></td>
-                            <td><input type="radio" name="q3" value="4"></td>
-                            <td><input type="radio" name="q3" value="5"></td>
-                            <td><input type="radio" name="q3" value="6"></td>
-                            <td><input type="radio" name="q3" value="7"></td>
-                        </tr>
-                        <tr align = "center">
-                            <th>Ich war nicht wirklich frei in der Wahl, diese Aufgabe zu bearbeiten.</th>
-                            <td><input type="radio" name="q4" value="1"></td>
-                            <td><input type="radio" name="q4" value="2"></td>
-                            <td><input type="radio" name="q4" value="3"></td>
-                            <td><input type="radio" name="q4" value="4"></td>
-                            <td><input type="radio" name="q4" value="5"></td>
-                            <td><input type="radio" name="q4" value="6"></td>
-                            <td><input type="radio" name="q4" value="7"></td>
-                        </tr>
-                        <tr align = "center">
-                            <th>Ich bin mit meiner Leistung bei dieser Aufgabe zufrieden.</th>
-                            <td><input type="radio" name="q5" value="1"></td>
-                            <td><input type="radio" name="q5" value="2"></td>
-                            <td><input type="radio" name="q5" value="3"></td>
-                            <td><input type="radio" name="q5" value="4"></td>
-                            <td><input type="radio" name="q5" value="5"></td>
-                            <td><input type="radio" name="q5" value="6"></td>
-                            <td><input type="radio" name="q5" value="7"></td>
-                        </tr>
-                        <tr align = "center">
-                            <th>Ich war ängstlich, während ich an dieser Aufgabe gearbeitet habe.</th>
-                            <td><input type="radio" name="q6" value="1"></td>
-                            <td><input type="radio" name="q6" value="2"></td>
-                            <td><input type="radio" name="q6" value="3"></td>
-                            <td><input type="radio" name="q6" value="4"></td>
-                            <td><input type="radio" name="q6" value="5"></td>
-                            <td><input type="radio" name="q6" value="6"></td>
-                            <td><input type="radio" name="q6" value="7"></td>
-                        </tr>
-                        <tr align = "center">
-                            <th>Ich empfand diese Tätigkeit als langweilig.</th>
-                            <td><input type="radio" name="q7" value="1"></td>
-                            <td><input type="radio" name="q7" value="2"></td>
-                            <td><input type="radio" name="q7" value="3"></td>
-                            <td><input type="radio" name="q7" value="4"></td>
-                            <td><input type="radio" name="q7" value="5"></td>
-                            <td><input type="radio" name="q7" value="6"></td>
-                            <td><input type="radio" name="q7" value="7"></td>
-                        </tr>
-                    </table>
-                    <p id = 'txtBelowQuestionnaire2' style="color: red"> </p>
-                </form>
-        		</div><br>
-			<button id = "btnQuestionnaire2">Weiter</button>
-		</div>
-        <!-- Fragebogen 2 Seite 2 ENDE -->
+<!-- Fragebogen 2 Seite 2--> 
+<div id='divQuestionnaire2' align = "center" style="display:none; margin-right:100px; margin-left:100px; margin-top:50px;">
+    <div id = 'divQuestionnaireHolder2' align = "left" style="width:80%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
+        <p id = 'txtInQuestionnaire2'>
+        Der nachfolgende Fragebogen besteht aus 22 Fragen, die sich auf die eben bearbeitete Aufgabe beziehen.</br></br>                		Beurteilen Sie bitte pro Aussage, wie sehr Sie persönlich dem darin angesprochenen Inhalt zustimmen.</br>
+        Dafür steht Ihnen eine siebenstufige Skala zur Verfügung.
+        Versuchen Sie einfach spontan und offen zu antworten.</br> 
+        </br>
+        </p> <form id = 'frmQuestionnaire2' style="display:inline;" method ="POST" action ="save_Questionnaire.php">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width:48px"></th>
+                        <th style="width:48px">1 trifft überhaupt nicht zu</th>
+                        <th style="width:48px">2 </th>
+                        <th style="width:48px">3</th>
+                        <th style="width:48px">4 teils, teils</th>
+                        <th style="width:48px">5</th>
+                        <th style="width:48px">6</th>
+                        <th style="width:48px">7 trifft völlig zu</th>
+                    </tr>
+                </thead>
+                <tr align = "center">
+                    <th>Diese Tätigkeit hat Spaß gemacht.</th>
+                    <td><input type="radio" name="q1" value="1"></td>
+                    <td><input type="radio" name="q1" value="2"></td>
+                    <td><input type="radio" name="q1" value="3"></td>
+                    <td><input type="radio" name="q1" value="4"></td>
+                    <td><input type="radio" name="q1" value="5"></td>
+                    <td><input type="radio" name="q1" value="6"></td>
+                    <td><input type="radio" name="q1" value="7"></td>
+                </tr>
+                <tr align = "center">
+                    <th>Ich war bei dieser Tätigkeit sehr entspannt. </th>
+                    <td><input type="radio" name="q2" value="1"></td>
+                    <td><input type="radio" name="q2" value="2"></td>
+                    <td><input type="radio" name="q2" value="3"></td>
+                    <td><input type="radio" name="q2" value="4"></td>
+                    <td><input type="radio" name="q2" value="5"></td>
+                    <td><input type="radio" name="q2" value="6"></td>
+                    <td><input type="radio" name="q2" value="7"></td>
+                </tr>
+                <tr align = "center">
+                    <th>Mir gefiel die Ausübung dieser Tätigkeit sehr gut.</th>
+                    <td><input type="radio" name="q3" value="1"></td>
+                    <td><input type="radio" name="q3" value="2"></td>
+                    <td><input type="radio" name="q3" value="3"></td>
+                    <td><input type="radio" name="q3" value="4"></td>
+                    <td><input type="radio" name="q3" value="5"></td>
+                    <td><input type="radio" name="q3" value="6"></td>
+                    <td><input type="radio" name="q3" value="7"></td>
+                </tr>
+                <tr align = "center">
+                    <th>Ich war nicht wirklich frei in der Wahl, diese Aufgabe zu bearbeiten.</th>
+                    <td><input type="radio" name="q4" value="1"></td>
+                    <td><input type="radio" name="q4" value="2"></td>
+                    <td><input type="radio" name="q4" value="3"></td>
+                    <td><input type="radio" name="q4" value="4"></td>
+                    <td><input type="radio" name="q4" value="5"></td>
+                    <td><input type="radio" name="q4" value="6"></td>
+                    <td><input type="radio" name="q4" value="7"></td>
+                </tr>
+                <tr align = "center">
+                    <th>Ich bin mit meiner Leistung bei dieser Aufgabe zufrieden.</th>
+                    <td><input type="radio" name="q5" value="1"></td>
+                    <td><input type="radio" name="q5" value="2"></td>
+                    <td><input type="radio" name="q5" value="3"></td>
+                    <td><input type="radio" name="q5" value="4"></td>
+                    <td><input type="radio" name="q5" value="5"></td>
+                    <td><input type="radio" name="q5" value="6"></td>
+                    <td><input type="radio" name="q5" value="7"></td>
+                </tr>
+                <tr align = "center">
+                    <th>Ich war ängstlich, während ich an dieser Aufgabe gearbeitet habe.</th>
+                    <td><input type="radio" name="q6" value="1"></td>
+                    <td><input type="radio" name="q6" value="2"></td>
+                    <td><input type="radio" name="q6" value="3"></td>
+                    <td><input type="radio" name="q6" value="4"></td>
+                    <td><input type="radio" name="q6" value="5"></td>
+                    <td><input type="radio" name="q6" value="6"></td>
+                    <td><input type="radio" name="q6" value="7"></td>
+                </tr>
+                <tr align = "center">
+                    <th>Ich empfand diese Tätigkeit als langweilig.</th>
+                    <td><input type="radio" name="q7" value="1"></td>
+                    <td><input type="radio" name="q7" value="2"></td>
+                    <td><input type="radio" name="q7" value="3"></td>
+                    <td><input type="radio" name="q7" value="4"></td>
+                    <td><input type="radio" name="q7" value="5"></td>
+                    <td><input type="radio" name="q7" value="6"></td>
+                    <td><input type="radio" name="q7" value="7"></td>
+                </tr>
+            </table>
+            <p id = 'txtBelowQuestionnaire2' style="color: red"> </p>
+        </form>
+    </div><br>
+    <button id = "btnQuestionnaire2">Weiter</button>
+</div>
+<!-- Fragebogen 2 Seite 2 ENDE -->
 
-        <!-- Fragebogen 2 Seite 3 -->
-		<div id='divQuestionnaire3' align = "center" style="display:none; margin-right:100px; margin-left:100px; margin-top:50px;">
-			<div id = 'divQuestionnaireHolder3' align = "left" style="width:80%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
-		<p id = 'txtInQuestionnaire3'>
-		Der nachfolgende Fragebogen besteht aus 22 Fragen, die sich auf die eben bearbeitete Aufgabe beziehen.</br></br>                		Beurteilen Sie bitte pro Aussage, wie sehr Sie persönlich dem darin angesprochenen Inhalt zustimmen.</br>
-		Dafür steht Ihnen eine siebenstufige Skala zur Verfügung.
-		Versuchen Sie einfach spontan und offen zu antworten.</br> 
-		</br>
-                	</p>                 
-				<form id = "frmQuestionnaire3" style="display:inline;" method ="POST" action ="save_Questionnaire.php">
-                    <table>
-                        <thead>
-                           <tr>
-                                <th style="width:48px"></th>
-                                <th style="width:48px">1 trifft überhaupt nicht zu</th>
-                                <th style="width:48px">2 </th>
-                                <th style="width:48px">3</th>
-                                <th style="width:48px">4 teils, teils</th>
-                                <th style="width:48px">5</th>
-                                <th style="width:48px">6</th>
-                                <th style="width:48px">7 trifft völlig zu</th>
-                            </tr>
-                        </thead>
-                        <tr align = "center">
-                            <th>Ich empfand als würde ich tun was ich wollte, während ich die Aufgaben bearbeitete</th>
-                            <td><input type="radio" name="q1" value="1"></td>
-                            <td><input type="radio" name="q1" value="2"></td>
-                            <td><input type="radio" name="q1" value="3"></td>
-                            <td><input type="radio" name="q1" value="4"></td>
-                            <td><input type="radio" name="q1" value="5"></td>
-                            <td><input type="radio" name="q1" value="6"></td>
-                            <td><input type="radio" name="q1" value="7"></td>
-                        </tr>
-                        <tr align = "center">
-                            <th>Ich war recht geschickt bei dieser Tätigkeit.</th>
-                            <td><input type="radio" name="q2" value="1"></td>
-                            <td><input type="radio" name="q2" value="2"></td>
-                            <td><input type="radio" name="q2" value="3"></td>
-                            <td><input type="radio" name="q2" value="4"></td>
-                            <td><input type="radio" name="q2" value="5"></td>
-                            <td><input type="radio" name="q2" value="6"></td>
-                            <td><input type="radio" name="q2" value="7"></td>
-                        </tr>
-                        <tr align = "center">
-                            <th>Ich dachte, dass die Tätigkeit sehr interessant ist.</th>
-                            <td><input type="radio" name="q3" value="1"></td>
-                            <td><input type="radio" name="q3" value="2"></td>
-                            <td><input type="radio" name="q3" value="3"></td>
-                            <td><input type="radio" name="q3" value="4"></td>
-                            <td><input type="radio" name="q3" value="5"></td>
-                            <td><input type="radio" name="q3" value="6"></td>
-                            <td><input type="radio" name="q3" value="7"></td>
-                        </tr>
-                        <tr align = "center">
-                            <th>Ich fühlte mich während dieser Tätigkeit unter Druck.</th>
-                            <td><input type="radio" name="q4" value="1"></td>
-                            <td><input type="radio" name="q4" value="2"></td>
-                            <td><input type="radio" name="q4" value="3"></td>
-                            <td><input type="radio" name="q4" value="4"></td>
-                            <td><input type="radio" name="q4" value="5"></td>
-                            <td><input type="radio" name="q4" value="6"></td>
-                            <td><input type="radio" name="q4" value="7"></td>
-                        </tr>
-                        <tr align = "center">
-                            <th>Ich hatte das Gefühl, dass ich die Aufgabe tun musste.</th>
-                            <td><input type="radio" name="q5" value="1"></td>
-                            <td><input type="radio" name="q5" value="2"></td>
-                            <td><input type="radio" name="q5" value="3"></td>
-                            <td><input type="radio" name="q5" value="4"></td>
-                            <td><input type="radio" name="q5" value="5"></td>
-                            <td><input type="radio" name="q5" value="6"></td>
-                            <td><input type="radio" name="q5" value="7"></td>
-                        </tr>
-                        <tr align = "center">
-                            <th>Ich würde diese Tätigkeit also recht unterhaltsam beschreiben.</th>
-                            <td><input type="radio" name="q6" value="1"></td>
-                            <td><input type="radio" name="q6" value="2"></td>
-                            <td><input type="radio" name="q6" value="3"></td>
-                            <td><input type="radio" name="q6" value="4"></td>
-                            <td><input type="radio" name="q6" value="5"></td>
-                            <td><input type="radio" name="q6" value="6"></td>
-                            <td><input type="radio" name="q6" value="7"></td>
-                        </tr>
-                        <tr align = "center">
-                            <th>Ich übte die Tätigkeit aus, weil ich keine Wahl hatte.</th>
-                            <td><input type="radio" name="q7" value="1"></td>
-                            <td><input type="radio" name="q7" value="2"></td>
-                            <td><input type="radio" name="q7" value="3"></td>
-                            <td><input type="radio" name="q7" value="4"></td>
-                            <td><input type="radio" name="q7" value="5"></td>
-                            <td><input type="radio" name="q7" value="6"></td>
-                            <td><input type="radio" name="q7" value="7"></td>
-                        </tr>
-                        <tr align = "center">
-                            <th>Nach längerer Beschäftigung mit dieser Tätigkeit fühlte ich mich ziemlich kompetent.</th>
-                            <td><input type="radio" name="q8" value="1"></td>
-                            <td><input type="radio" name="q8" value="2"></td>
-                            <td><input type="radio" name="q8" value="3"></td>
-                            <td><input type="radio" name="q8" value="4"></td>
-                            <td><input type="radio" name="q8" value="5"></td>
-                            <td><input type="radio" name="q8" value="6"></td>
-                            <td><input type="radio" name="q8" value="7"></td>
-                        </tr>
-                    </table>
-                    <p id = 'txtBelowQuestionnaire3' style="color: red"> </p>
-                </form>
-			</div><br>
-			<button id = "btnQuestionnaire3">Weiter</button>
-		</div>
-        <!-- Fragebogen ENDE --> 
-
-
-		<!-- Weitere Instruktionen 2-->
-        <div id='divInstructions2' align = "center"
-            style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
-            <p id = 'txtAboveInstructions2' style="display:none">Welcome instructions2</p>
-            <div id = 'divInstructionsHolder2' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
-
-                Nun beginnt der Hauptteil des Experiments.</br>
-                Ihre Aufgabe wird es sein alle Worträtsel in möglichst kurzer Zeit zu lösen.</br></br> 
-                Insgesamt werden Ihnen 9 Seiten mit jeweils 8 Rätseln vorgegeben.</br>
-                Die Zeit wird dabei für jede Seite einzeln gemessen.</br></br>
-                Sie können mit der Bearbeitung nur fortfahren, wenn Sie alle Aufgaben einer Seite gelöst haben.</br>
-                Sollten Sie einmal keine Lösung für ein Rätsel finden, wird Ihnen nach einiger Zeit angeboten mit der nächsten Seite fortzufahren.
-            </div>
-            <p id = 'txtBelowInstructions2'>
-            <button id = "btnInstructions2">Weiter</button>
-            </p>
-        </div>
-        <!-- Weitere Instruktionen 2 ENDE -->
+<!-- Fragebogen 2 Seite 3 -->
+<div id='divQuestionnaire3' align = "center" style="display:none; margin-right:100px; margin-left:100px; margin-top:50px;">
+    <div id = 'divQuestionnaireHolder3' align = "left" style="width:80%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
+        <p id = 'txtInQuestionnaire3'>
+        Der nachfolgende Fragebogen besteht aus 22 Fragen, die sich auf die eben bearbeitete Aufgabe beziehen.</br></br>                		Beurteilen Sie bitte pro Aussage, wie sehr Sie persönlich dem darin angesprochenen Inhalt zustimmen.</br>
+        Dafür steht Ihnen eine siebenstufige Skala zur Verfügung.
+        Versuchen Sie einfach spontan und offen zu antworten.</br> 
+        </br>
+        </p>                 
+        <form id = "frmQuestionnaire3" style="display:inline;" method ="POST" action ="save_Questionnaire.php">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width:48px"></th>
+                        <th style="width:48px">1 trifft überhaupt nicht zu</th>
+                        <th style="width:48px">2 </th>
+                        <th style="width:48px">3</th>
+                        <th style="width:48px">4 teils, teils</th>
+                        <th style="width:48px">5</th>
+                        <th style="width:48px">6</th>
+                        <th style="width:48px">7 trifft völlig zu</th>
+                    </tr>
+                </thead>
+                <tr align = "center">
+                    <th>Ich empfand als würde ich tun was ich wollte, während ich die Aufgaben bearbeitete</th>
+                    <td><input type="radio" name="q1" value="1"></td>
+                    <td><input type="radio" name="q1" value="2"></td>
+                    <td><input type="radio" name="q1" value="3"></td>
+                    <td><input type="radio" name="q1" value="4"></td>
+                    <td><input type="radio" name="q1" value="5"></td>
+                    <td><input type="radio" name="q1" value="6"></td>
+                    <td><input type="radio" name="q1" value="7"></td>
+                </tr>
+                <tr align = "center">
+                    <th>Ich war recht geschickt bei dieser Tätigkeit.</th>
+                    <td><input type="radio" name="q2" value="1"></td>
+                    <td><input type="radio" name="q2" value="2"></td>
+                    <td><input type="radio" name="q2" value="3"></td>
+                    <td><input type="radio" name="q2" value="4"></td>
+                    <td><input type="radio" name="q2" value="5"></td>
+                    <td><input type="radio" name="q2" value="6"></td>
+                    <td><input type="radio" name="q2" value="7"></td>
+                </tr>
+                <tr align = "center">
+                    <th>Ich dachte, dass die Tätigkeit sehr interessant ist.</th>
+                    <td><input type="radio" name="q3" value="1"></td>
+                    <td><input type="radio" name="q3" value="2"></td>
+                    <td><input type="radio" name="q3" value="3"></td>
+                    <td><input type="radio" name="q3" value="4"></td>
+                    <td><input type="radio" name="q3" value="5"></td>
+                    <td><input type="radio" name="q3" value="6"></td>
+                    <td><input type="radio" name="q3" value="7"></td>
+                </tr>
+                <tr align = "center">
+                    <th>Ich fühlte mich während dieser Tätigkeit unter Druck.</th>
+                    <td><input type="radio" name="q4" value="1"></td>
+                    <td><input type="radio" name="q4" value="2"></td>
+                    <td><input type="radio" name="q4" value="3"></td>
+                    <td><input type="radio" name="q4" value="4"></td>
+                    <td><input type="radio" name="q4" value="5"></td>
+                    <td><input type="radio" name="q4" value="6"></td>
+                    <td><input type="radio" name="q4" value="7"></td>
+                </tr>
+                <tr align = "center">
+                    <th>Ich hatte das Gefühl, dass ich die Aufgabe tun musste.</th>
+                    <td><input type="radio" name="q5" value="1"></td>
+                    <td><input type="radio" name="q5" value="2"></td>
+                    <td><input type="radio" name="q5" value="3"></td>
+                    <td><input type="radio" name="q5" value="4"></td>
+                    <td><input type="radio" name="q5" value="5"></td>
+                    <td><input type="radio" name="q5" value="6"></td>
+                    <td><input type="radio" name="q5" value="7"></td>
+                </tr>
+                <tr align = "center">
+                    <th>Ich würde diese Tätigkeit also recht unterhaltsam beschreiben.</th>
+                    <td><input type="radio" name="q6" value="1"></td>
+                    <td><input type="radio" name="q6" value="2"></td>
+                    <td><input type="radio" name="q6" value="3"></td>
+                    <td><input type="radio" name="q6" value="4"></td>
+                    <td><input type="radio" name="q6" value="5"></td>
+                    <td><input type="radio" name="q6" value="6"></td>
+                    <td><input type="radio" name="q6" value="7"></td>
+                </tr>
+                <tr align = "center">
+                    <th>Ich übte die Tätigkeit aus, weil ich keine Wahl hatte.</th>
+                    <td><input type="radio" name="q7" value="1"></td>
+                    <td><input type="radio" name="q7" value="2"></td>
+                    <td><input type="radio" name="q7" value="3"></td>
+                    <td><input type="radio" name="q7" value="4"></td>
+                    <td><input type="radio" name="q7" value="5"></td>
+                    <td><input type="radio" name="q7" value="6"></td>
+                    <td><input type="radio" name="q7" value="7"></td>
+                </tr>
+                <tr align = "center">
+                    <th>Nach längerer Beschäftigung mit dieser Tätigkeit fühlte ich mich ziemlich kompetent.</th>
+                    <td><input type="radio" name="q8" value="1"></td>
+                    <td><input type="radio" name="q8" value="2"></td>
+                    <td><input type="radio" name="q8" value="3"></td>
+                    <td><input type="radio" name="q8" value="4"></td>
+                    <td><input type="radio" name="q8" value="5"></td>
+                    <td><input type="radio" name="q8" value="6"></td>
+                    <td><input type="radio" name="q8" value="7"></td>
+                </tr>
+            </table>
+            <p id = 'txtBelowQuestionnaire3' style="color: red"> </p>
+        </form>
+    </div><br>
+    <button id = "btnQuestionnaire3">Weiter</button>
+</div>
+<!-- Fragebogen ENDE --> 
 
 
-		<!-- Intrinsisch -->
-        <div id='divIntrinsic' align = "center"
-            style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
-            <p id = 'txtAboveIntrinsic' style="display:none">Welcome Intrinsic</p>
-            <div id = 'divIntrinsicHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
-                Die Bearbeitung der Aufgaben soll dabei möglichst gut auf Ihre Interessen zugeschnitten sein.</br> 
-                Daher können Sie nun eine von drei Rätselkategorien wählen.</br>
-                Die Worträtsel werden alle diesem Oberthema zuzuordnen sein.</br></br></br>
-                Bitte wählen Sie eine der Kategorien aus:</br></br>
-                <form id = "frmIntrinsic" style="display:inline;" method ="POST" action ="save_Demographic.php">
-                    <table>
-                        <tr> <td><input type="radio" name="rdIntrinsic" value="1">1. Menschen und ihre Umgebung</td></tr>
-                        <tr><td><input type="radio" name="rdIntrinsic" value="2">2. Natur und Tiere</td></tr>
-                        <tr><td><input type="radio" name="rdIntrinsic" value="3">3. Technik und Gebrauchsgegenstände</td></tr>
-                    </table>
-                    <p id = 'txtBelowIntrinsic' style="color:red"> </p>
-                </form>
-            </div>
-            <button id = "btnIntrinsic">Weiter</button>
-        </div>
-        <!-- Intrinsisch ENDE -->
+<!-- Weitere Instruktionen 2-->
+<div id='divInstructions2' align = "center"
+    style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
+    <p id = 'txtAboveInstructions2' style="display:none">Welcome instructions2</p>
+    <div id = 'divInstructionsHolder2' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
+
+        Nun beginnt der Hauptteil des Experiments.</br>
+        Ihre Aufgabe wird es sein alle Worträtsel in möglichst kurzer Zeit zu lösen.</br></br> 
+        Insgesamt werden Ihnen 9 Seiten mit jeweils 8 Rätseln vorgegeben.</br>
+        Die Zeit wird dabei für jede Seite einzeln gemessen.</br></br>
+        Sie können mit der Bearbeitung nur fortfahren, wenn Sie alle Aufgaben einer Seite gelöst haben.</br>
+        Sollten Sie einmal keine Lösung für ein Rätsel finden, wird Ihnen nach einiger Zeit angeboten mit der nächsten Seite fortzufahren.
+    </div>
+    <p id = 'txtBelowInstructions2'>
+    <button id = "btnInstructions2">Weiter</button>
+    </p>
+</div>
+<!-- Weitere Instruktionen 2 ENDE -->
 
 
-		<!-- Extrinsisch -->
-        <div id='divExtrinsic' align = "center"
-            style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
-            <p id = 'txtAboveExtrinsic' style="display:none">Welcome Extrinsic</p>
-            <div id = 'divExtrinsicHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
-                Es gibt drei verschiedene Worträtselkategorien. </br>Alle Rätsel werden diesem Oberthema zuzuordnen sein.</br>
-                Hier sehen Sie die möglichen Kategorien: </br></br>
-                1. Menschen und ihre Umgebung</br>
-                2. Natur und Tiere</br>
-                3. Technik und Gebrauchsgegenstände</br></br>
-                Der Computer wird Ihnen nun automatisch ein Thema zuweisen.
-            </div>
-            <p id = 'txtBelowExtrinsic' style="color:red"> </p>
-            <button id = "btnExtrinsic">Weiter</button>
-        </div>
-		<!-- Extrinsisch ENDE -->
+<!-- Intrinsisch -->
+<div id='divIntrinsic' align = "center"
+    style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
+    <p id = 'txtAboveIntrinsic' style="display:none">Welcome Intrinsic</p>
+    <div id = 'divIntrinsicHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
+        Die Bearbeitung der Aufgaben soll dabei möglichst gut auf Ihre Interessen zugeschnitten sein.</br> 
+        Daher können Sie nun eine von drei Rätselkategorien wählen.</br>
+        Die Worträtsel werden alle diesem Oberthema zuzuordnen sein.</br></br></br>
+        Bitte wählen Sie eine der Kategorien aus:</br></br>
+        <form id = "frmIntrinsic" style="display:inline;" method ="POST" action ="save_Demographic.php">
+            <table>
+                <tr> <td><input type="radio" name="rdIntrinsic" value="1">1. Menschen und ihre Umgebung</td></tr>
+                <tr><td><input type="radio" name="rdIntrinsic" value="2">2. Natur und Tiere</td></tr>
+                <tr><td><input type="radio" name="rdIntrinsic" value="3">3. Technik und Gebrauchsgegenstände</td></tr>
+            </table>
+            <p id = 'txtBelowIntrinsic' style="color:red"> </p>
+        </form>
+    </div>
+    <button id = "btnIntrinsic">Weiter</button>
+</div>
+<!-- Intrinsisch ENDE -->
 
 
-        <!-- Präsentation der Auswahl Menschen und ihre Umgebung -->
-        <div id='divPresentation' align = "center"
-            style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
-            <p id = 'txtAbovePresentation' style="display:none">Presentation of anagram task</p>
-            <div id = 'divPresentationHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
-                Ihnen wurde die Kategorie "Menschen und ihre Umwelt" zugewiesen.</br></br>
-                Unter diese Kategorie fallen:</br>
-                - Nahrungsmittel (z.B. Früchte)</br>
-                - Unterhaltung (z.B. Sportarten)</br>
-                - Bezeichnungen für Menschen (z.B. Tante, Onkel, etc.)</br>
-                - Elemente der Gesellschaft und Kultur (z.B. Finanzen, menschliche Tugenden)</br>
-                </br><br>
-                Der Hauptteil wird nun beginnen.</br>
-                Ihr Ziel ist es alle 9 Seiten so schnell wie möglich abzuschließen.</br></br>
-                Klicken Sie auf „weiter“ um mit der Bearbeitung zu beginnen.
-
-            </div>
-            <p id = 'txtBelowPresentation'>
-            <button id = "btnPresentation">Weiter</button>
-            </p>
-        </div>
-        <!-- Präsentation der Auswahl Menschen und ihre Umgebung ENDE -->
-
-        <!-- Präsentation der Auswahl Natur und Tiere-->
-        <div id='divPresentation2' align = "center"
-            style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
-            <p id = 'txtAbovePresentation2' style="display:none">Presentation of anagram task</p>
-            <div id = 'divPresentationHolder2' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
-                Ihnen wurde die Kategorie "Natur und Tiere" zugewiesen.</br></br>
-                Unter diese Kategorie fallen:</br>
-                - Tierarten</br>
-                - Pflanzen </br>
-                - natürliche Lebensmittel (z.B. Weizen)</br>
-                - natürliche Phänomene (z.B. Blitz)</br>
-                </br><br>
-                Der Hauptteil wird nun beginnen.</br>
-                Ihr Ziel ist es alle 9 Seiten so schnell wie möglich abzuschließen.</br></br>
-                Klicken Sie auf „weiter“ um mit der Bearbeitung zu beginnen.
-            </div>
-            <p id = 'txtBelowPresentation2'>
-            <button id = "btnPresentation2">Weiter</button>
-            </p>
-        </div>
-        <!-- Präsentation der Auswahl Natur und Tiere ENDE -->
-
-        <!-- Präsentation der Auswahl Technik und Gebrauchsgegenstände-->
-        <div id='divPresentation3' align = "center"
-            style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
-            <p id = 'txtAbovePresentation3' style="display:none">Presentation of anagram task</p>
-            <div id = 'divPresentationHolder3' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
-                This is your anagram task: TODO
-                </br><br>
-                Der Hauptteil wird nun beginnen.</br>
-                Ihr Ziel ist es alle 9 Seiten so schnell wie möglich abzuschließen.</br></br>
-                Klicken Sie auf „weiter“ um mit der Bearbeitung zu beginnen.
-            </div>
-            <p id = 'txtBelowPresentation3'>
-            <button id = "btnPresentation3">Weiter</button>
-            </p>
-        </div>
-        <!-- Präsentation der Auswahl Technik und Gebrauchsgegenstände ENDE -->
+<!-- Extrinsisch -->
+<div id='divExtrinsic' align = "center"
+    style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
+    <p id = 'txtAboveExtrinsic' style="display:none">Welcome Extrinsic</p>
+    <div id = 'divExtrinsicHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
+        Es gibt drei verschiedene Worträtselkategorien. </br>Alle Rätsel werden diesem Oberthema zuzuordnen sein.</br>
+        Hier sehen Sie die möglichen Kategorien: </br></br>
+        1. Menschen und ihre Umgebung</br>
+        2. Natur und Tiere</br>
+        3. Technik und Gebrauchsgegenstände</br></br>
+        Der Computer wird Ihnen nun automatisch ein Thema zuweisen.
+    </div>
+    <p id = 'txtBelowExtrinsic' style="color:red"> </p>
+    <button id = "btnExtrinsic">Weiter</button>
+</div>
+<!-- Extrinsisch ENDE -->
 
 
-        <!-- Presentation intrinsic -->
-        <div id='divPresentationIntrinsic' align = "center"
-            style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
-            <p id = 'txtAbovePresentationIntrinsic' style="display:none">Presentation of anagram task</p>
-            <div id = 'divPresentationHolderIntrinsic' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
-                This is your anagram task: TODO
-                </br><br>
-                Der Hauptteil wird nun beginnen.</br>
-                Ihr Ziel ist es alle 9 Seiten so schnell wie möglich abzuschließen.</br></br>
-                Klicken Sie auf „weiter“ um mit der Bearbeitung zu beginnen.
-            </div>
-            <p id = 'txtBelowPresentationIntrinsic'>
-            <button id = "btnPresentationIntrinsic">Weiter</button>
-            </p>
-        </div>
-        <!-- Presentation intrinsic -->
+<!-- Präsentation der Auswahl Menschen und ihre Umgebung -->
+<div id='divPresentation' align = "center"
+    style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
+    <p id = 'txtAbovePresentation' style="display:none">Presentation of anagram task</p>
+    <div id = 'divPresentationHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
+        Ihnen wurde die Kategorie "Menschen und ihre Umwelt" zugewiesen.</br></br>
+        Unter diese Kategorie fallen:</br>
+        - Nahrungsmittel (z.B. Früchte)</br>
+        - Unterhaltung (z.B. Sportarten)</br>
+        - Bezeichnungen für Menschen (z.B. Tante, Onkel, etc.)</br>
+        - Elemente der Gesellschaft und Kultur (z.B. Finanzen, menschliche Tugenden)</br>
+        </br><br>
+        Der Hauptteil wird nun beginnen.</br>
+        Ihr Ziel ist es alle 9 Seiten so schnell wie möglich abzuschließen.</br></br>
+        Klicken Sie auf „weiter“ um mit der Bearbeitung zu beginnen.
 
-        <!-- ToGo -->
-        <div id='divToGo' align = "center"
-            style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
-            <p id = 'txtAboveToGo' style="display:none">Welcome ToGo</p>
-            <div id = 'divToGoHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
-                Im weiteren Verlauf des Experiments wird Ihnen ein Balken im oberen Teil des Bildschirmes ihren Fortschritt anzeigen.
-                Er zeigt an, wie viele Seiten noch zu bearbeiten sind.<br></br>
-                Dieser Fortschrittsbalken zeigt an, dass Sie noch 7 Seiten bearbeiten müssen:<br><br>
-                <img src="../images/2go2Blocks.jpg" alt="Fortschrittsbalken" width="30%"> <br><br>
-                Hier ein Beispiel: Bitte geben Sie an, wie viele Seiten Sie noch bearbeiten müssen:
-                <br><br>
-                <img src="../images/2go5Blocks.jpg" alt="Fortschrittsbalken" width="30%"> <br><br>
-                "Ich habe noch <input id ="toGoInput" name = "toGoInput" size="1">  Seite(n) zu bearbeiten.“</br></br>
-                Ihre Aufgabe ist es nun alle 9 Seiten möglichst schnell zu bearbeiten.</br></br>
-                Klicken Sie auf „Starten“ um mit dem Experiment zu beginnen.</br><br>
-            </div>
-            <p id = 'txtBelowToGo'>
-            <button id = "btnToGo">Weiter</button>
-            </p>
-        </div>
-		<!-- ToGo ENDE -->
-        
-        
-        <!-- ToDate -->
-        <div id='divToDate' align = "center"
-            style="display:none; margin-right:100px; margin-left:100px; margin-top:100px;">
-            <p id = 'txtAboveToDate' style="display:none">Welcome ToDate</p>
-            <div id = 'divToDateHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
-                Ein Balken im oberen Teil des Bildschirmes wird ihren Fortschritt anzigen.
-                Er wird sie informieren, wie viele Seiten sie bereits abgeschlossen haben.<br>
-                Dieser Fortschrittsbalken zeigt an, dass sie bereits zwei Seiten abgeschlossen haben.<br><br>
-                <img src="../images/2date2Blocks.jpg" alt="Fortschrittsbalken" width="30%"> <br><br>
-                Hier ein Beispiel:
-                Bitte geben Sie an, wie viele Seiten sie auf Basis des unten angezeigten Balkens bereits abgeschlossen haben: <br><br>
-                <img src="../images/2date7Blocks.jpg" alt="Fortschrittsbalken" width="30%"> <br><br>
-                "Ich habe <input id ="toDateInput" name = "toDateInput" size="1"> Seite(n) abgeschlossen." 
-            </div>
-            <p id = 'txtBelowToDate'> </p>
-            <button id = "btnToDate">Weiter</button>
-        </div>
-        <!-- ToDate ENDE -->
+    </div>
+    <p id = 'txtBelowPresentation'>
+    <button id = "btnPresentation">Weiter</button>
+    </p>
+</div>
+<!-- Präsentation der Auswahl Menschen und ihre Umgebung ENDE -->
 
+<!-- Präsentation der Auswahl Natur und Tiere-->
+<div id='divPresentation2' align = "center"
+    style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
+    <p id = 'txtAbovePresentation2' style="display:none">Presentation of anagram task</p>
+    <div id = 'divPresentationHolder2' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
+        Ihnen wurde die Kategorie "Natur und Tiere" zugewiesen.</br></br>
+        Unter diese Kategorie fallen:</br>
+        - Tierarten</br>
+        - Pflanzen </br>
+        - natürliche Lebensmittel (z.B. Weizen)</br>
+        - natürliche Phänomene (z.B. Blitz)</br>
+        </br><br>
+        Der Hauptteil wird nun beginnen.</br>
+        Ihr Ziel ist es alle 9 Seiten so schnell wie möglich abzuschließen.</br></br>
+        Klicken Sie auf „weiter“ um mit der Bearbeitung zu beginnen.
+    </div>
+    <p id = 'txtBelowPresentation2'>
+    <button id = "btnPresentation2">Weiter</button>
+    </p>
+</div>
+<!-- Präsentation der Auswahl Natur und Tiere ENDE -->
 
-        <!-- Hier findet die ganze Magie statt. -->
-        <div id='divExperiment' align = "center"
-            style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
-            <div id = 'divExperimentHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
-                <p id = 'txtAboveExperiment' style="display:inline"><img src="../images/2date1Blocks.jpg" id="progress" alt="Fortschrittsbalken" width="30%"> </br> </p>
-
-                <form id = "frmExperiment" style="display:inline;" action ="save_Questionnaire.php">
-                    <table width="100%" >
-                        <tr>
-                            <td width="20%" id='tdexp0'>test </td> <td>  <input id = "expBox0" name = "exp0"> </td>
-                        </tr>
-                        <tr>
-                            <td id='tdexp1'>test </td> <td>  <input id = "expBox1" name = "exp1"> </td>
-                        </tr>
-                        <tr>
-                            <td id='tdexp2'>test </td> <td>  <input id = "expBox2" name = "exp2"> </td>
-                        </tr>
-                        <tr>
-                            <td id='tdexp3'>test </td> <td>  <input id = "expBox3" name = "exp3"> </td>
-                        </tr>
-                        <tr>
-                            <td id='tdexp4'>test </td> <td>  <input id = "expBox4" name = "exp4"> </td>
-                        </tr>
-                        <tr>
-                            <td id='tdexp5'>test </td> <td>  <input id = "expBox5" name = "exp5"> </td>
-                        </tr>
-                        <tr>
-                            <td id='tdexp6'>test </td> <td>  <input id = "expBox6" name = "exp6"> </td>
-                        </tr>
-                        <tr>
-                            <td id='tdexp7'>test </td> <td>  <input id = "expBox7" name = "exp7"> </td>
-                        </tr>
-                    </table>
-                </form>
-                <p id = 'txtBelowExperiment' style="color:red"> </p>
-
-            </div>
-            <button id = "btnExperiment">Weiter</button>
-        </div>
-        <!-- Magie aus -->
-
-        <!-- Manipulationscheck -->
-        <div id='divManipulation' align = "center"
-            style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
-            <p id = 'txtAboveManipulation' style="display:none">Manipulation</p>
-            <div id = 'divManipulationHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
-                <p id = 'txtManipulation' style="font-size:20px;">Im folgenden überprüfen wir, in wie weit Sie über ihren Fortschritt informiert sind.</br> Bitte markieren Sie die Kästchen, um ihren aktuellen Fortschritt anzugeben.</br> Dabei entspricht ein markiertes Kästchen einer vollständig bearbeiteten Seite.</p> 
-                <form id = "frmManipulation" style="display:inline;" method ="POST" action ="save_Demographic.php">
-                    <input type="checkbox" id="cbManipulation1" >
-                    <input type="checkbox" id="cbManipulation2" >
-                    <input type="checkbox" id="cbManipulation3" >
-                    <input type="checkbox" id="cbManipulation4" >
-                    <input type="checkbox" id="cbManipulation5" >
-                    <input type="checkbox" id="cbManipulation6" >
-                    <input type="checkbox" id="cbManipulation7" >
-                    <input type="checkbox" id="cbManipulation8" >
-                    <input type="checkbox" id="cbManipulation9" >
-                </form>
-            </div>
-            <p id = 'txtBelowManipulation'>
-            <button id = "btnManipulation">Weiter</button>
-            </p>
-        </div>
-        <!-- Magie aus -->
+<!-- Präsentation der Auswahl Technik und Gebrauchsgegenstände-->
+<div id='divPresentation3' align = "center"
+    style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
+    <p id = 'txtAbovePresentation3' style="display:none">Presentation of anagram task</p>
+    <div id = 'divPresentationHolder3' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
+        This is your anagram task: TODO
+        </br><br>
+        Der Hauptteil wird nun beginnen.</br>
+        Ihr Ziel ist es alle 9 Seiten so schnell wie möglich abzuschließen.</br></br>
+        Klicken Sie auf „weiter“ um mit der Bearbeitung zu beginnen.
+    </div>
+    <p id = 'txtBelowPresentation3'>
+    <button id = "btnPresentation3">Weiter</button>
+    </p>
+</div>
+<!-- Präsentation der Auswahl Technik und Gebrauchsgegenstände ENDE -->
 
 
-		<!-- This section appears after the last trial. -->
-		<div id="divDebrief" align = "center" style="display:None; margin-right:100px; margin-left:100px; margin-top:100px;">
-			<p>
-                Vielen Dank für Ihre Teilnahme!<br>
-                Bitte wenden Sie sich an den Versuchsleiter.
-			</p>	
-		</div>
-		
-        <div id="hidden_div" style = "display: none;">
-            <!-- 
+<!-- Presentation intrinsic -->
+<div id='divPresentationIntrinsic' align = "center"
+    style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
+    <p id = 'txtAbovePresentationIntrinsic' style="display:none">Presentation of anagram task</p>
+    <div id = 'divPresentationHolderIntrinsic' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
+        This is your anagram task: TODO
+        </br><br>
+        Der Hauptteil wird nun beginnen.</br>
+        Ihr Ziel ist es alle 9 Seiten so schnell wie möglich abzuschließen.</br></br>
+        Klicken Sie auf „weiter“ um mit der Bearbeitung zu beginnen.
+    </div>
+    <p id = 'txtBelowPresentationIntrinsic'>
+    <button id = "btnPresentationIntrinsic">Weiter</button>
+    </p>
+</div>
+<!-- Presentation intrinsic -->
+
+<!-- ToGo -->
+<div id='divToGo' align = "center"
+    style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
+    <p id = 'txtAboveToGo' style="display:none">Welcome ToGo</p>
+    <div id = 'divToGoHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
+        Im weiteren Verlauf des Experiments wird Ihnen ein Balken im oberen Teil des Bildschirmes ihren Fortschritt anzeigen.
+        Er zeigt an, wie viele Seiten noch zu bearbeiten sind.<br></br>
+        Dieser Fortschrittsbalken zeigt an, dass Sie noch 7 Seiten bearbeiten müssen:<br><br>
+        <img src="../images/2go2Blocks.jpg" alt="Fortschrittsbalken" width="30%"> <br><br>
+        Hier ein Beispiel: Bitte geben Sie an, wie viele Seiten Sie noch bearbeiten müssen:
+        <br><br>
+        <img src="../images/2go5Blocks.jpg" alt="Fortschrittsbalken" width="30%"> <br><br>
+        "Ich habe noch <input id ="toGoInput" name = "toGoInput" size="1">  Seite(n) zu bearbeiten.“</br></br>
+        Ihre Aufgabe ist es nun alle 9 Seiten möglichst schnell zu bearbeiten.</br></br>
+        Klicken Sie auf „Starten“ um mit dem Experiment zu beginnen.</br><br>
+    </div>
+    <p id = 'txtBelowToGo'>
+    <button id = "btnToGo">Weiter</button>
+    </p>
+</div>
+<!-- ToGo ENDE -->
+
+
+<!-- ToDate -->
+<div id='divToDate' align = "center"
+    style="display:none; margin-right:100px; margin-left:100px; margin-top:100px;">
+    <p id = 'txtAboveToDate' style="display:none">Welcome ToDate</p>
+    <div id = 'divToDateHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
+        Ein Balken im oberen Teil des Bildschirmes wird ihren Fortschritt anzigen.
+        Er wird sie informieren, wie viele Seiten sie bereits abgeschlossen haben.<br>
+        Dieser Fortschrittsbalken zeigt an, dass sie bereits zwei Seiten abgeschlossen haben.<br><br>
+        <img src="../images/2date2Blocks.jpg" alt="Fortschrittsbalken" width="30%"> <br><br>
+        Hier ein Beispiel:
+        Bitte geben Sie an, wie viele Seiten sie auf Basis des unten angezeigten Balkens bereits abgeschlossen haben: <br><br>
+        <img src="../images/2date7Blocks.jpg" alt="Fortschrittsbalken" width="30%"> <br><br>
+        "Ich habe <input id ="toDateInput" name = "toDateInput" size="1"> Seite(n) abgeschlossen." 
+    </div>
+    <p id = 'txtBelowToDate'> </p>
+    <button id = "btnToDate">Weiter</button>
+</div>
+<!-- ToDate ENDE -->
+
+
+<!-- Hier findet die ganze Magie statt. -->
+<div id='divExperiment' align = "center"
+    style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
+    <div id = 'divExperimentHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
+        <p id = 'txtAboveExperiment' style="display:inline"><img src="../images/2date1Blocks.jpg" id="progress" alt="Fortschrittsbalken" width="30%"> </br> </p>
+
+        <form id = "frmExperiment" style="display:inline;" action ="save_Questionnaire.php">
+            <table width="100%" >
+                <tr>
+                    <td width="20%" id='tdexp0'>test </td> <td>  <input id = "expBox0" name = "exp0"> </td>
+                </tr>
+                <tr>
+                    <td id='tdexp1'>test </td> <td>  <input id = "expBox1" name = "exp1"> </td>
+                </tr>
+                <tr>
+                    <td id='tdexp2'>test </td> <td>  <input id = "expBox2" name = "exp2"> </td>
+                </tr>
+                <tr>
+                    <td id='tdexp3'>test </td> <td>  <input id = "expBox3" name = "exp3"> </td>
+                </tr>
+                <tr>
+                    <td id='tdexp4'>test </td> <td>  <input id = "expBox4" name = "exp4"> </td>
+                </tr>
+                <tr>
+                    <td id='tdexp5'>test </td> <td>  <input id = "expBox5" name = "exp5"> </td>
+                </tr>
+                <tr>
+                    <td id='tdexp6'>test </td> <td>  <input id = "expBox6" name = "exp6"> </td>
+                </tr>
+                <tr>
+                    <td id='tdexp7'>test </td> <td>  <input id = "expBox7" name = "exp7"> </td>
+                </tr>
+            </table>
+        </form>
+        <p id = 'txtBelowExperiment' style="color:red"> </p>
+
+    </div>
+    <button id = "btnExperiment">Weiter</button>
+</div>
+<!-- Magie aus -->
+
+<!-- Manipulationscheck -->
+<div id='divManipulation' align = "center"
+    style="display: None; margin-right:100px; margin-left:100px; margin-top:100px;">
+    <p id = 'txtAboveManipulation' style="display:none">Manipulation</p>
+    <div id = 'divManipulationHolder' style="width:60%;  min-height:100px; padding-top:100px; padding-bottom:100px;">
+        <p id = 'txtManipulation' style="font-size:20px;">Im folgenden überprüfen wir, in wie weit Sie über ihren Fortschritt informiert sind.</br> Bitte markieren Sie die Kästchen, um ihren aktuellen Fortschritt anzugeben.</br> Dabei entspricht ein markiertes Kästchen einer vollständig bearbeiteten Seite.</p> 
+        <form id = "frmManipulation" style="display:inline;" method ="POST" action ="save_Demographic.php">
+            <input type="checkbox" id="cbManipulation1" >
+            <input type="checkbox" id="cbManipulation2" >
+            <input type="checkbox" id="cbManipulation3" >
+            <input type="checkbox" id="cbManipulation4" >
+            <input type="checkbox" id="cbManipulation5" >
+            <input type="checkbox" id="cbManipulation6" >
+            <input type="checkbox" id="cbManipulation7" >
+            <input type="checkbox" id="cbManipulation8" >
+            <input type="checkbox" id="cbManipulation9" >
+        </form>
+    </div>
+    <p id = 'txtBelowManipulation'>
+    <button id = "btnManipulation">Weiter</button>
+    </p>
+</div>
+<!-- Magie aus -->
+
+
+<!-- This section appears after the last trial. -->
+<div id="divDebrief" align = "center" style="display:None; margin-right:100px; margin-left:100px; margin-top:100px;">
+    <p>
+    Vielen Dank für Ihre Teilnahme!<br>
+    Bitte wenden Sie sich an den Versuchsleiter.
+    </p>	
+</div>
+
+<div id="hidden_div" style = "display: none;">
+    <!-- 
         Nothing within this section will be visable to participants.
         Note the 'id' and 'name' values for each <input> below.
         In your JavaScript file, you will need to include a  list of these ids, along with
@@ -790,27 +790,27 @@
         It is recomended that you use the same names as used for the variables in the experiment itself,
         and, when it comes to creating your database, using 
          -->
-            <form id = "responseForm" style="display:inline;" method ="POST" action ="save_data.php">
-                Dies ist nur die DEBUG Form, die beim Testen sichtbar ist.<br>
-                Paradigm: <input id = "paradigmBox"    name = "paradigm"><br>
-                Timestamp: <input id = "timeBox"    name = "timestamp"><br>
-                Subject: <input id = "subjectBox"    name = "subject"><br>
-                Trial <input id = "trialBox"    name = "trial"><br>
-                Stimuli <input id = "stimuliBox"    name = "trial"><br>
-                Probe<input id = "probeBox"    name = "probe"><br>
-                Code<input id = "codeBox"    name = "code"><br>
-                Response<input id = "responseBox"    name = "response"><br>
-                rt<input id = "rtBox"    name = "rt"><br><!--Shown response data-->
-            </form>
-            <button id = "btnHide">Hide</button>
-        </div>
-		<script src="../js/jquery-1.11.0.min.js"></script>
-		<script src="../js/jquery.validate.js"></script>
-		<script src="../js/jquery.maskedinput.js"></script>
-		<script src="../js/stimuli.js"></script>
-		<script src="../js/functions.js"></script>
-		<script src="../js/lexical_decision_keyboard_response.js"></script>
-	</body>
+    <form id = "responseForm" style="display:inline;" method ="POST" action ="save_data.php">
+        Dies ist nur die DEBUG Form, die beim Testen sichtbar ist.<br>
+        Paradigm: <input id = "paradigmBox"    name = "paradigm"><br>
+        Timestamp: <input id = "timeBox"    name = "timestamp"><br>
+        Subject: <input id = "subjectBox"    name = "subject"><br>
+        Trial <input id = "trialBox"    name = "trial"><br>
+        Stimuli <input id = "stimuliBox"    name = "trial"><br>
+        Probe<input id = "probeBox"    name = "probe"><br>
+        Code<input id = "codeBox"    name = "code"><br>
+        Response<input id = "responseBox"    name = "response"><br>
+        rt<input id = "rtBox"    name = "rt"><br><!--Shown response data-->
+    </form>
+    <button id = "btnHide">Hide</button>
+</div>
+<script src="../js/jquery-1.11.0.min.js"></script>
+<script src="../js/jquery.validate.js"></script>
+<script src="../js/jquery.maskedinput.js"></script>
+<script src="../js/stimuli.js"></script>
+<script src="../js/functions.js"></script>
+<script src="../js/lexical_decision_keyboard_response.js"></script>
+</body>
 
 </html>
 
