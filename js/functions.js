@@ -16,27 +16,12 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-/*
- * This page consists of generic functions, that should be useful in a 
- * range of paradigms. As such, we would hope to shield the end user from
- * the actual code here, and just provide some idea of what functions should
- * be called in the main.js section of their own experiment.
-*/
-
-// Don't change anything below this line.
-// Trial variables
-var trial_number = 0;
-var stimuli_number;
 // Running variables - Defined here so the user doesn't have to deal with them.
-var start_time;
-var response;
 var rt;
-var prime;
-var probe;
 var accepted_keys;
-var feedback_delay;
 
 // Functions
+// ---------------------------------------------------------------------
 // Visuals
 function show_text(text) {
 	document.getElementById('txtExperiment').innerHTML = text;
