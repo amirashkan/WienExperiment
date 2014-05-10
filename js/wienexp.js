@@ -11,7 +11,6 @@ var variables_to_log = new Array();
 
 // DEBUG stuff
 var debug_mode = false // Set as true to show extra information, false to run experiment normally.
-var error_feedback = false
 
 // variables to log
 var choosenTreatment
@@ -24,12 +23,11 @@ var mean_time = 180;
 var experiment_start_time = Date();
 var p1 = 1/3;
 var p2 = 1/3;
-var subject_nr 
+var vpnumber 
 var trial_number = 0;
 var stimuli_number
 var anagram
 var solution
-var response
 var rt
 
 // Do not change
