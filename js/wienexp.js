@@ -3,8 +3,7 @@ var ITI = 500
 var number_of_trials = 9
 
 // pages to send results to
-var user_data_address = '../save_demographic.php' 
-var data_address = '../save_data.php' 
+var saveData = '../save_data.php' 
 
 // hidden box with forms which gets filled with data
 var logging_box_ids = new Array('paradigmBox', 'timeBox', 'subjectBox', 'trialBox', 'stimuliBox', 'probeBox', 'codeBox', 'responseBox', 'rtBox');
