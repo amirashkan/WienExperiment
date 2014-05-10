@@ -15,8 +15,8 @@
  *und natürlich die Antwort aus dem manipulationscheck
 
 10. Seite: Fortschrittsbalken: von sollen aufgehalten werden, bis Eingabe
-
 11. Abstand zwischen Fortschrittsbalken und Anagramme
+12. Ausgrauen der Buttons
 
 
 Start der Erhebung: 09.05
