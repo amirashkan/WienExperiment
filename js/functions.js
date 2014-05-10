@@ -110,7 +110,6 @@ function end_experiment() {
 	document.getElementById('divDebrief').style.display = "Inline";
 };
 
-
 // Logging
 function check_accuracy() {
     var codes_index = list_of_codes.indexOf(code);

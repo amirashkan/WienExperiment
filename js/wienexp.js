@@ -25,10 +25,6 @@ var p1 = 1/3;
 var p2 = 1/3;
 var vpnumber 
 var trial_number = 0;
-var stimuli_number
-var anagram
-var solution
-var rt
 
 // Do not change
 var random_order = generate_random_list(number_of_trials);
