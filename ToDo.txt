@@ -14,8 +14,7 @@
  welche Auswahl getroffen
  *und natürlich die Antwort aus dem manipulationscheck
 
-10. Seite: Fortschrittsbalken: von sollen aufgehalten werden, bis Eingabe
-11. Abstand zwischen Fortschrittsbalken und Anagramme
+10. Seite: Fortschrittsbalken: vpn sollen aufgehalten werden, bis Eingabe
 12. Ausgrauen der Buttons
 
 
