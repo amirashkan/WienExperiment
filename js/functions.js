@@ -142,28 +142,21 @@ function check_accuracy() {
     };
 };
 
-function log_response() {
+function log_response(data_address) {
     rt = Date.now() - start_time;
     // If they exit, clear intervals and timeouts.
     try {clearInterval(tracking_interval);} catch(err){};
     try {clearTimeout(response_timeout);} catch(err){};
-    feedback_delay = 0
-    if(error_feedback) {
-        var correct = check_accuracy()
-        console.log(correct)
-        if (!correct) {
-            give_feedback()
-        };
-    };
-    console.log('Logging response: '+ response)
+
     for (var i=0; i < variables_to_log.length; i++) {
         var logging_box_id = logging_box_ids[i];
         var variable_to_log = variables_to_log[i];
         document.getElementById(logging_box_id).value = window[variable_to_log]
     };
     sendData(data_address);
-    console.log("log_response")
-    setTimeout(function(){next_trial();}, feedback_delay)
+    console.log("log_response");
+    // display next trial after a delay
+    // setTimeout(function(){next_trial();}, feedback_delay)
 };
 
 function give_feedback() {
