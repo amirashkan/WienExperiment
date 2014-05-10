@@ -18,9 +18,11 @@ var choosenCategory
 var current_stimuli
 var current_solutions 
 var random_array 
+// time vars
 var stage_time 
 var mean_time = 180;
 var experiment_start_time = Date();
+// probabilities of the extrinsic decisions
 var p1 = 1/3;
 var p2 = 1/3;
 var vpnumber 
