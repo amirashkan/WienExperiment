@@ -210,8 +210,11 @@ document.getElementById("btnHide").addEventListener("click",
 document.getElementById("btnTreatment").addEventListener("click", 
         function() {
             choosenTreatment = $('input[name=rdTreatment]:checked', '#frmTreatment').val();
-            if( choosenTreatment == undefined)
+            vpnumber = $('input[name=txVPN]','#frmTreatment').val();
+            if( choosenTreatment == undefined || vpnumber == undefined)
 {
+    document.getElementById('txtBelowTreatment').style.color = 'red';
+    document.getElementById('txtBelowTreatment').innerHTML ='Bitte wählen Sie ein Treatment aus UND geben Sie eine VP Nummer ein';
     console.log('Please check one of the treatments');
 }
 else {
