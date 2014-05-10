@@ -6,8 +6,8 @@ var number_of_trials = 9
 var saveData = '../save_data.php' 
 
 // hidden box with forms which gets filled with data
-var logging_box_ids = new Array('paradigmBox', 'timeBox', 'subjectBox', 'trialBox', 'stimuliBox', 'probeBox', 'codeBox', 'responseBox', 'rtBox');
-var variables_to_log = new Array('paradigm', 'experiment_start_time', 'subject_nr', 'trial_number', 'stimuli_number', 'probe', 'code', 'response', 'rt');
+var logging_box_ids = new Array();
+var variables_to_log = new Array();
 
 // DEBUG stuff
 var debug_mode = false // Set as true to show extra information, false to run experiment normally.
