@@ -22,6 +22,13 @@ var random_array
 var stage_time 
 var mean_time = 300;
 var experiment_start_time = Date();
+var whichbutton
+var whichparagraph
+var timer = $.timer(function() {
+    document.getElementById(whichbutton).disabled = false;
+	document.getElementById(whichparagraph).innerHTML = 'Sie haben nun die Möglichkeit fortzufahren ohne alle Lösungen gefunden zu haben.';
+});
+timer.set({ time : mean_time, autostart : true });
 // probabilities of the extrinsic decisions
 var p1 = 1/3;
 var p2 = 1/3;
