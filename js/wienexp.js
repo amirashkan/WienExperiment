@@ -215,7 +215,7 @@ document.getElementById("btnHide").addEventListener("click",
 document.getElementById("btnTreatment").addEventListener("click", 
         function() {
             choosenTreatment = $('input[name=rdTreatment]:checked', '#frmTreatment').val();
-            vpnumber = $('input[name=txVPN]','#frmTreatment').val();
+            vpnumber = document.getElementById('txVPN').value;
             if( choosenTreatment == undefined || vpnumber == '')
 {
     document.getElementById('txtBelowTreatment').style.color = 'red';
