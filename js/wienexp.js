@@ -15,9 +15,9 @@ var debug_mode = false // Set as true to show extra information, false to run ex
 // variables to log
 var choosenTreatment
 var choosenCategory 
-var current_stimuli
-var current_solutions 
-var random_array 
+var current_stimuli = []
+var current_solutions = []
+var random_array = []
 // time vars
 var stage_time 
 var mean_time = 300;
