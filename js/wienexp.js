@@ -191,6 +191,7 @@ $(document).ready(function () {
     $("#birthdayBox").mask("99");
     $("#toGoInput").mask("9");
     $("#toDateInput").mask("9");
+    $("#txVPN").mask("999");
     //    $("#exampleBox1").mask("aaaa");
     //    $("#exampleBox2").mask("aaaa");
     //    $("#exampleBox3").mask("aaaa");
@@ -216,7 +217,7 @@ document.getElementById("btnTreatment").addEventListener("click",
         function() {
             choosenTreatment = $('input[name=rdTreatment]:checked', '#frmTreatment').val();
             vpnumber = $('input[name=txVPN]','#frmTreatment').val();
-            if( choosenTreatment == undefined || vpnumber == undefined)
+            if( choosenTreatment == undefined || vpnumber == '')
 {
     document.getElementById('txtBelowTreatment').style.color = 'red';
     document.getElementById('txtBelowTreatment').innerHTML ='Bitte wählen Sie ein Treatment aus UND geben Sie eine VP Nummer ein';
