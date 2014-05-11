@@ -401,6 +401,17 @@ document.getElementById("btnExperiment").addEventListener("click",
             // if all anagrams are solved correctly or it took them longer 
             // as the meanTime of all participants of the prestudy 
             if ($('#frmExperiment').valid()/* || stage_time > mean_time*/){
+                // at first handle manipulation block or finish the experiment
+                if (trial_number == 4 || trial_number == 7) { 
+                    document.getElementById('divExperiment').style.display = 'None';
+                    document.getElementById('divManipulation').style.display = 'Inline'; 
+                }
+                else if (trial_number == 10) {
+                    document.getElementById('divExperiment').style.display = 'None';
+                    document.getElementById('divQuestionnaire').style.display = 'Inline';
+                    // only in this case, we need to return
+                    return;
+                }
                 // update trial number 
                 trial_number++;
                 // remove all user input
@@ -413,16 +424,6 @@ document.getElementById("btnExperiment").addEventListener("click",
                 // fill in stimuli
                 load_stimuli();
 
-                if (trial_number == 4 || trial_number == 7) { 
-                    document.getElementById('divExperiment').style.display = 'None';
-                    document.getElementById('divManipulation').style.display = 'Inline'; 
-                }
-                else if (trial_number == 10) {
-                    document.getElementById('divExperiment').style.display = 'None';
-                    document.getElementById('divQuestionnaire').style.display = 'Inline';
-                    // only in this case, we need to return
-                    return;
-                }
             }
             // the input isn't correct and there is still some time left
             else {
