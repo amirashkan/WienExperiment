@@ -15,7 +15,6 @@
  *und natürlich die Antwort aus dem manipulationscheck
 
 10. Seite: Fortschrittsbalken: vpn sollen aufgehalten werden, bis Eingabe
-12. Ausgrauen der Buttons
 
 
 Start der Erhebung: 09.05
