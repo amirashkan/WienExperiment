@@ -22,7 +22,3 @@ var solutions = [
 
 var examples = ['GAST' , 'BROT' , 'BUBE' , 'PILZ' , 'KAMM' , 'SCHUH' , 'LEINE' , 'HORN' , 'KOPIE' , 'SEIL' , 'RAUCH', 'HEBEL' ]
 
-// If using error_feedback, you need to define the possible codes, and 
-// the correct response for each.
-var list_of_codes = new Array('common_word', 'rare_word','pseudo_word', 'consonants');
-var correct_responses = new Array(1, 1, 2, 2);
