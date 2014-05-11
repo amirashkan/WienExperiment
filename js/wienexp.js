@@ -176,6 +176,25 @@ $(document).ready(function () {
         }
     });
 
+    $('#frmToDate').validate({
+        rules: {
+            toDateInput:{ required:true}
+        },
+
+        highlight: function(element, errorClass){
+            document.getElementById('txtBelowToDate').innerHTML = 'Bitte tragen Sie eine Antwort ein';
+        }
+    });
+    $('#frmToGo').validate({
+        rules: {
+            toGoInput:{ required:true}
+        },
+
+        highlight: function(element, errorClass){
+            document.getElementById('txtBelowToGo').innerHTML = 'Bitte tragen Sie eine Antwort ein';
+        }
+    });
+
     $('#frmIntrinsic').validate({
         rules: {
             rdIntrinsic:{ required:true}
@@ -318,20 +337,24 @@ document.getElementById("btnInstructions2").addEventListener("click",
         false);
 document.getElementById("btnToGo").addEventListener("click", 
         function() {
-            document.getElementById('divToGo').style.display = 'None';
-            if (choosenTreatment == 1 || choosenTreatment == 3) 
-    document.getElementById('divIntrinsic').style.display = 'Inline';
-            else if(choosenTreatment == 0 || choosenTreatment == 2)
-    document.getElementById('divExtrinsic').style.display = 'Inline';
+            if($('#frmToGo').valid()) {
+                document.getElementById('divToGo').style.display = 'None';
+                if (choosenTreatment == 1 || choosenTreatment == 3) 
+                    document.getElementById('divIntrinsic').style.display = 'Inline';
+                else if(choosenTreatment == 0 || choosenTreatment == 2)
+                    document.getElementById('divExtrinsic').style.display = 'Inline';
+            }
         },
         false);
 document.getElementById("btnToDate").addEventListener("click", 
         function() {
-            document.getElementById('divToDate').style.display = 'None';
-            if (choosenTreatment == 1 || choosenTreatment == 3) 
-    document.getElementById('divIntrinsic').style.display = 'Inline';
-            else if(choosenTreatment == 0 || choosenTreatment == 2)
-    document.getElementById('divExtrinsic').style.display = 'Inline';
+            if($('#frmToDate').valid()) {
+                document.getElementById('divToDate').style.display = 'None';
+                if (choosenTreatment == 1 || choosenTreatment == 3) 
+                    document.getElementById('divIntrinsic').style.display = 'Inline';
+                else if(choosenTreatment == 0 || choosenTreatment == 2)
+                    document.getElementById('divExtrinsic').style.display = 'Inline';
+            }
         },
         false);
 document.getElementById("btnIntrinsic").addEventListener("click", 

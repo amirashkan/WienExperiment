@@ -661,7 +661,8 @@
         Hier ein Beispiel: Bitte geben Sie an, wie viele Seiten Sie noch bearbeiten müssen:
         <br><br>
         <img src="../images/2go5Blocks.jpg" alt="Fortschrittsbalken" width="30%"> <br><br>
-        "Ich habe noch <input id ="toGoInput" name = "toGoInput" size="1">  Seite(n) zu bearbeiten.“</br></br>
+        "Ich habe noch <form id = "frmToGo" method ="POST" action ="save_Demographic.php">
+            <input id ="toGoInput" name = "toGoInput" size="1"></form>  Seite(n) zu bearbeiten.“</br></br>
     </div>
     <p id = 'txtBelowToGo'> </p>
     <p><button id = "btnToGo">Weiter</button></p>
@@ -681,7 +682,8 @@
         Hier ein Beispiel:
         Bitte geben Sie an, wie viele Seiten sie auf Basis des unten angezeigten Balkens bereits abgeschlossen haben: <br><br>
         <img src="../images/2date7Blocks.jpg" alt="Fortschrittsbalken" width="30%"> <br><br>
-        "Ich habe <input id ="toDateInput" name = "toDateInput" size="1"> Seite(n) abgeschlossen." 
+        "Ich habe <form id = "frmToDate" method ="POST" action ="save_Demographic.php">
+            <input id ="toDateInput" name = "toDateInput" size="1"></form>  Seite(n) abgeschlossen.“</br></br>
     </div>
     <p id = 'txtBelowToDate'> </p>
     <p><button id = "btnToDate">Weiter</button></p>
