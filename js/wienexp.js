@@ -24,7 +24,6 @@ var mean_time = 300;
 var experiment_start_time = Date();
 var exptimer = $.timer(function() {
     console.log("the time is over");
-    document.getElementById("btnExperiment").disabled = false;
 	document.getElementById("txtBelowExperiment2").innerHTML = 'Sie haben nun die Möglichkeit fortzufahren ohne alle Lösungen gefunden zu haben.';
     exptimer.stop();
 });
