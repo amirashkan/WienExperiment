@@ -128,13 +128,16 @@ function check_accuracy() {
 
 function start_experiment() {
     trial_number++;
-    stage_time = Date.now();
     console.log('start exp with trial: ' + trial_number);
     document.getElementById('divExperiment').style.display = 'Inline';
     // generate stimuli order
     random_array = generate_random_list(8);
     // fill in stimuli
     load_stimuli();
+    // save begin time
+    stage_time = Date.now();
+    // set timer to 0 and start it
+    exptimer.reset();
 }
 
 function load_stimuli()
