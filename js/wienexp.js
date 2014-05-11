@@ -166,14 +166,14 @@ $(document).ready(function () {
     $('#frmExperiment').validate({
         rules: {
             exp0: "checkAnagrams",
-        exp1: "checkAnagrams",
-        exp2: "checkAnagrams",
-        exp3: "checkAnagrams",
-        exp3: "checkAnagrams",
-        exp4: "checkAnagrams",
-        exp5: "checkAnagrams",
-        exp6: "checkAnagrams",
-        exp7: "checkAnagrams"
+            exp1: "checkAnagrams",
+            exp2: "checkAnagrams",
+            exp3: "checkAnagrams",
+            exp3: "checkAnagrams",
+            exp4: "checkAnagrams",
+            exp5: "checkAnagrams",
+            exp6: "checkAnagrams",
+            exp7: "checkAnagrams"
         }
     });
 
