@@ -17,4 +17,6 @@
 
 11. Textfeld statt Kästchen
 
+12. Zeit gesamt statt pro einzelne Seite
+
 Start der Erhebung: 09.05
