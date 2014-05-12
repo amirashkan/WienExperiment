@@ -1,18 +1,18 @@
 9. Speicherung der Eingaben [60min]
 
- alle demographischen
- alle fragebogenitems
- die zeit für die Lösung pro seite
- die Reihenfolge der Anagramme
- VPN
- datum / zeit
+ +alle demographischen
+ +alle fragebogenitems
+ +die zeit für die Lösung pro seite
+ +die Reihenfolge der Anagramme
+ +VPN
+ +datum / zeit
  *Anzahl gelöste items (wir geben ja eine zeit vor, nachdem ohne Lösung fortgeschritten wurde)
  *ach ja, vielleicht wäre eine geheime taste noch ganz nützlich, wenn jemand sagt er kann etwas nicht lösen, sodass es weiter geht aber registriert wird das items nicht gelöst wurden
- die Reihenfolge der Seiten
- es ist wichtig das später die zeiten für die Lösung der zeitachse zuzuordnen sind (wie schnell waren die von am Anfang, ende, Anagramm 1, Anagramm 1-10 etc.)
- welche kondition
- welche Auswahl getroffen
- *und natürlich die Antwort aus dem manipulationscheck
+ ?die Reihenfolge der Seiten
+ ?es ist wichtig das später die zeiten für die Lösung der zeitachse zuzuordnen sind (wie schnell waren die von am Anfang, ende, Anagramm 1, Anagramm 1-10 etc.)
+ +welche kondition
+ +welche Auswahl getroffen
+ +und natürlich die Antwort aus dem manipulationscheck
 
 
 Start der Erhebung: 09.05
