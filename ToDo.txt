@@ -1,1 +1,2 @@
 2. Entertaste disablen
+3. fixbug: text von erster Eingabe bleibt sichtbar bei zweitem manipulations-check
