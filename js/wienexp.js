@@ -296,7 +296,7 @@ else if ($('#frmExamples').valid())
     console.log('All answers are correct');
     // log data for example stage
     stage_name='examples';
-    logging_box_ids = ['vpnumberBox','trialBox3','rtBox'];
+    logging_box_ids = ['vpnumberBox3','trialBox3','rtBox'];
     variables_to_log= ['vpnumber','stage_name','rt'];
     log_response('../save_response.php',frmResponses);
 }
