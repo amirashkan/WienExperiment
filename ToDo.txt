@@ -18,4 +18,6 @@
 
 15. Beispiel Fortschrittsbalken, nur weiter wenn richtig.
 
+16. Fortschrittsbalken Reihenfolge bei 2 Go
+
 Start der Erhebung: 09.05
