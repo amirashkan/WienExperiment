@@ -1,6 +1,1 @@
-
- *ach ja, vielleicht wäre eine geheime taste noch ganz nützlich, wenn jemand sagt er kann etwas nicht lösen, sodass es weiter geht aber registriert wird das items nicht gelöst wurden
-
-
-17. Untergeordnete Priorität: (nur wenn leicht möglich) „Bitte geben Sie die…“ erst nachdem man auf weiter drückt 
-
+1. Anhalten bei Manipulationscheck. Erst weiter wenn Eingabe erfolgt
