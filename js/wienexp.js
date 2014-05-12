@@ -429,7 +429,7 @@ document.getElementById("btnIntrinsic").addEventListener("click",
                 choosenCategory = $('input[name=rdIntrinsic]:checked', '#frmIntrinsic').val();
                 //$('#divPresentationHolderIntrinsic').text('Intrinsic choosenCategory: '.concat(choosenCategory));
                 console.log('Intrinsic choosenCategory: '.concat(choosenCategory));
-                document.getElementById('divPresentationIntrinsic').style.display = 'Inline';
+                document.getElementById('divPresentationIntrinsic'+choosenCategory).style.display = 'Inline';
             }
             else {
                 console.log('something does not work with intrinsic');
@@ -477,9 +477,21 @@ document.getElementById("btnPresentation3").addEventListener("click",
             start_experiment();
         },
         false);
-document.getElementById("btnPresentationIntrinsic").addEventListener("click", 
+document.getElementById("btnPresentationIntrinsic1").addEventListener("click", 
         function() {
-            document.getElementById('divPresentationIntrinsic').style.display = 'None';
+            document.getElementById('divPresentationIntrinsic1').style.display = 'None';
+            start_experiment();
+        },
+        false);
+document.getElementById("btnPresentationIntrinsic2").addEventListener("click", 
+        function() {
+            document.getElementById('divPresentationIntrinsic2').style.display = 'None';
+            start_experiment();
+        },
+        false);
+document.getElementById("btnPresentationIntrinsic3").addEventListener("click", 
+        function() {
+            document.getElementById('divPresentationIntrinsic3').style.display = 'None';
             start_experiment();
         },
         false);
