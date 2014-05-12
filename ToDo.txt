@@ -17,4 +17,6 @@
 11. Textfeld statt Kästchen
 
 12. FAAU -> FAPU
+
+13. random arrays & responses noch nicht gespeichert
 Start der Erhebung: 09.05
