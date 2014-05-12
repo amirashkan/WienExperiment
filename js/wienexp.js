@@ -248,8 +248,10 @@ else {
     document.getElementById('divTreatment').style.display = 'None';
     document.getElementById('divInstructions').style.display = 'Inline';
     // create data for new vp
-    log_response(save_data);
     stage_name = 'choosenTreatment';
+    logging_box_ids = ['vpnumberBox','choosentreatmentBox'];
+    variables_to_log= ['vpnumber','choosenTreatment'];
+    log_response('../save_user_data.php', frmUserData);
 }
 },
 false)
@@ -293,8 +295,10 @@ else if ($('#frmExamples').valid())
     document.getElementById('divInstructions2').style.display = 'Inline';
     console.log('All answers are correct');
     // log data for example stage
-    log_response(save_data);
     stage_name='examples';
+    logging_box_ids = ['vpnumberBox','stage_nameBox','rtBox'];
+    variables_to_log= ['vpnumber','stage_name','rt'];
+    log_response('../save_responses.php',frmResponses);
 }
 // input wasn't right
 else {
@@ -324,8 +328,10 @@ document.getElementById("btnQuestionnaire").addEventListener("click",
             // show next stage
             if($('#frmQuestionnaire1').valid()) {
                 // save Answers to questionnaire
-                log_response(save_data);
                 stage_name='quest1';
+                logging_box_ids = ['vpnumberBox4','questBox','q1Box','q2Box','q3Box','q4Box','q5Box','q6Box','q7Box','q8Box'];
+                variables_to_log= ['vpnumber','stage_name','q1','q2','q3','q4','q5','q6','q7','q8'];
+                log_response('../save_quest.php',frmQuest);
                 document.getElementById('divQuestionnaire').style.display = 'None';
                 document.getElementById('divQuestionnaire2').style.display = 'Inline';
             }
@@ -347,8 +353,10 @@ document.getElementById("btnQuestionnaire2").addEventListener("click",
             // show next stage
             if($('#frmQuestionnaire2').valid()) {
                 // save Answers to questionnaire
-                log_response(save_data);
                 stage_name='quest2';
+                logging_box_ids = ['vpnumberBox4','questBox','q1Box','q2Box','q3Box','q4Box','q5Box','q6Box','q7Box','q8Box'];
+                variables_to_log= ['vpnumber','stage_name','q1','q2','q3','q4','q5','q6','q7','q8'];
+                log_response('../save_quest.php',frmQuest);
                 document.getElementById('divQuestionnaire2').style.display = 'None';
                 document.getElementById('divQuestionnaire3').style.display = 'Inline';
             }
@@ -369,8 +377,10 @@ document.getElementById("btnQuestionnaire3").addEventListener("click",
             // show next stage
             if($('#frmQuestionnaire3').valid()) {
                 // save Answers to questionnaire
-                log_response(save_data);
                 stage_name='quest3';
+                logging_box_ids = ['vpnumberBox4','questBox','q1Box','q2Box','q3Box','q4Box','q5Box','q6Box','q7Box','q8Box'];
+                variables_to_log= ['vpnumber','stage_name','q1','q2','q3','q4','q5','q6','q7','q8'];
+                log_response('../save_quest.php',frmQuest);
                 document.getElementById('divQuestionnaire3').style.display = 'None';
                 document.getElementById('divDebrief').style.display = 'Inline';
             }
@@ -395,7 +405,7 @@ document.getElementById("btnToGo").addEventListener("click",
                 else if(choosenTreatment == 0 || choosenTreatment == 2)
                     document.getElementById('divExtrinsic').style.display = 'Inline';
                 // log user understandig of toGo
-                log_response(save_data);
+                //log_response(save_data);
             }
         },
         false);
@@ -408,7 +418,7 @@ document.getElementById("btnToDate").addEventListener("click",
                 else if(choosenTreatment == 0 || choosenTreatment == 2)
                     document.getElementById('divExtrinsic').style.display = 'Inline';
                 // log user understandig of toDate
-                log_response(save_data);
+                //log_response(save_data);
             }
         },
         false);
