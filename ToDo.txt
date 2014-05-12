@@ -1,1 +1,2 @@
 1. Anhalten bei Manipulationscheck. Erst weiter wenn Eingabe erfolgt
+2. Entertaste disablen
