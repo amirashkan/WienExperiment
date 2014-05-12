@@ -162,7 +162,7 @@ function load_stimuli()
 }
 
 
-function log_response(data_address) {
+function log_response(data_address, whichform) {
     // reaction time is time since presentation of current stage 
     rt = Date.now() - stage_time;
     // If they exit, clear intervals and timeouts.
@@ -174,7 +174,7 @@ function log_response(data_address) {
         var variable_to_log = variables_to_log[i];
         document.getElementById(logging_box_id).value = window[variable_to_log]
     };
-    send_data(data_address);
+    send_data(data_address, whichform);
     console.log("log_response");
     // display next trial after a delay
     // setTimeout(function(){next_trial();}, feedback_delay)
