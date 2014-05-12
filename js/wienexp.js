@@ -414,7 +414,7 @@ document.getElementById("btnToGo").addEventListener("click",
         false);
 document.getElementById("btnToDate").addEventListener("click", 
         function() {
-            if($('#frmToDate').valid() && document.getElementById('toDateInput').value == 7 ) {
+            if($('#frmToDate').valid() && document.getElementById('toDateInput').value == 6 ) {
                 document.getElementById('divToDate').style.display = 'None';
                 if (choosenTreatment == 1 || choosenTreatment == 3) 
                     document.getElementById('divIntrinsic').style.display = 'Inline';
