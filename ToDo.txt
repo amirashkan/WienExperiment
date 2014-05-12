@@ -24,3 +24,5 @@
 Start der Erhebung: 09.05
 
 15. Questionnaire scheint in falscher Reihenfolge zu speichern (auf Seite 3 aufgefallen)
+
+16. germanyears wird nicht gespeichert
