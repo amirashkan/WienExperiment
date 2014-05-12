@@ -29,7 +29,7 @@ var q8
 var rt
 var stage_time 
 var stage_name
-var avg_time = 300*1000;
+var avg_time = 180*1000;
 var exptimer = $.timer(function() {
     console.log("the time is over");
 	document.getElementById("txtBelowExperiment2").style.display = 'inline';
