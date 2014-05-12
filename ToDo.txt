@@ -19,4 +19,6 @@
 12. FAAU -> FAPU
 
 13. random arrays & responses noch nicht gespeichert
+
+14. „Bitte geben Sie die…“ erst nachdem man auf weiter drückt (schnell möglich?)
 Start der Erhebung: 09.05
