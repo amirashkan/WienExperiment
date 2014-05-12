@@ -18,6 +18,6 @@
 11. Demographischer Fragebogen nach 22 Item Fragebogen, vor Dankes-Seite
 12. Kran-Anagramm (nkra) durch ipkoe (Kopie) ersetzen. „Kopie“ von Beispielen entfernen.
 13. In Kondition 2date werden die falschen Fortschrittsbalken angezeigt (2Go werden angezeigt) - und umgekehrt wird bei 2go 2date-balken angezeigt.
-14. Randomisierung klappt noch nicht ganz. Anagramme werden zwar auf Positionen geshuffelt aber die Seiten bleiben gleich (an selber position) - besser wäre vollkommene randomisierung. (damit steht und fällst das ganze experiment)
+14. Randomisierung klappt noch nicht ganz. Anagramme werden zwar auf Positionen geshuffelt aber die Seiten bleiben gleich (an selber position) - besser wäre vollkommene randomisierung (also das auch Anagramme die Seiten wechseln). (mit der randomisierung steht und fällst das ganze experiment)
 
 Start der Erhebung: 09.05
