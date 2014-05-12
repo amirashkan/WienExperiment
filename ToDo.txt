@@ -1,2 +1,3 @@
 2. Entertaste disablen
 3. fixbug: text von erster Eingabe bleibt sichtbar bei zweitem manipulations-check
+4. bei save response: stage name bleibt noch leer, keine Speicherungen
