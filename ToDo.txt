@@ -15,4 +15,6 @@
 
 10. Demographie ans Ende, nach Fragebogen, vor Danke-Seite
 
+11. Textfeld statt Kästchen
+
 Start der Erhebung: 09.05
