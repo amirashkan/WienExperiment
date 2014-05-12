@@ -14,5 +14,8 @@
  +welche Auswahl getroffen
  +und natürlich die Antwort aus dem manipulationscheck
 
+10. Beispiel aus Haupttask entfernen
+11. Demographischer Fragebogen nach 22 Item Fragebogen, vor Dankes-Seite
+12. Kran-Anagramm (nkra) durch ipkoe (Kopie) ersetzen. „Kopie“ von Beispielen entfernen.
 
 Start der Erhebung: 09.05
