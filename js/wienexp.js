@@ -288,7 +288,7 @@ document.getElementById("btnExamples").addEventListener("click",
     stage_time = Date.now();
 }
 // now it checks user input
-else if ($('#frmExamples').valid())
+else if ($('#frmExamples').valid() || Date.now() - stage_time > avg_time)
 {
     // and the party goes on...
     document.getElementById('divExamples').style.display = 'None';
@@ -382,7 +382,7 @@ document.getElementById("btnQuestionnaire3").addEventListener("click",
                 variables_to_log= ['vpnumber','stage_name','q1','q2','q3','q4','q5','q6','q7','q8'];
                 log_response('../save_quest.php',frmQuest);
                 document.getElementById('divQuestionnaire3').style.display = 'None';
-                document.getElementById('divDebrief').style.display = 'Inline';
+                document.getElementById('divDemographic').style.display = 'Inline';
             }
         },
         false);
