@@ -17,9 +17,14 @@ var current_stimuli = []
 var current_solutions = []
 var random_array = []
 var manipulation
-var quest1 = ''
-var quest2 = ''
-var quest3 = ''
+var q1 
+var q2 
+var q3 
+var q4 
+var q5 
+var q6 
+var q7 
+var q8 
 // time vars
 var rt
 var stage_time 
@@ -306,8 +311,16 @@ function getRadioValue(i,j){
 document.getElementById("btnQuestionnaire").addEventListener("click", 
         function() {
             // save all Answers of Radio Buttons 
-            for (var i=1; i<9; i++)
-                quest1 = quest1 + ',' + getRadioValue(i,1);
+            //for (var i=1; i<9; i++)
+                //quest1[i] = quest1 + ',' + getRadioValue(i,1);
+            q1 = getRadioValue(1,1);
+            q2 = getRadioValue(2,1);
+            q3 = getRadioValue(3,1);
+            q4 = getRadioValue(4,1);
+            q5 = getRadioValue(5,1);
+            q6 = getRadioValue(6,1);
+            q7 = getRadioValue(7,1);
+            q8 = getRadioValue(8,1);
             // show next stage
             if($('#frmQuestionnaire1').valid()) {
                 // save Answers to questionnaire
@@ -321,8 +334,16 @@ document.getElementById("btnQuestionnaire").addEventListener("click",
 document.getElementById("btnQuestionnaire2").addEventListener("click", 
         function() {
             // save all Answers of Radio Buttons 
-            for (var i=1; i<9; i++)
-                quest2 = quest2 + ',' + getRadioValue(i,2);
+            q1 = getRadioValue(1,2);
+            q2 = getRadioValue(2,2);
+            q3 = getRadioValue(3,2);
+            q4 = getRadioValue(4,2);
+            q5 = getRadioValue(5,2);
+            q6 = getRadioValue(6,2);
+            q7 = getRadioValue(7,2);
+            q8 = getRadioValue(8,2);
+            
+            
             // show next stage
             if($('#frmQuestionnaire2').valid()) {
                 // save Answers to questionnaire
@@ -336,8 +357,15 @@ document.getElementById("btnQuestionnaire2").addEventListener("click",
 document.getElementById("btnQuestionnaire3").addEventListener("click", 
         function() {
             // save all Answers of Radio Buttons 
-            for (var i=1; i<9; i++)
-                quest3 = quest3 + ',' + getRadioValue(i,3);
+            q1 = getRadioValue(1,1);
+            q2 = getRadioValue(2,1);
+            q3 = getRadioValue(3,1);
+            q4 = getRadioValue(4,1);
+            q5 = getRadioValue(5,1);
+            q6 = getRadioValue(6,1);
+            q7 = getRadioValue(7,1);
+            q8 = getRadioValue(8,1);
+ 
             // show next stage
             if($('#frmQuestionnaire3').valid()) {
                 // save Answers to questionnaire
