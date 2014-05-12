@@ -544,6 +544,7 @@ document.getElementById("btnExperiment").addEventListener("click",
                 load_stimuli();
                 if (trial_number != 4 && trial_number != 7)
                     // start timer in rounds without manipulation check (otherwise it's started there)
+                    exptimer.reset();
                     exptimer.play(true);
             }
             // the input isn't correct and there is still some time left
@@ -569,6 +570,7 @@ document.getElementById("btnManipulation").addEventListener("click",
             document.getElementById('divManipulation').style.display = 'None';
             document.getElementById('divExperiment').style.display = 'Inline';
             // restart timer to not get confused with manipulation check time 
+            exptimer.reset();
             exptimer.play(true);
         },
         false);
