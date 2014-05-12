@@ -245,6 +245,8 @@ else {
     console.log('everything fine, choose -> '.concat(choosenTreatment));
     document.getElementById('divTreatment').style.display = 'None';
     document.getElementById('divInstructions').style.display = 'Inline';
+    // create data for new vp
+    log_response(save_data);
 }
 },
 false)
@@ -287,6 +289,8 @@ else if ($('#frmExamples').valid())
     document.getElementById('divExamples').style.display = 'None';
     document.getElementById('divInstructions2').style.display = 'Inline';
     console.log('All answers are correct');
+    // log data for example stage
+    log_response(save_data);
 }
 // input wasn't right
 else {
