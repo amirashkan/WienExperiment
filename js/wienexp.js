@@ -25,7 +25,7 @@ var avg_time = 300*1000;
 var experiment_start_time = Date();
 var exptimer = $.timer(function() {
     console.log("the time is over");
-	document.getElementById("txtBelowExperiment2").innerHTML = 'Sie haben nun die Möglichkeit fortzufahren ohne alle Lösungen gefunden zu haben.';
+	document.getElementById("txtBelowExperiment2").style.display = 'inline';
     exptimer.stop();
 });
 exptimer.set({ time : avg_time, autostart : false });
@@ -453,6 +453,8 @@ document.getElementById("btnExperiment").addEventListener("click",
                 for (var i=0; i<8; i++) {
                     $('input[name=exp'+ i +']', '#frmExperiment').val('');
                 }
+                document.getElementById('txtBelowExperiment').style.display='none';
+                document.getElementById('txtBelowExperiment2').style.display='none';
 
                 // generate new random list 
                 random_array = generate_random_list(8);
@@ -463,7 +465,6 @@ document.getElementById("btnExperiment").addEventListener("click",
             else {
                 // indicate how many anagrams are wrong
                 document.getElementById('txtBelowExperiment').style.display = 'inline';
-                document.getElementById('txtBelowExperiment').innerHTML = 'Bitte vervollständigen Sie alle Aufgaben richtig.';
                 console.log("input incorrect or still time left");
             }
         },
