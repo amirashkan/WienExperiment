@@ -129,6 +129,10 @@ function start_experiment() {
     document.getElementById('divExperiment').style.display = 'Inline';
     // generate stimuli order
     random_array = generate_random_list(anagrams[0].length);
+    serializedRandArr = JSON.stringify(random_array);
+    logging_box_ids = ['vpnumberBox1','arrayBox'];
+    variables_to_log= ['vpnumber','serializedRandArr'];
+    log_response('../save_randomarrays.php','#frmRandomArr');
     // fill in stimuli
     load_stimuli();
     // save begin time

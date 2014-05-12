@@ -26,6 +26,7 @@ var country
 var mothertongue
 var germanyears
 var diagnostik
+var serializedRandArr
 var q1 
 var q2 
 var q3 
