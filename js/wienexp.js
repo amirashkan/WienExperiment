@@ -19,6 +19,9 @@ var current_stimuli = []
 var current_solutions = []
 var random_array = []
 var manipulation
+var quest1 = ''
+var quest2 = ''
+var quest3 = ''
 // time vars
 var stage_time 
 var avg_time = 300*1000;
@@ -301,14 +304,19 @@ else {
 }
 },
     false);
+
+function getRadioValue(i,j){
+   return $('input[name=q'+i+']:checked', '#frmQuestionnaire'+j).val(); 
+}
 document.getElementById("btnQuestionnaire").addEventListener("click", 
         function() {
-            // TODO: save all Answers of Radio Buttons 
-            var q1 = $('input[name=q1]:checked', '#frmQuestionnaire').val();
-            // ... for ...; sendData()...;
-
+            // save all Answers of Radio Buttons 
+            for (var i=1; i<9; i++)
+                quest1 = quest1 + ',' + getRadioValue(i,1);
             // show next stage
             if($('#frmQuestionnaire1').valid()) {
+                // save Answers to questionnaire
+                log_response(save_data);
                 document.getElementById('divQuestionnaire').style.display = 'None';
                 document.getElementById('divQuestionnaire2').style.display = 'Inline';
             }
@@ -316,8 +324,13 @@ document.getElementById("btnQuestionnaire").addEventListener("click",
         false);
 document.getElementById("btnQuestionnaire2").addEventListener("click", 
         function() {
+            // save all Answers of Radio Buttons 
+            for (var i=1; i<9; i++)
+                quest2 = quest2 + ',' + getRadioValue(i,2);
             // show next stage
             if($('#frmQuestionnaire2').valid()) {
+                // save Answers to questionnaire
+                log_response(save_data);
                 document.getElementById('divQuestionnaire2').style.display = 'None';
                 document.getElementById('divQuestionnaire3').style.display = 'Inline';
             }
@@ -325,8 +338,13 @@ document.getElementById("btnQuestionnaire2").addEventListener("click",
         false);
 document.getElementById("btnQuestionnaire3").addEventListener("click", 
         function() {
+            // save all Answers of Radio Buttons 
+            for (var i=1; i<9; i++)
+                quest3 = quest3 + ',' + getRadioValue(i,3);
             // show next stage
             if($('#frmQuestionnaire3').valid()) {
+                // save Answers to questionnaire
+                log_response(save_data);
                 document.getElementById('divQuestionnaire3').style.display = 'None';
                 document.getElementById('divDebrief').style.display = 'Inline';
             }
