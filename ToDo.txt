@@ -2,4 +2,15 @@
  +die Reihenfolge der Anagramme
  *ach ja, vielleicht wäre eine geheime taste noch ganz nützlich, wenn jemand sagt er kann etwas nicht lösen, sodass es weiter geht aber registriert wird das items nicht gelöst wurden
 
-Start der Erhebung: 09.05
+11. Textfeld statt Kästchen
+
+12. FAAU -> FAPU
+
+13. random arrays & responses noch nicht gespeichert
+
+15. Questionnaire scheint in falscher Reihenfolge zu speichern (auf Seite 3 aufgefallen)
+
+16. germanyears wird nicht gespeichert
+
+17. Untergeordnete Priorität: (nur wenn leicht möglich) „Bitte geben Sie die…“ erst nachdem man auf weiter drückt 
+
