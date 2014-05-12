@@ -179,7 +179,7 @@ function log_response(data_address) {
         var variable_to_log = variables_to_log[i];
         document.getElementById(logging_box_id).value = window[variable_to_log]
     };
-    sendData(data_address);
+    send_data(data_address);
     console.log("log_response");
     // display next trial after a delay
     // setTimeout(function(){next_trial();}, feedback_delay)
@@ -202,7 +202,7 @@ function next_trial(){
 };
 
 // POSTs data into 'wichform' to the given 'address'
-function sendData(address, whichform){ 
+function send_data(address, whichform){ 
     $.ajax({
 	    type: "POST",
 	    url: address,

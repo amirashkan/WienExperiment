@@ -3,7 +3,7 @@ var ITI = 500
 var number_of_trials = 9
 
 // pages to send results to
-var saveData = '../save_data.php' 
+var save_data = '../save_data.php' 
 
 // hidden box with forms which gets filled with data
 var logging_box_ids = new Array();
@@ -254,7 +254,7 @@ document.getElementById("btnEnde").addEventListener("click",
 {
     document.getElementById('divDemographic').style.display = 'None';
     document.getElementById('divDebrief').style.display = 'Inline';
-    sendData(user_data_address, "#frmDemographic")
+    send_data(save_data, "#frmDemographic")
 }
 },
 false)
