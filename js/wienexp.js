@@ -295,7 +295,7 @@ document.getElementById("btnExamples").addEventListener("click",
     stage_time = Date.now();
 }
 // now it checks user input
-else if ($('#frmExamples').valid() || Date.now() - stage_time > avg_time)
+else if ($('#frmExamples').valid())
 {
     // and the party goes on...
     document.getElementById('divExamples').style.display = 'None';
