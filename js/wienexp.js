@@ -5,10 +5,6 @@ var number_of_trials = 9
 // pages to send results to
 var save_data = '../save_data.php' 
 
-// hidden box with forms which gets filled with data
-var logging_box_ids = new Array();
-var variables_to_log = new Array();
-
 // DEBUG stuff
 var debug_mode = false // Set as true to show extra information, false to run experiment normally.
 
@@ -24,13 +20,10 @@ var manipulation
 var quest1 = ''
 var quest2 = ''
 var quest3 = ''
-var logging_box_ids = ['vpnumber','choosenTreatment','choosenCategory',]
-var variables_to_log = ['timeBox', 'trialBox', 'probeBox', 'codeBox', 'responseBox', 'rtBox']
 // time vars
 var rt
 var stage_time 
 var avg_time = 300*1000;
-var experiment_start_time = Date();
 var exptimer = $.timer(function() {
     console.log("the time is over");
 	document.getElementById("txtBelowExperiment2").style.display = 'inline';

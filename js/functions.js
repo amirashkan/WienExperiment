@@ -16,9 +16,6 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-// Running variables - Defined here so the user doesn't have to deal with them.
-var rt;
-var accepted_keys;
 
 // Functions
 // ---------------------------------------------------------------------
@@ -199,7 +196,7 @@ function next_trial(){
     };
 };
 
-// POSTs data into 'wichform' to the given 'address'
+// POSTs data from 'wichform' to the given 'address'
 function send_data(address, whichform){ 
     $.ajax({
 	    type: "POST",
