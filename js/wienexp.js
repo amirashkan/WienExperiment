@@ -17,6 +17,7 @@ var current_stimuli = []
 var current_solutions = []
 var random_array = []
 var manipulation
+var missedanagrams
 var q1 
 var q2 
 var q3 
@@ -174,6 +175,15 @@ $(document).ready(function () {
             exp5: "checkAnagrams",
             exp6: "checkAnagrams",
             exp7: "checkAnagrams"
+        },
+        invalidHandler: function(event, validator) {
+            // 'this' refers to the form
+            missedanagrams = validator.numberOfInvalids();
+            if (missedanagrams) {
+                console.log("Anagramme, die noch nicht gelöst wurden: "+missedanagrams);
+            } else {
+                console.log("Alle Anagramme gelöst");
+            }
         }
     });
 
