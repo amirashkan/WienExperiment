@@ -18,6 +18,7 @@ var choosenCategory
 var current_stimuli = []
 var current_solutions = []
 var random_array = []
+var manipulation
 // time vars
 var stage_time 
 var avg_time = 300*1000;
@@ -466,14 +467,20 @@ document.getElementById("btnExperiment").addEventListener("click",
 
 document.getElementById("btnManipulation").addEventListener("click", 
         function() {
-            if ($('#cbManipulation1').prop('checked') && $('#cbManipulation2').prop('checked') &&
-                $('#cbManipulation3').prop('checked') && !$('#cbManipulation4').prop('checked') &&
-                !$('#cbManipulation5').prop('checked') && !$('#cbManipulation6').prop('checked') &&
-                !$('#cbManipulation7').prop('checked') && !$('#cbManipulation8').prop('checked') &&
-                !$('#cbManipulation9').prop('checked') )
-            {
-                // TODO: save manipulation test
-            }
+            // manipulation bit code encodes user input
+            manipulation = 0;
+            if ($('#cbManipulation1').prop('checked')) manipulation +=1;
+            if ($('#cbManipulation2').prop('checked')) manipulation +=2;
+            if ($('#cbManipulation3').prop('checked')) manipulation +=4;
+            if ($('#cbManipulation4').prop('checked')) manipulation +=8;
+            if ($('#cbManipulation5').prop('checked')) manipulation +=16;
+            if ($('#cbManipulation6').prop('checked')) manipulation +=32;
+            if ($('#cbManipulation7').prop('checked')) manipulation +=64;
+            if ($('#cbManipulation8').prop('checked')) manipulation +=128;
+            if ($('#cbManipulation9').prop('checked')) manipulation +=256;
+            // save decision
+            log_response(save_data);
+            // and go on with the experiment
             document.getElementById('divManipulation').style.display = 'None';
             document.getElementById('divExperiment').style.display = 'Inline';
         },
