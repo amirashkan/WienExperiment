@@ -2,9 +2,7 @@
  +die Reihenfolge der Anagramme
  *ach ja, vielleicht wäre eine geheime taste noch ganz nützlich, wenn jemand sagt er kann etwas nicht lösen, sodass es weiter geht aber registriert wird das items nicht gelöst wurden
 
-11. Textfeld statt Kästchen
 
-12. FAAU -> FAPU
 
 13. random arrays & responses noch nicht gespeichert
 
