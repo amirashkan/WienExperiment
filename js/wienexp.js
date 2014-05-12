@@ -261,7 +261,10 @@ document.getElementById("btnEnde").addEventListener("click",
 {
     document.getElementById('divDemographic').style.display = 'None';
     document.getElementById('divDebrief').style.display = 'Inline';
-    send_data(save_data, "#frmDemographic")
+    stage_name = 'choosenTreatment';
+    logging_box_ids = ['vpnumberBox','choosentreatmentBox'];
+    variables_to_log= ['vpnumber','choosenTreatment'];
+    log_response('../save_demographic.php', frmDemo);
 }
 },
 false)
