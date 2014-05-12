@@ -14,9 +14,4 @@
  +welche Auswahl getroffen
  +und natürlich die Antwort aus dem manipulationscheck
 
-
-16. Fortschrittsbalken Reihenfolge bei 2Go verkehrt.
-
-17. Forschrittsbalken bei 2Date muss bei Null anfangen (my bad, hab vergessen dass man ja bei einem leeren Fortschrittsbalken anfangen muss, hab neues Bild bereits erstellt.) 
-
 Start der Erhebung: 09.05
