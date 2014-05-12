@@ -24,7 +24,7 @@ var student
 var studyfield
 var country
 var mothertongue
-var germanyear
+var germanyears
 var diagnostik
 var q1 
 var q2 
@@ -316,7 +316,7 @@ else if ($('#frmExamples').valid())
     stage_name='examples';
     logging_box_ids = ['vpnumberBox2','trialBox2','stagetimeBox','rtBox','missedanagramsBox', 'manipulationBox', 'choosencategoryBox', 'choosentreatmentBox','p1Box','p2Box'];
     variables_to_log = ['vpnumber','trial_number','stage_time','rt','missedanagrams', 'manipulation', 'choosenCategory', 'choosenTreatment','p1','p2'];
-    log_response('../save_responses.php',frmResponses);
+    log_response('../save_responses.php','#frmResponses');
 }
 // input wasn't right
 else {
@@ -349,7 +349,7 @@ document.getElementById("btnQuestionnaire").addEventListener("click",
                 stage_name='quest1';
                 logging_box_ids = ['vpnumberBox3','questBox','q1Box','q2Box','q3Box','q4Box','q5Box','q6Box','q7Box','q8Box'];
                 variables_to_log= ['vpnumber','stage_name','q1','q2','q3','q4','q5','q6','q7','q8'];
-                log_response('../save_questionnaires.php',frmQuestionnaires);
+                log_response('../save_questionnaires.php','#frmQuestionnaires');
                 document.getElementById('divQuestionnaire').style.display = 'None';
                 document.getElementById('divQuestionnaire2').style.display = 'Inline';
             }
@@ -374,7 +374,7 @@ document.getElementById("btnQuestionnaire2").addEventListener("click",
                 stage_name='quest2';
                 logging_box_ids = ['vpnumberBox3','questBox','q1Box','q2Box','q3Box','q4Box','q5Box','q6Box','q7Box','q8Box'];
                 variables_to_log= ['vpnumber','stage_name','q1','q2','q3','q4','q5','q6','q7','q8'];
-                log_response('../save_questionnaires.php',frmQuestionnaires);
+                log_response('../save_questionnaires.php','#frmQuestionnaires');
                 document.getElementById('divQuestionnaire2').style.display = 'None';
                 document.getElementById('divQuestionnaire3').style.display = 'Inline';
             }
@@ -383,14 +383,14 @@ document.getElementById("btnQuestionnaire2").addEventListener("click",
 document.getElementById("btnQuestionnaire3").addEventListener("click", 
         function() {
             // save all Answers of Radio Buttons 
-            q1 = getRadioValue(1,1);
-            q2 = getRadioValue(2,1);
-            q3 = getRadioValue(3,1);
-            q4 = getRadioValue(4,1);
-            q5 = getRadioValue(5,1);
-            q6 = getRadioValue(6,1);
-            q7 = getRadioValue(7,1);
-            q8 = getRadioValue(8,1);
+            q1 = getRadioValue(1,3);
+            q2 = getRadioValue(2,3);
+            q3 = getRadioValue(3,3);
+            q4 = getRadioValue(4,3);
+            q5 = getRadioValue(5,3);
+            q6 = getRadioValue(6,3);
+            q7 = getRadioValue(7,3);
+            q8 = getRadioValue(8,3);
  
             // show next stage
             if($('#frmQuestionnaire3').valid()) {
@@ -398,7 +398,7 @@ document.getElementById("btnQuestionnaire3").addEventListener("click",
                 stage_name='quest3';
                 logging_box_ids = ['vpnumberBox3','questBox','q1Box','q2Box','q3Box','q4Box','q5Box','q6Box','q7Box','q8Box'];
                 variables_to_log= ['vpnumber','stage_name','q1','q2','q3','q4','q5','q6','q7','q8'];
-                log_response('../save_questionnaires.php',frmQuestionnaires);
+                log_response('../save_questionnaires.php','#frmQuestionnaires');
                 document.getElementById('divQuestionnaire3').style.display = 'None';
                 document.getElementById('divDemographic').style.display = 'Inline';
             }
@@ -518,7 +518,7 @@ document.getElementById("btnExperiment").addEventListener("click",
                 // save random_array and user inputs
                 logging_box_ids = ['vpnumberBox2','trialBox2','stagetimeBox','rtBox','missedanagramsBox', 'manipulationBox', 'choosencategoryBox', 'choosentreatmentBox','p1Box','p2Box'];
                 variables_to_log = ['vpnumber','trial_number','stage_time','rt','missedanagrams', 'manipulation', 'choosenCategory', 'choosenTreatment','p1','p2'];
-                log_response('../save_responses.php',frmResponses);
+                log_response('../save_responses.php','#frmResponses');
                 // update trial number 
                 trial_number++;
                 stage_name = 'trial'+trial_number;
