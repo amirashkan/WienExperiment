@@ -200,6 +200,17 @@ $(document).ready(function () {
             document.getElementById('txtBelowToDate').innerHTML = 'Bitte tragen Sie die richtige Antwort ein';
         }
     });
+    
+    $('#frmManipulation').validate({
+        rules: {
+            txManipulation:{ required:true}
+        },
+
+        highlight: function(element, errorClass){
+            document.getElementById('txtBelowManipulation').innerHTML = 'Bitte tragen eine Antwort ein';
+        }
+    });
+    
     $('#frmToGo').validate({
         rules: {
             toGoInput:{ required:true}
@@ -559,19 +570,21 @@ document.getElementById("btnExperiment").addEventListener("click",
 
 document.getElementById("btnManipulation").addEventListener("click", 
         function() {
-            // save decision
-            manipulation = document.getElementById('txManipulation').value
-            stage_name = 'manipulation'+trial_number;
-            logging_box_ids = ['vpnumberBox2','trialBox2','stagetimeBox','rtBox','missedanagramsBox', 'manipulationBox', 'choosencategoryBox', 'choosentreatmentBox','p1Box','p2Box'];
-            variables_to_log = ['vpnumber','trial_number','stage_time','rt','missedanagrams', 'manipulation', 'choosenCategory', 'choosenTreatment','p1','p2'];
-            log_response('../save_responses.php','#frmResponses');
-            // remove user input
-            manipulation = '';
-            // and go on with the experiment
-            document.getElementById('divManipulation').style.display = 'None';
-            document.getElementById('divExperiment').style.display = 'Inline';
-            // restart timer to not get confused with manipulation check time 
-            exptimer.reset();
-            exptimer.play(true);
+            if($('#frmManipulation').valid()){
+                // save decision
+                manipulation = document.getElementById('txManipulation').value
+                stage_name = 'manipulation'+trial_number;
+                logging_box_ids = ['vpnumberBox2','trialBox2','stagetimeBox','rtBox','missedanagramsBox', 'manipulationBox', 'choosencategoryBox', 'choosentreatmentBox','p1Box','p2Box'];
+                variables_to_log = ['vpnumber','trial_number','stage_time','rt','missedanagrams', 'manipulation', 'choosenCategory', 'choosenTreatment','p1','p2'];
+                log_response('../save_responses.php','#frmResponses');
+                // remove user input
+                manipulation = '';
+                // and go on with the experiment
+                document.getElementById('divManipulation').style.display = 'None';
+                document.getElementById('divExperiment').style.display = 'Inline';
+                // restart timer to not get confused with manipulation check time 
+                exptimer.reset();
+                exptimer.play(true);
+            }
         },
         false);
