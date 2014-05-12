@@ -169,7 +169,8 @@ function load_stimuli()
 
 
 function log_response(data_address) {
-    rt = Date.now() - start_time;
+    // reaction time is time since presentation of current stage 
+    rt = Date.now() - stage_time;
     // If they exit, clear intervals and timeouts.
     try {clearInterval(tracking_interval);} catch(err){};
     try {clearTimeout(response_timeout);} catch(err){};

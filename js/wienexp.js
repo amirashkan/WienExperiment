@@ -277,6 +277,8 @@ document.getElementById("btnExamples").addEventListener("click",
     document.getElementById('txtAboveExamples2').style.display = 'inline';
     document.getElementById('txtAboveExamples').style.display = 'none';
     document.getElementById('frmExamples').style.display = 'inline';
+    // presentation of examples begins now
+    stage_time = Date.now();
 }
 // now it checks user input
 else if ($('#frmExamples').valid())
