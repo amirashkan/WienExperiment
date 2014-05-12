@@ -162,9 +162,6 @@ function load_stimuli()
         $("#progress").attr("src","../images/2go"+trial_number+"Blocks.jpg");
     else if(choosenTreatment >= 2)
         $("#progress").attr("src","../images/2date"+trial_number+"Blocks.jpg");
-
-    // TODO: save random_array for each trial
-    // ...
 }
 
 
