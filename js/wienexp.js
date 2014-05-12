@@ -452,6 +452,10 @@ document.getElementById("btnExperiment").addEventListener("click",
             // if all anagrams are solved correctly or it took them longer 
             // as the meanTime of all participants of the prestudy 
             if ($('#frmExperiment').valid() || Date.now() - stage_time > avg_time){
+                // save random_array and user inputs
+                log_response(save_data);
+                // update trial number 
+                trial_number++;
                 // at first handle manipulation block or finish the experiment
                 if (trial_number == 4 || trial_number == 7) { 
                     document.getElementById('divExperiment').style.display = 'None';
@@ -463,10 +467,6 @@ document.getElementById("btnExperiment").addEventListener("click",
                     // only in this case, we need to return
                     return;
                 }
-                // save random_array and user inputs
-                log_response(save_data);
-                // update trial number 
-                trial_number++;
                 // remove all user input
                 for (var i=0; i<8; i++) {
                     $('input[name=exp'+ i +']', '#frmExperiment').val('');
