@@ -15,7 +15,7 @@ $ex7 = $_POST["ex7"];
 include 'connect.php';
 
 //Insert variables into database
-mysql_query("INSERT INTO user_data (vpnumber, trial, rt, ex0, ex1, ex2, ex3, ex4, ex5, ex6, ex7) 
+mysql_query("INSERT INTO responses (vpnumber, trial, rt, ex0, ex1, ex2, ex3, ex4, ex5, ex6, ex7) 
 VALUES ('$vpnumber', '$trial', '$rt', '$ex0','$ex1','$ex2','$ex3','$ex4','$ex5','$ex6', '$ex7');");
 
 //Disconnect
