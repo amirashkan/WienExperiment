@@ -298,7 +298,7 @@ else if ($('#frmExamples').valid())
     stage_name='examples';
     logging_box_ids = ['vpnumberBox','stage_nameBox','rtBox'];
     variables_to_log= ['vpnumber','stage_name','rt'];
-    log_response('../save_responses.php',frmResponses);
+    log_response('../save_response.php',frmResponses);
 }
 // input wasn't right
 else {

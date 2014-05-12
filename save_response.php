@@ -1,7 +1,7 @@
 <?php
 //Receive variables from JavaScript
 $vpnumber = $_POST["vpnumber"];
-$trial = $_POST["trial_number"];
+$trial = $_POST["trial"];
 $rt = $_POST["rt"];
 $ex0 = $_POST["ex0"];
 $ex1 = $_POST["ex1"];
