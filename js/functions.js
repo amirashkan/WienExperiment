@@ -158,7 +158,7 @@ function load_stimuli()
     if (choosenTreatment < 2) 
         $("#progress").attr("src","../images/2go"+trial_number+"Blocks.jpg");
     else if(choosenTreatment >= 2)
-        $("#progress").attr("src","../images/2date"+trial_number-1+"Blocks.jpg");
+        $("#progress").attr("src","../images/2date"+trial_number+"Blocks.jpg");
 }
 
 
