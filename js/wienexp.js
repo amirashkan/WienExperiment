@@ -18,6 +18,14 @@ var current_solutions = []
 var random_array = []
 var manipulation
 var missedanagrams
+var birthday
+var education
+var student
+var studyfield
+var country
+var mothertongue
+var germanyear
+var diagnostik
 var q1 
 var q2 
 var q3 
@@ -251,11 +259,6 @@ else {
     console.log('everything fine, choose -> '.concat(choosenTreatment));
     document.getElementById('divTreatment').style.display = 'None';
     document.getElementById('divInstructions').style.display = 'Inline';
-    // create data for new vp
-    stage_name = 'choosenTreatment';
-    logging_box_ids = ['vpnumberBox','choosentreatmentBox'];
-    variables_to_log= ['vpnumber','choosenTreatment'];
-    log_response('../save_user_data.php', frmUserData);
 }
 },
 false)
@@ -263,12 +266,20 @@ document.getElementById("btnEnde").addEventListener("click",
         function() {
             if($('#frmDemographic').valid())
 {
+    birthday = document.getElementById('birthdayBox').value;
+    education = document.getElementById('educationBox').value;
+    student = document.getElementById('studentBox').value;
+    studyfield = document.getElementById('studyfieldBox').value;
+    country = document.getElementById('countryBox').value;
+    mothertongue = document.getElementById('mothertongueBox').value;
+    germanyears = document.getElementById('germanyearsBox').value;
+    diagnostik = document.getElementById('diagnostikBox').value;
     document.getElementById('divDemographic').style.display = 'None';
     document.getElementById('divDebrief').style.display = 'Inline';
-    stage_name = 'choosenTreatment';
-    logging_box_ids = ['vpnumberBox','choosentreatmentBox'];
-    variables_to_log= ['vpnumber','choosenTreatment'];
-    log_response('../save_demographic.php', frmDemo);
+    stage_name = 'demographic';
+    logging_box_ids = ['vpnumberBox4','bdayBox', 'eduBox', 'studBox', 'studfieldBox', 'countBox', 'motherBox', 'gyBox', 'diaBox'];
+    variables_to_log = ['vpnumber','birthday', 'education', 'student', 'studyfield', 'country', 'mothertongue', 'germanyears', 'diagnostik'];
+    log_response('../save_demographics.php', '#frmDemo');
 }
 },
 false)
@@ -303,9 +314,9 @@ else if ($('#frmExamples').valid())
     console.log('All answers are correct');
     // log data for example stage
     stage_name='examples';
-    logging_box_ids = ['vpnumberBox3','trialBox3','rtBox'];
-    variables_to_log= ['vpnumber','stage_name','rt'];
-    log_response('../save_response.php',frmResponses);
+    logging_box_ids = ['vpnumberBox2','trialBox2','stagetimeBox','rtBox','missedanagramsBox', 'manipulationBox', 'choosencategoryBox', 'choosentreatmentBox','p1Box','p2Box'];
+    variables_to_log = ['vpnumber','trial_number','stage_time','rt','missedanagrams', 'manipulation', 'choosenCategory', 'choosenTreatment','p1','p2'];
+    log_response('../save_responses.php',frmResponses);
 }
 // input wasn't right
 else {
@@ -336,9 +347,9 @@ document.getElementById("btnQuestionnaire").addEventListener("click",
             if($('#frmQuestionnaire1').valid()) {
                 // save Answers to questionnaire
                 stage_name='quest1';
-                logging_box_ids = ['vpnumberBox4','questBox','q1Box','q2Box','q3Box','q4Box','q5Box','q6Box','q7Box','q8Box'];
+                logging_box_ids = ['vpnumberBox3','questBox','q1Box','q2Box','q3Box','q4Box','q5Box','q6Box','q7Box','q8Box'];
                 variables_to_log= ['vpnumber','stage_name','q1','q2','q3','q4','q5','q6','q7','q8'];
-                log_response('../save_quest.php',frmQuest);
+                log_response('../save_questionnaires.php',frmQuestionnaires);
                 document.getElementById('divQuestionnaire').style.display = 'None';
                 document.getElementById('divQuestionnaire2').style.display = 'Inline';
             }
@@ -361,9 +372,9 @@ document.getElementById("btnQuestionnaire2").addEventListener("click",
             if($('#frmQuestionnaire2').valid()) {
                 // save Answers to questionnaire
                 stage_name='quest2';
-                logging_box_ids = ['vpnumberBox4','questBox','q1Box','q2Box','q3Box','q4Box','q5Box','q6Box','q7Box','q8Box'];
+                logging_box_ids = ['vpnumberBox3','questBox','q1Box','q2Box','q3Box','q4Box','q5Box','q6Box','q7Box','q8Box'];
                 variables_to_log= ['vpnumber','stage_name','q1','q2','q3','q4','q5','q6','q7','q8'];
-                log_response('../save_quest.php',frmQuest);
+                log_response('../save_questionnaires.php',frmQuestionnaires);
                 document.getElementById('divQuestionnaire2').style.display = 'None';
                 document.getElementById('divQuestionnaire3').style.display = 'Inline';
             }
@@ -385,9 +396,9 @@ document.getElementById("btnQuestionnaire3").addEventListener("click",
             if($('#frmQuestionnaire3').valid()) {
                 // save Answers to questionnaire
                 stage_name='quest3';
-                logging_box_ids = ['vpnumberBox4','questBox','q1Box','q2Box','q3Box','q4Box','q5Box','q6Box','q7Box','q8Box'];
+                logging_box_ids = ['vpnumberBox3','questBox','q1Box','q2Box','q3Box','q4Box','q5Box','q6Box','q7Box','q8Box'];
                 variables_to_log= ['vpnumber','stage_name','q1','q2','q3','q4','q5','q6','q7','q8'];
-                log_response('../save_quest.php',frmQuest);
+                log_response('../save_questionnaires.php',frmQuestionnaires);
                 document.getElementById('divQuestionnaire3').style.display = 'None';
                 document.getElementById('divDemographic').style.display = 'Inline';
             }
@@ -412,8 +423,6 @@ document.getElementById("btnToGo").addEventListener("click",
                     document.getElementById('divIntrinsic').style.display = 'Inline';
                 else if(choosenTreatment == 0 || choosenTreatment == 2)
                     document.getElementById('divExtrinsic').style.display = 'Inline';
-                // log user understandig of toGo
-                //log_response(save_data);
             }
         },
         false);
@@ -425,8 +434,6 @@ document.getElementById("btnToDate").addEventListener("click",
                     document.getElementById('divIntrinsic').style.display = 'Inline';
                 else if(choosenTreatment == 0 || choosenTreatment == 2)
                     document.getElementById('divExtrinsic').style.display = 'Inline';
-                // log user understandig of toDate
-                //log_response(save_data);
             }
         },
         false);
@@ -509,7 +516,9 @@ document.getElementById("btnExperiment").addEventListener("click",
             // as the meanTime of all participants of the prestudy 
             if ($('#frmExperiment').valid() || Date.now() - stage_time > avg_time){
                 // save random_array and user inputs
-                log_response(save_data);
+                logging_box_ids = ['vpnumberBox2','trialBox2','stagetimeBox','rtBox','missedanagramsBox', 'manipulationBox', 'choosencategoryBox', 'choosentreatmentBox','p1Box','p2Box'];
+                variables_to_log = ['vpnumber','trial_number','stage_time','rt','missedanagrams', 'manipulation', 'choosenCategory', 'choosenTreatment','p1','p2'];
+                log_response('../save_responses.php',frmResponses);
                 // update trial number 
                 trial_number++;
                 stage_name = 'trial'+trial_number;
@@ -560,7 +569,10 @@ document.getElementById("btnManipulation").addEventListener("click",
             if ($('#cbManipulation8').prop('checked')) manipulation +=128;
             if ($('#cbManipulation9').prop('checked')) manipulation +=256;
             // save decision
-            log_response(save_data);
+            stage_name = 'manipulation'+trial_number;
+            logging_box_ids = ['vpnumberBox2','trialBox2','stagetimeBox','rtBox','missedanagramsBox', 'manipulationBox', 'choosencategoryBox', 'choosentreatmentBox','p1Box','p2Box'];
+            variables_to_log = ['vpnumber','trial_number','stage_time','rt','missedanagrams', 'manipulation', 'choosenCategory', 'choosenTreatment','p1','p2'];
+            log_response('../save_responses.php',frmResponses);
             // remove user input
             $('#cbManipulation1').prop('checked',false);
             $('#cbManipulation2').prop('checked',false);

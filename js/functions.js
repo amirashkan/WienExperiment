@@ -175,7 +175,6 @@ function log_response(data_address, whichform) {
         document.getElementById(logging_box_id).value = window[variable_to_log]
     };
     send_data(data_address, whichform);
-    console.log("log_response");
     // display next trial after a delay
     // setTimeout(function(){next_trial();}, feedback_delay)
 };

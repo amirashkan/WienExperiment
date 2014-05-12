@@ -13,7 +13,7 @@ $diagnostik = $_POST["diagnostik"];
 include 'connect.php';
 
 //Insert variables into database
-mysql_query("INSERT INTO demographic (vpnumber, birthday, education, student, studyfield, country, mothertongue, germanyears, diagnostik) 
+mysql_query("INSERT INTO demographics (vpnumber, birthday, education, student, studyfield, country, mothertongue, germanyears, diagnostik) 
 VALUES ('$vpnumber','$birthday', '$education', '$student', '$studyfield', '$country', '$mothertongue', '$germanyears', '$diagnostik');");
 echo mysql_insert_id();
 //Disconnect

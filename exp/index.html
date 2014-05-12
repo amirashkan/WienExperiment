@@ -821,39 +821,25 @@
 </div>
 
 <div id="hidden_div" style = "display: inline;">
-     <form id = "frmUserData" style="display:inline;" method ="POST" action ="save_data.php">
-        VPNumber: <input id = "vpnumberBox" name = "vpnumber"><br>
-        ChoosenTreatment: <input id = "choosentreatmentBox" name = "choosentreatment"><br>
-        ChoosenCategory: <input id = "choosencategoryBox" name = "choosencategory"><br>
+     <form id = "frmRandomArr" style="display:inline;" method ="POST" action ="../save_randomarrays.php">
+        VPNumber: <input id = "vpnumberBox1" name = "vpnumber"><br>
+        r0: <input id = "arrayBox" name = "array"><br>
     </form>
-     <form id = "frmRandomArr" style="display:inline;" method ="POST" action ="save_data.php">
+     <form id = "frmResponses" style="display:inline;" method ="POST" action ="../save_responses.php">
         VPNumber: <input id = "vpnumberBox2" name = "vpnumber"><br>
-        trial: <input id="trialBox2" name = "trial"><br>
-        r0: <input id = "r0Box" name = "r0"><br>
-        r1: <input id = "r1Box" name = "r1"><br>
-        r2: <input id = "r2Box" name = "r2"><br>
-        r3: <input id = "r3Box" name = "r3"><br>
-        r4: <input id = "r4Box" name = "r4"><br>
-        r5: <input id = "r5Box" name = "r5"><br>
-        r6: <input id = "r6Box" name = "r6"><br>
-        r7: <input id = "r7Box" name = "r7"><br>
-    </form>
-     <form id = "frmResponses" style="display:inline;" method ="POST" action ="save_data.php">
-        VPNumber: <input id = "vpnumberBox3" name = "vpnumber"><br>
-        trial: <input id = "trialBox3" name = "trial"><br>
+        trial: <input id = "trialBox2" name = "trial"><br>
+        stagetime: <input id = "stagetimeBox" name = "stagetime"><br>
         rt: <input id = "rtBox" name = "rt"><br>
-        ex: <input id = "ex0Box" name = "ex0"><br>
-        ex: <input id = "ex1Box" name = "ex1"><br>
-        ex: <input id = "ex2Box" name = "ex2"><br>
-        ex: <input id = "ex3Box" name = "ex3"><br>
-        ex: <input id = "ex4Box" name = "ex4"><br>
-        ex: <input id = "ex5Box" name = "ex5"><br>
-        ex: <input id = "ex6Box" name = "ex6"><br>
-        ex: <input id = "ex7Box" name = "ex7"><br>
+        missedanagrams: <input id = "missedanagramsBox" name = "missedanagrams"><br>
+        manipulation: <input id = "manipulationBox" name = "manipulation"><br>
+        choosencategory: <input id = "choosencategoryBox" name = "choosencategory"><br>
+        choosentreatment: <input id = "choosentreatmentBox" name = "choosentreatment"><br>
+        p1: <input id = "p1Box" name = "p1"><br>
+        p2: <input id = "p2Box" name = "p2"><br>
     </form>
-     <form id = "frmQuest" style="display:inline;" method ="POST" action ="save_data.php">
-        VPNumber: <input id = "vpnumberBox4" name = "vpnumber"><br>
-        questionnaire: <input id = "questBox" name = "quest"><br>
+     <form id = "frmQuestionnaires" style="display:inline;" method ="POST" action ="../save_questionnaires.php">
+        VPNumber: <input id = "vpnumberBox3" name = "vpnumber"><br>
+        questionnaire: <input id = "questBox" name = "questionnaire"><br>
         q1: <input id = "q1Box" name = "q1"><br>
         q2: <input id = "q2Box" name = "q2"><br>
         q3: <input id = "q3Box" name = "q3"><br>
@@ -863,9 +849,9 @@
         q7: <input id = "q7Box" name = "q7"><br>
         q8: <input id = "q8Box" name = "q8"><br>
     </form>
-     <form id = "frmDemo" style="display:inline;" method ="POST" action ="save_data.php">
-        VPNumber: <input id = "vpnumberBox5" name = "vpnumber"><br>
-        questionnaire: <input id = "bdayBox" name = "birthday"><br>
+     <form id = "frmDemo" style="display:inline;" method ="POST" action ="../save_demographics.php">
+        VPNumber: <input id = "vpnumberBox4" name = "vpnumber"><br>
+        birthday: <input id = "bdayBox" name = "birthday"><br>
         education: <input id = "eduBox" name = "education"><br>
         student: <input id = "studBox" name = "student"><br>
         studyfield: <input id = "studfieldBox" name = "studyfield"><br>
