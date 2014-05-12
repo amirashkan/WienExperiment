@@ -20,14 +20,14 @@ var current_solutions = []
 var random_array = []
 // time vars
 var stage_time 
-var mean_time = 300;
+var avg_time = 300*1000;
 var experiment_start_time = Date();
 var exptimer = $.timer(function() {
     console.log("the time is over");
 	document.getElementById("txtBelowExperiment2").innerHTML = 'Sie haben nun die Möglichkeit fortzufahren ohne alle Lösungen gefunden zu haben.';
     exptimer.stop();
 });
-exptimer.set({ time : mean_time, autostart : false });
+exptimer.set({ time : avg_time, autostart : false });
 // probabilities of the extrinsic decisions
 var p1 = 1/3;
 var p2 = 1/3;
@@ -428,7 +428,7 @@ document.getElementById("btnExperiment").addEventListener("click",
         function() {
             // if all anagrams are solved correctly or it took them longer 
             // as the meanTime of all participants of the prestudy 
-            if ($('#frmExperiment').valid() || Date.now() - stage_time > mean_time){
+            if ($('#frmExperiment').valid() || Date.now() - stage_time > avg_time){
                 // at first handle manipulation block or finish the experiment
                 if (trial_number == 4 || trial_number == 7) { 
                     document.getElementById('divExperiment').style.display = 'None';
