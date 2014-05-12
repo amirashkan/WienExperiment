@@ -128,7 +128,7 @@ function start_experiment() {
     stage_name = 'trial'+trial_number;
     document.getElementById('divExperiment').style.display = 'Inline';
     // generate stimuli order
-    random_array = generate_random_list(8);
+    random_array = generate_random_list(anagrams[0].length);
     // fill in stimuli
     load_stimuli();
     // save begin time
@@ -142,8 +142,8 @@ function load_stimuli()
     // load 
     for (var i=0; i<8; i++) {
         // save stimuli for this round
-        current_stimuli[i] = anagrams[choosenCategory - 1][8 * (trial_number-1) + i];
-        current_solutions[i] = solutions[choosenCategory - 1][8 * (trial_number-1) + i];
+        current_stimuli[i] = anagrams[choosenCategory - 1][random_array[8 * (trial_number-1) + i]];
+        current_solutions[i] = solutions[choosenCategory - 1][random_array[8 * (trial_number-1) + i]];
     }
 
     // write into table
@@ -151,7 +151,7 @@ function load_stimuli()
         var selector = '#tdexp' + i;
         var selector2 = 'exp' + i;
         // write stimuli at random place 
-        $(selector).text(current_stimuli[random_array[i]]);
+        $(selector).text(current_stimuli[i]);
     }
 
     // present progress bar

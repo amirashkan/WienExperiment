@@ -158,7 +158,7 @@ $(document).ready(function () {
                 // retrieve element number and decrement, to get the position of the current element (in array notation)
                 var number = parseInt(element.name.replace(/[^0-9]/g, ''));
                 // find position of randomized element in current_solutions
-                return value.toUpperCase() == current_solutions[random_array[number]];
+                return value.toUpperCase() == current_solutions[number];
             },
             // display error messages
             jQuery.validator.format("Bitte geben Sie die korrekte Lösung an"));
@@ -525,8 +525,6 @@ document.getElementById("btnExperiment").addEventListener("click",
                 document.getElementById('txtBelowExperiment').style.display='none';
                 document.getElementById('txtBelowExperiment2').style.display='none';
 
-                // generate new random list 
-                random_array = generate_random_list(8);
                 // fill in stimuli
                 load_stimuli();
                 if (trial_number != 4 && trial_number != 7)
