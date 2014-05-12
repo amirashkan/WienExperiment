@@ -20,9 +20,9 @@
 
 13. random arrays & responses noch nicht gespeichert
 
-14. „Bitte geben Sie die…“ erst nachdem man auf weiter drückt (schnell möglich?)
-Start der Erhebung: 09.05
-
 15. Questionnaire scheint in falscher Reihenfolge zu speichern (auf Seite 3 aufgefallen)
 
 16. germanyears wird nicht gespeichert
+
+17. Untergeordnete Priorität: (nur wenn leicht möglich) „Bitte geben Sie die…“ erst nachdem man auf weiter drückt 
+
