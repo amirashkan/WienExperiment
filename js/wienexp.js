@@ -445,16 +445,16 @@ document.getElementById("btnExperiment").addEventListener("click",
                     // only in this case, we need to return
                     return;
                 }
-                difftime = Date.now() - stage_time;
-                console.log("difftime: " + difftime);
+                // save random_array and user inputs
+                log_response(save_data);
                 // update trial number 
                 trial_number++;
                 // remove all user input
                 for (var i=0; i<8; i++) {
                     $('input[name=exp'+ i +']', '#frmExperiment').val('');
                 }
-                // TODO: save random_array for each trial
-                // ...
+
+                // generate new random list 
                 random_array = generate_random_list(8);
                 // fill in stimuli
                 load_stimuli();
