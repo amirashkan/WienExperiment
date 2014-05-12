@@ -17,5 +17,6 @@
 10. Beispiel aus Haupttask entfernen
 11. Demographischer Fragebogen nach 22 Item Fragebogen, vor Dankes-Seite
 12. Kran-Anagramm (nkra) durch ipkoe (Kopie) ersetzen. „Kopie“ von Beispielen entfernen.
+13. In Kondition 2date werden die falschen Fortschrittsbalken angezeigt (2Go werden angezeigt) - und umgekehrt wird bei 2go 2date-balken angezeigt.
 
 Start der Erhebung: 09.05
