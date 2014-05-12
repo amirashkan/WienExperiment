@@ -183,7 +183,7 @@ $(document).ready(function () {
         },
 
         highlight: function(element, errorClass){
-            document.getElementById('txtBelowToDate').innerHTML = 'Bitte tragen Sie eine Antwort ein';
+            document.getElementById('txtBelowToDate').innerHTML = 'Bitte tragen Sie die richtige Antwort ein';
         }
     });
     $('#frmToGo').validate({
@@ -192,7 +192,7 @@ $(document).ready(function () {
         },
 
         highlight: function(element, errorClass){
-            document.getElementById('txtBelowToGo').innerHTML = 'Bitte tragen Sie eine Antwort ein';
+            document.getElementById('txtBelowToGo').innerHTML = 'Bitte tragen Sie die richtige Antwort ein';
         }
     });
 
@@ -400,7 +400,8 @@ document.getElementById("btnInstructions2").addEventListener("click",
         false);
 document.getElementById("btnToGo").addEventListener("click", 
         function() {
-            if($('#frmToGo').valid()) {
+    
+            if($('#frmToGo').valid() && document.getElementById('toGoInput').value == 5 ) {
                 document.getElementById('divToGo').style.display = 'None';
                 if (choosenTreatment == 1 || choosenTreatment == 3) 
                     document.getElementById('divIntrinsic').style.display = 'Inline';
@@ -413,7 +414,7 @@ document.getElementById("btnToGo").addEventListener("click",
         false);
 document.getElementById("btnToDate").addEventListener("click", 
         function() {
-            if($('#frmToDate').valid()) {
+            if($('#frmToDate').valid() && document.getElementById('toDateInput').value == 7 ) {
                 document.getElementById('divToDate').style.display = 'None';
                 if (choosenTreatment == 1 || choosenTreatment == 3) 
                     document.getElementById('divIntrinsic').style.display = 'Inline';
