@@ -125,7 +125,7 @@ function check_accuracy() {
 
 function start_experiment() {
     trial_number++;
-    console.log('start exp with trial: ' + trial_number);
+    stage_name = 'trial'+trial_number;
     document.getElementById('divExperiment').style.display = 'Inline';
     // generate stimuli order
     random_array = generate_random_list(8);

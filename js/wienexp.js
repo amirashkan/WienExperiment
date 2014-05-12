@@ -23,6 +23,7 @@ var quest3 = ''
 // time vars
 var rt
 var stage_time 
+var stage_name
 var avg_time = 300*1000;
 var exptimer = $.timer(function() {
     console.log("the time is over");
@@ -243,6 +244,7 @@ else {
     document.getElementById('divInstructions').style.display = 'Inline';
     // create data for new vp
     log_response(save_data);
+    stage_name = 'choosenTreatment';
 }
 },
 false)
@@ -287,6 +289,7 @@ else if ($('#frmExamples').valid())
     console.log('All answers are correct');
     // log data for example stage
     log_response(save_data);
+    stage_name='examples';
 }
 // input wasn't right
 else {
@@ -309,6 +312,7 @@ document.getElementById("btnQuestionnaire").addEventListener("click",
             if($('#frmQuestionnaire1').valid()) {
                 // save Answers to questionnaire
                 log_response(save_data);
+                stage_name='quest1';
                 document.getElementById('divQuestionnaire').style.display = 'None';
                 document.getElementById('divQuestionnaire2').style.display = 'Inline';
             }
@@ -323,6 +327,7 @@ document.getElementById("btnQuestionnaire2").addEventListener("click",
             if($('#frmQuestionnaire2').valid()) {
                 // save Answers to questionnaire
                 log_response(save_data);
+                stage_name='quest2';
                 document.getElementById('divQuestionnaire2').style.display = 'None';
                 document.getElementById('divQuestionnaire3').style.display = 'Inline';
             }
@@ -337,6 +342,7 @@ document.getElementById("btnQuestionnaire3").addEventListener("click",
             if($('#frmQuestionnaire3').valid()) {
                 // save Answers to questionnaire
                 log_response(save_data);
+                stage_name='quest3';
                 document.getElementById('divQuestionnaire3').style.display = 'None';
                 document.getElementById('divDebrief').style.display = 'Inline';
             }
@@ -448,6 +454,7 @@ document.getElementById("btnExperiment").addEventListener("click",
                 log_response(save_data);
                 // update trial number 
                 trial_number++;
+                stage_name = 'trial'+trial_number;
                 // at first handle manipulation block or finish the experiment
                 if (trial_number == 4 || trial_number == 7) { 
                     document.getElementById('divExperiment').style.display = 'None';
