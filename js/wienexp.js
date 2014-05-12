@@ -350,6 +350,8 @@ document.getElementById("btnToGo").addEventListener("click",
                     document.getElementById('divIntrinsic').style.display = 'Inline';
                 else if(choosenTreatment == 0 || choosenTreatment == 2)
                     document.getElementById('divExtrinsic').style.display = 'Inline';
+                // log user understandig of toGo
+                log_response(save_data);
             }
         },
         false);
@@ -361,6 +363,8 @@ document.getElementById("btnToDate").addEventListener("click",
                     document.getElementById('divIntrinsic').style.display = 'Inline';
                 else if(choosenTreatment == 0 || choosenTreatment == 2)
                     document.getElementById('divExtrinsic').style.display = 'Inline';
+                // log user understandig of toDate
+                log_response(save_data);
             }
         },
         false);
