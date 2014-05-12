@@ -773,22 +773,7 @@
 </div>
 
 <div id="hidden_div" style = "display: none;">
-    <!-- 
-        Nothing within this section will be visable to participants.
-        Note the 'id' and 'name' values for each <input> below.
-        In your JavaScript file, you will need to include a  list of these ids, along with
-        a list of the corresponding variable for each;
-        i.e. 
-            var logging_box_ids = [Date(), trial_number, probe, code, response, rt]
-            var variables_to_log = ['timeBox', 'trialBox', 'probeBox', 'codeBox', 
-                        'responseBox', 'rtBox']
-
-        The 'name' value is the name this variable gets sent to the server as.
-        It is recomended that you use the same names as used for the variables in the experiment itself,
-        and, when it comes to creating your database, using 
-         -->
     <form id = "responseForm" style="display:inline;" method ="POST" action ="save_data.php">
-        Dies ist nur die DEBUG Form, die beim Testen sichtbar ist.<br>
         Paradigm: <input id = "paradigmBox"    name = "paradigm"><br>
         Timestamp: <input id = "timeBox"    name = "timestamp"><br>
         Subject: <input id = "subjectBox"    name = "subject"><br>
@@ -797,7 +782,7 @@
         Probe<input id = "probeBox"    name = "probe"><br>
         Code<input id = "codeBox"    name = "code"><br>
         Response<input id = "responseBox"    name = "response"><br>
-        rt<input id = "rtBox"    name = "rt"><br><!--Shown response data-->
+        rt<input id = "rtBox"    name = "rt"><br>
     </form>
     <p><button id = "btnHide">Hide</button></p>
 </div>

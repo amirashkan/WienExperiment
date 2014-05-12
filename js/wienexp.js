@@ -13,6 +13,8 @@ var variables_to_log = new Array();
 var debug_mode = false // Set as true to show extra information, false to run experiment normally.
 
 // variables to log
+var vpnumber 
+var trial_number = 0;
 var choosenTreatment
 var choosenCategory 
 var current_stimuli = []
@@ -22,7 +24,10 @@ var manipulation
 var quest1 = ''
 var quest2 = ''
 var quest3 = ''
+var logging_box_ids = ['vpnumber','choosenTreatment','choosenCategory',]
+var variables_to_log = ['timeBox', 'trialBox', 'probeBox', 'codeBox', 'responseBox', 'rtBox']
 // time vars
+var rt
 var stage_time 
 var avg_time = 300*1000;
 var experiment_start_time = Date();
@@ -35,12 +40,6 @@ exptimer.set({ time : avg_time, autostart : false });
 // probabilities of the extrinsic decisions
 var p1 = 1/3;
 var p2 = 1/3;
-var vpnumber 
-var trial_number = 0;
-
-// Do not change
-var random_order = generate_random_list(number_of_trials);
-//var stim_number = random_order[trial_number];
 
 // Experiment logic - Adjust this as needed
 if(debug_mode){
