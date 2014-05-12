@@ -438,6 +438,7 @@ document.getElementById("btnExperiment").addEventListener("click",
                 if (trial_number == 4 || trial_number == 7) { 
                     document.getElementById('divExperiment').style.display = 'None';
                     document.getElementById('divManipulation').style.display = 'Inline'; 
+                    return;
                 }
                 else if (trial_number == 10) {
                     document.getElementById('divExperiment').style.display = 'None';
