@@ -57,14 +57,9 @@ $(document).ready(function () {
         mothertongue: { required: true },
         studyfield: { required: true }
         },
-        // fade in and out elements that are not filled out
-        highlight: function(element, errorClass) {
-            $(element).fadeOut(function() {
-                $(element).fadeIn();
-            })},
         // give us some messages
         messages: {
-            birthday: "Bitte ausfüllen",
+        birthday: "Bitte ausfüllen",
         country: "Bitte ausfüllen",
         mothertongue: "Bitte ausfüllen",
         studyfield: "Bitte ausfüllen"
@@ -73,7 +68,7 @@ $(document).ready(function () {
 
     $('#frmQuestionnaire1').validate({
         rules: {
-            q1:{ required:true},
+        q1:{ required:true},
         q2:{ required:true},
         q3:{ required:true},
         q4:{ required:true},
