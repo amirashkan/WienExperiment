@@ -16,4 +16,6 @@
 
 14. Randomisierung klappt noch nicht ganz. Anagramme werden zwar auf Positionen geshuffelt aber die Seiten bleiben gleich (an selber position) - besser wäre vollkommene randomisierung (also das auch Anagramme die Seiten wechseln). (mit der randomisierung steht und fällst das ganze experiment)
 
+15. Beispiel Fortschrittsbalken, nur weiter wenn richtig.
+
 Start der Erhebung: 09.05
