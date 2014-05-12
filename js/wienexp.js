@@ -147,8 +147,7 @@ $(document).ready(function () {
         example8: "checkExamples",
         example9: "checkExamples",
         example10: "checkExamples",
-        example11: "checkExamples",
-        example12: "checkExamples"
+        example11: "checkExamples"
         }
     });
 
