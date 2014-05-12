@@ -486,6 +486,16 @@ document.getElementById("btnManipulation").addEventListener("click",
             if ($('#cbManipulation9').prop('checked')) manipulation +=256;
             // save decision
             log_response(save_data);
+            // remove user input
+            $('#cbManipulation1').prop('checked',false);
+            $('#cbManipulation2').prop('checked',false);
+            $('#cbManipulation3').prop('checked',false);
+            $('#cbManipulation4').prop('checked',false);
+            $('#cbManipulation5').prop('checked',false);
+            $('#cbManipulation6').prop('checked',false);
+            $('#cbManipulation7').prop('checked',false);
+            $('#cbManipulation8').prop('checked',false);
+            $('#cbManipulation9').prop('checked',false);
             // and go on with the experiment
             document.getElementById('divManipulation').style.display = 'None';
             document.getElementById('divExperiment').style.display = 'Inline';
