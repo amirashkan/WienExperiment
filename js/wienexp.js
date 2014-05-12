@@ -438,7 +438,6 @@ document.getElementById("btnExperiment").addEventListener("click",
                 if (trial_number == 4 || trial_number == 7) { 
                     document.getElementById('divExperiment').style.display = 'None';
                     document.getElementById('divManipulation').style.display = 'Inline'; 
-                    return;
                 }
                 else if (trial_number == 10) {
                     document.getElementById('divExperiment').style.display = 'None';
@@ -461,6 +460,9 @@ document.getElementById("btnExperiment").addEventListener("click",
                 random_array = generate_random_list(8);
                 // fill in stimuli
                 load_stimuli();
+                if (trial_number != 4 && trial_number != 7)
+                    // start timer in rounds without manipulation check (otherwise it's started there)
+                    exptimer.play(true);
             }
             // the input isn't correct and there is still some time left
             else {
@@ -499,5 +501,7 @@ document.getElementById("btnManipulation").addEventListener("click",
             // and go on with the experiment
             document.getElementById('divManipulation').style.display = 'None';
             document.getElementById('divExperiment').style.display = 'Inline';
+            // restart timer to not get confused with manipulation check time 
+            exptimer.play(true);
         },
         false);
