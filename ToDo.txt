@@ -11,7 +11,6 @@
  ?es ist wichtig das später die zeiten für die Lösung der zeitachse zuzuordnen sind (wie schnell waren die von am Anfang, ende, Anagramm 1, Anagramm 1-10 etc.)
  +welche kondition
  +welche Auswahl getroffen
- +und natürlich die Antwort aus dem manipulationscheck
 
 10. Demographie ans Ende, nach Fragebogen, vor Danke-Seite
 

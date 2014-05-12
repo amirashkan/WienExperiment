@@ -557,32 +557,14 @@ document.getElementById("btnExperiment").addEventListener("click",
 
 document.getElementById("btnManipulation").addEventListener("click", 
         function() {
-            // manipulation bit code encodes user input
-            manipulation = 0;
-            if ($('#cbManipulation1').prop('checked')) manipulation +=1;
-            if ($('#cbManipulation2').prop('checked')) manipulation +=2;
-            if ($('#cbManipulation3').prop('checked')) manipulation +=4;
-            if ($('#cbManipulation4').prop('checked')) manipulation +=8;
-            if ($('#cbManipulation5').prop('checked')) manipulation +=16;
-            if ($('#cbManipulation6').prop('checked')) manipulation +=32;
-            if ($('#cbManipulation7').prop('checked')) manipulation +=64;
-            if ($('#cbManipulation8').prop('checked')) manipulation +=128;
-            if ($('#cbManipulation9').prop('checked')) manipulation +=256;
             // save decision
+            manipulation = document.getElementById('txManipulation').value
             stage_name = 'manipulation'+trial_number;
             logging_box_ids = ['vpnumberBox2','trialBox2','stagetimeBox','rtBox','missedanagramsBox', 'manipulationBox', 'choosencategoryBox', 'choosentreatmentBox','p1Box','p2Box'];
             variables_to_log = ['vpnumber','trial_number','stage_time','rt','missedanagrams', 'manipulation', 'choosenCategory', 'choosenTreatment','p1','p2'];
-            log_response('../save_responses.php',frmResponses);
+            log_response('../save_responses.php','#frmResponses');
             // remove user input
-            $('#cbManipulation1').prop('checked',false);
-            $('#cbManipulation2').prop('checked',false);
-            $('#cbManipulation3').prop('checked',false);
-            $('#cbManipulation4').prop('checked',false);
-            $('#cbManipulation5').prop('checked',false);
-            $('#cbManipulation6').prop('checked',false);
-            $('#cbManipulation7').prop('checked',false);
-            $('#cbManipulation8').prop('checked',false);
-            $('#cbManipulation9').prop('checked',false);
+            manipulation = '';
             // and go on with the experiment
             document.getElementById('divManipulation').style.display = 'None';
             document.getElementById('divExperiment').style.display = 'Inline';
