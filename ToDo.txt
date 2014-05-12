@@ -22,3 +22,5 @@
 
 14. „Bitte geben Sie die…“ erst nachdem man auf weiter drückt (schnell möglich?)
 Start der Erhebung: 09.05
+
+15. Questionnaire scheint in falscher Reihenfolge zu speichern (auf Seite 3 aufgefallen)
