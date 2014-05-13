@@ -2,3 +2,4 @@
 3. fixbug: text von erster Eingabe bleibt sichtbar bei zweitem manipulations-check
 4. bei save response: stage name bleibt noch leer, keine Speicherungen
 5. Nicht sicher ob „choosentreatment“ stimmt. Habe Kondition 4 gewählt und er gibt 3 aus. (Aber kein Ding, das schreibe ich mit)
+6. Fragebogen ist verzerrte auf den Computern im Lab. Ein Satz hat ca. 5 Umbrüche
