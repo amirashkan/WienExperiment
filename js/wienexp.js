@@ -11,30 +11,30 @@ var debug_mode = false // Set as true to show extra information, false to run ex
 // variables to log
 var vpnumber 
 var trial_number = 0;
-var choosenTreatment
-var choosenCategory 
-var current_stimuli = []
-var current_solutions = []
-var random_array = []
-var manipulation
-var missedanagrams
+var choosenTreatment = -1;
+var choosenCategory = -1;
+var current_stimuli = [];
+var current_solutions = [];
+var random_array = [];
+var manipulation = -1;
+var missedanagrams = -1;
 var birthday
 var education
 var student
 var studyfield
 var country
 var mothertongue
-var germanyears
+var germanyears = -1;
 var diagnostik
 var serializedRandArr
-var q1 
-var q2 
-var q3 
-var q4 
-var q5 
-var q6 
-var q7 
-var q8 
+var q1 = -1;
+var q2 = -1;
+var q3 = -1;
+var q4 = -1;
+var q5 = -1;
+var q6 = -1;
+var q7 = -1; 
+var q8 = -1;
 // time vars
 var rt
 var stage_time 
