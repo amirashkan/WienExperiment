@@ -1,3 +1,2 @@
 2. Entertaste disablen
-4. bei save response: stage name bleibt noch leer, keine Speicherungen
 6. Fragebogen ist verzerrte auf den Computern im Lab. Ein Satz hat ca. 5 Umbrüche

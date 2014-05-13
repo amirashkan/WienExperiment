@@ -326,8 +326,8 @@ else if ($('#frmExamples').valid())
     console.log('All answers are correct');
     // log data for example stage
     stage_name='examples';
-    logging_box_ids = ['vpnumberBox2','trialBox2','stagetimeBox','rtBox','missedanagramsBox', 'manipulationBox', 'choosencategoryBox', 'choosentreatmentBox','p1Box','p2Box'];
-    variables_to_log = ['vpnumber','trial_number','stage_time','rt','missedanagrams', 'manipulation', 'choosenCategory', 'choosenTreatment','p1','p2'];
+    logging_box_ids = ['vpnumberBox2','trialBox2','stagetimeBox','stagenameBox','rtBox','missedanagramsBox', 'manipulationBox', 'choosencategoryBox', 'choosentreatmentBox','p1Box','p2Box'];
+    variables_to_log = ['vpnumber','trial_number','stage_time', 'stage_name','rt','missedanagrams', 'manipulation', 'choosenCategory', 'choosenTreatment','p1','p2'];
     log_response('../save_responses.php','#frmResponses');
 }
 // input wasn't right
@@ -528,12 +528,12 @@ document.getElementById("btnExperiment").addEventListener("click",
             // as the meanTime of all participants of the prestudy 
             if ($('#frmExperiment').valid() || Date.now() - stage_time > avg_time){
                 // save random_array and user inputs
-                logging_box_ids = ['vpnumberBox2','trialBox2','stagetimeBox','rtBox','missedanagramsBox', 'manipulationBox', 'choosencategoryBox', 'choosentreatmentBox','p1Box','p2Box'];
-                variables_to_log = ['vpnumber','trial_number','stage_time','rt','missedanagrams', 'manipulation', 'choosenCategory', 'choosenTreatment','p1','p2'];
+                stage_name = 'trial'+trial_number;
+                logging_box_ids = ['vpnumberBox2','trialBox2','stagetimeBox','stagenameBox','rtBox','missedanagramsBox', 'manipulationBox', 'choosencategoryBox', 'choosentreatmentBox','p1Box','p2Box'];
+                variables_to_log = ['vpnumber','trial_number','stage_time','stage_name','rt','missedanagrams', 'manipulation', 'choosenCategory', 'choosenTreatment','p1','p2'];
                 log_response('../save_responses.php','#frmResponses');
                 // update trial number 
                 trial_number++;
-                stage_name = 'trial'+trial_number;
                 // at first handle manipulation block or finish the experiment
                 if (trial_number == 4 || trial_number == 7) { 
                     document.getElementById('divExperiment').style.display = 'None';
@@ -574,8 +574,8 @@ document.getElementById("btnManipulation").addEventListener("click",
                 // save decision
                 manipulation = document.getElementById('txManipulation').value
                 stage_name = 'manipulation'+trial_number;
-                logging_box_ids = ['vpnumberBox2','trialBox2','stagetimeBox','rtBox','missedanagramsBox', 'manipulationBox', 'choosencategoryBox', 'choosentreatmentBox','p1Box','p2Box'];
-                variables_to_log = ['vpnumber','trial_number','stage_time','rt','missedanagrams', 'manipulation', 'choosenCategory', 'choosenTreatment','p1','p2'];
+                logging_box_ids = ['vpnumberBox2','trialBox2','stagetimeBox','stagenameBox','rtBox','missedanagramsBox', 'manipulationBox', 'choosencategoryBox', 'choosentreatmentBox','p1Box','p2Box'];
+                variables_to_log = ['vpnumber','trial_number','stage_time','stage_name','rt','missedanagrams', 'manipulation', 'choosenCategory', 'choosenTreatment','p1','p2'];
                 log_response('../save_responses.php','#frmResponses');
                 // remove user input
                 document.getElementById('txManipulation').value = '';
