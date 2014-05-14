@@ -1,3 +1,7 @@
 1. Datenwirrwarr: Es scheint so als würde missedanagrams auch -1 gerechnet werden.
 Auf welche Variablen trifft das alles zu? Für die Datenauswertung muss ich später wissen,
 wie ich die Variablen lesen soll und vor allem wie sich die Verrechnung über die Datensammlung verändert hat. Was wurde bisher geändert und wofür stehen die verschiedenen Werte?
+
+2. Demographie
+
+-> Geschlecht noch einbauen. (total vergessen…shit^^)
