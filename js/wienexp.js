@@ -26,6 +26,7 @@ var country
 var mothertongue
 var germanyears = -1;
 var diagnostik
+var gender
 var serializedRandArr
 var q1 = -1;
 var q2 = -1;
@@ -286,11 +287,12 @@ document.getElementById("btnEnde").addEventListener("click",
     mothertongue = document.getElementById('mothertongueBox').value;
     germanyears = document.getElementById('germanyearsBox').value;
     diagnostik = document.getElementById('diagnostikBox').value;
+    gender = document.getElementById('genderBox').value;
     document.getElementById('divDemographic').style.display = 'None';
     document.getElementById('divDebrief').style.display = 'Inline';
     stage_name = 'demographic';
-    logging_box_ids = ['vpnumberBox4','bdayBox', 'eduBox', 'studBox', 'studfieldBox', 'countBox', 'motherBox', 'gyBox', 'diaBox'];
-    variables_to_log = ['vpnumber','birthday', 'education', 'student', 'studyfield', 'country', 'mothertongue', 'germanyears', 'diagnostik'];
+    logging_box_ids = ['vpnumberBox4','bdayBox', 'eduBox', 'studBox', 'studfieldBox', 'countBox', 'motherBox', 'gyBox', 'diaBox','gender'];
+    variables_to_log = ['vpnumber','birthday', 'education', 'student', 'studyfield', 'country', 'mothertongue', 'germanyears', 'diagnostik','gender'];
     log_response('../save_demographics.php', '#frmDemo');
 }
 },

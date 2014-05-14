@@ -9,12 +9,13 @@ $country = $_POST["country"];
 $mothertongue = $_POST["mothertongue"];
 $germanyears = $_POST["germanyears"];
 $diagnostik = $_POST["diagnostik"];
+$gender = $_POST["gender"];
 
 include 'connect.php';
 
 //Insert variables into database
-mysql_query("INSERT INTO demographics (vpnumber, birthday, education, student, studyfield, country, mothertongue, germanyears, diagnostik) 
-VALUES ('$vpnumber','$birthday', '$education', '$student', '$studyfield', '$country', '$mothertongue', '$germanyears', '$diagnostik');");
+mysql_query("INSERT INTO demographics (vpnumber, birthday, education, student, studyfield, country, mothertongue, germanyears, diagnostik, gender) 
+VALUES ('$vpnumber','$birthday', '$education', '$student', '$studyfield', '$country', '$mothertongue', '$germanyears', '$diagnostik', '$gender');");
 echo mysql_insert_id();
 //Disconnect
 mysql_close($con);
