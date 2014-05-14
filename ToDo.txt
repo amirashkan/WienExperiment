@@ -5,3 +5,10 @@ wie ich die Variablen lesen soll und vor allem wie sich die Verrechnung über di
 2. Demographie
 
 -> Geschlecht noch einbauen. (total vergessen…shit^^)
+
+
+3. Ross kommt doppelt vor
+
+Dafür trob -> Brot
+
+Brot von den Beispielen entfernen
