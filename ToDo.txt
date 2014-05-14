@@ -1,1 +1,1 @@
-1. Notwendig machen, dass Geschlecht eingegeben wird
+1. Geschlecht „verpflichtend“ machen; noch können vps einfach so weiter
