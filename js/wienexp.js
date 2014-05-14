@@ -151,9 +151,7 @@ $(document).ready(function () {
         example6: "checkExamples",
         example7: "checkExamples",
         example8: "checkExamples",
-        example9: "checkExamples",
-        example10: "checkExamples",
-        example11: "checkExamples"
+        example9: "checkExamples"
         }
     });
 
