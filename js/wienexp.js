@@ -289,7 +289,7 @@ document.getElementById("btnEnde").addEventListener("click",
     document.getElementById('divDemographic').style.display = 'None';
     document.getElementById('divDebrief').style.display = 'Inline';
     stage_name = 'demographic';
-    logging_box_ids = ['vpnumberBox4','bdayBox', 'eduBox', 'studBox', 'studfieldBox', 'countBox', 'motherBox', 'gyBox', 'diaBox','gender'];
+    logging_box_ids = ['vpnumberBox4','bdayBox', 'eduBox', 'studBox', 'studfieldBox', 'countBox', 'motherBox', 'gyBox', 'diaBox','gendrBox'];
     variables_to_log = ['vpnumber','birthday', 'education', 'student', 'studyfield', 'country', 'mothertongue', 'germanyears', 'diagnostik','gender'];
     log_response('../save_demographics.php', '#frmDemo');
 }
