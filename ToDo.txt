@@ -1,4 +1,3 @@
 1. Geschlecht „verpflichtend“ machen; noch können vps einfach so weiter
-
-
-ALLES GUTE ZUM GEBURTSTAG ;)
+2. GAST aus Beispielen entfernen
+3. Mann kann die vorherigen Eintragungen beim Manipulationscheck sehen. 
