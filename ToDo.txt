@@ -1,3 +1,2 @@
 1. Geschlecht „verpflichtend“ machen; noch können vps einfach so weiter
-2. GAST muss noch aus Beispielen entfernt werden / (habe es bereits in stimuli statt VISA eingebaut
 3. Mann kann die vorherigen Eintragungen beim Manipulationscheck sehen. 

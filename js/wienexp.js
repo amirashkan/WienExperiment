@@ -150,8 +150,7 @@ $(document).ready(function () {
         example5: "checkExamples",
         example6: "checkExamples",
         example7: "checkExamples",
-        example8: "checkExamples",
-        example9: "checkExamples"
+        example8: "checkExamples"
         }
     });
 
