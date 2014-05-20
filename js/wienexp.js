@@ -579,7 +579,7 @@ document.getElementById("btnManipulation").addEventListener("click",
                 variables_to_log = ['vpnumber','trial_number','stage_time','stage_name','rt','missedanagrams', 'manipulation', 'choosenCategory', 'choosenTreatment','p1','p2'];
                 log_response('../save_responses.php','#frmResponses');
                 // remove user input
-                document.getElementById('txManipulation').value = '';
+                document.getElementById('txManipulation').innerHTML = '';
                 // and go on with the experiment
                 document.getElementById('divManipulation').style.display = 'None';
                 document.getElementById('divExperiment').style.display = 'Inline';
