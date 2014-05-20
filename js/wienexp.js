@@ -65,14 +65,16 @@ $(document).ready(function () {
             birthday: { required: true },
         country: { required: true },
         mothertongue: { required: true },
-        studyfield: { required: true }
+        studyfield: { required: true },
+        gender: { required: true }
         },
         // give us some messages
         messages: {
         birthday: "Bitte ausfüllen",
         country: "Bitte ausfüllen",
         mothertongue: "Bitte ausfüllen",
-        studyfield: "Bitte ausfüllen"
+        studyfield: "Bitte ausfüllen",
+        gender: "Bitte ausfüllen"
         }
     }); 
 
