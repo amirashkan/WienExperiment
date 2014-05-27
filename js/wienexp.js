@@ -47,9 +47,6 @@ var exptimer = $.timer(function() {
     exptimer.stop();
 });
 exptimer.set({ time : avg_time, autostart : false });
-// probabilities of the extrinsic decisions
-var p1 = 1/3;
-var p2 = 1/3;
 
 // Experiment logic - Adjust this as needed
 if(debug_mode){
@@ -260,11 +257,12 @@ document.getElementById("btnHide").addEventListener("click",
 document.getElementById("btnTreatment").addEventListener("click", 
         function() {
             choosenTreatment = $('input[name=rdTreatment]:checked', '#frmTreatment').val();
+            choosenCategory = document.getElementById('txCategory').value; 
             vpnumber = document.getElementById('txVPN').value;
-            if( choosenTreatment == undefined || vpnumber == '')
+            if( choosenTreatment == undefined || vpnumber == '' || choosenCategory == '')
 {
     document.getElementById('txtBelowTreatment').style.color = 'red';
-    document.getElementById('txtBelowTreatment').innerHTML ='Bitte wählen Sie ein Treatment aus UND geben Sie eine VP Nummer ein';
+    document.getElementById('txtBelowTreatment').innerHTML ='Bitte wählen Sie ein Treatment aus UND geben Sie eine VP Nummer und eine Kategorie ein';
     console.log('Please check one of the treatments');
 }
 else {
@@ -470,17 +468,14 @@ document.getElementById("btnExtrinsic").addEventListener("click",
             var random_extrinsic = Math.random();
 
             // present randomly choosen treatment
-            if (random_extrinsic < p1) {
+            if (choosenCategory == 1) {
                 document.getElementById('divPresentation').style.display = 'Inline';
-                choosenCategory = 1;
             }
-            else if (random_extrinsic >= p1 && random_extrinsic < p2) {
+            else if (choosenCategory == 2) {
                 document.getElementById('divPresentation2').style.display = 'Inline';
-                choosenCategory = 2;
             }
             else  {
                 document.getElementById('divPresentation3').style.display = 'Inline';
-                choosenCategory = 3;
             }
 
 console.log('Extrinsic choosenCategory: '.concat(choosenCategory));
