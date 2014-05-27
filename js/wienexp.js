@@ -259,14 +259,12 @@ document.getElementById("btnTreatment").addEventListener("click",
             choosenTreatment = $('input[name=rdTreatment]:checked', '#frmTreatment').val();
             choosenCategory = document.getElementById('txCategory').value; 
             vpnumber = document.getElementById('txVPN').value;
-            if( choosenTreatment == undefined || vpnumber == '' || choosenCategory == '')
+            if( choosenTreatment == undefined || vpnumber == '' || choosenCategory == '' || choosenCategory > 3 || choosenCategory < 1)
 {
     document.getElementById('txtBelowTreatment').style.color = 'red';
-    document.getElementById('txtBelowTreatment').innerHTML ='Bitte wählen Sie ein Treatment aus UND geben Sie eine VP Nummer und eine Kategorie ein';
-    console.log('Please check one of the treatments');
+    document.getElementById('txtBelowTreatment').innerHTML ='Bitte überprüfen Sie Ihre Eingaben.';
 }
 else {
-    console.log('everything fine, choose -> '.concat(choosenTreatment));
     document.getElementById('divTreatment').style.display = 'None';
     document.getElementById('divInstructions').style.display = 'Inline';
 }
@@ -464,9 +462,8 @@ document.getElementById("btnIntrinsic").addEventListener("click",
         false);
 document.getElementById("btnExtrinsic").addEventListener("click", 
         function() {
-            document.getElementById('divExtrinsic').style.display = 'None';
-            var random_extrinsic = Math.random();
-
+            
+            console.log('Extrinsic choosenCategory: '.concat(choosenCategory));
             // present randomly choosen treatment
             if (choosenCategory == 1) {
                 document.getElementById('divPresentation').style.display = 'Inline';
@@ -474,11 +471,15 @@ document.getElementById("btnExtrinsic").addEventListener("click",
             else if (choosenCategory == 2) {
                 document.getElementById('divPresentation2').style.display = 'Inline';
             }
-            else  {
+            else if (choosenCategory == 3) {
                 document.getElementById('divPresentation3').style.display = 'Inline';
             }
+            else {
+                document.getElementById('txtBelowExtrinsic').innerHTML = 'Es ist ein Fehler aufgetreten. Bitte verständigen Sie die Versuchsleitung.';
+                return;
+            }
+            document.getElementById('divExtrinsic').style.display = 'None';
 
-console.log('Extrinsic choosenCategory: '.concat(choosenCategory));
 
         },
         false);
