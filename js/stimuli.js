@@ -14,5 +14,5 @@ var solutions = [
 ['ZELT', 'SACK', 'VASE', 'TUBE', 'LEDER', 'TOPF', 'SOFA', 'TIPI', 'ROHR', 'SÄGE', 'BAHN', 'ZAUN', 'OBOE', 'AUTO', 'ROCK', 'HEMD', 'NERZ', 'TANK', 'KRAN', 'BUCH', 'LEIM', 'BOOT', 'KRAN', 'GURT', 'HEFT', 'BETT', 'BAND', 'HOSE', 'HUPE', 'ETUI', 'KANU', 'KLON', 'LACK', 'DAMM', 'MOFA', 'TEER', 'CHIP', 'FILM', 'HAKE', 'AKKU', 'PAPPE', 'NORM', 'TURM', 'WALL', 'WAND', 'KILO', 'FASS', 'SAAL', 'TRAM', 'GONG', 'WAAGE', 'RECK', 'DRAHT', 'HANDY', 'LABOR', 'MODEM', 'MOTOR', 'NYLON', 'RADAR', 'RADIO', 'GUMMI', 'SAUNA', 'SEIFE', 'VOLT', 'QUALM', 'FADEN', 'KETTE', 'DACH', 'KORB', 'WAFFE', 'LATEX', 'DAMPF']
 ];
 
-var examples = ['HEBEL' , 'RAUCH' , 'BUBE' , 'SEIL' , 'KAMM' , 'SCHUH' , 'LEINE' , 'HORN']
+var examples = ['BAUM' , 'WOLF' , 'PULT' , 'GELD' , 'KOCH' , 'YOGA' , 'BABY' , 'STOLZ']
 
