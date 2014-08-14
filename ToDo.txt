@@ -1,0 +1,43 @@
+ALLGEMEIN
+
+1. Struktur des Programms ändern (es gibt keine Unterschiede mehr zwischen Extrinsisch / Intrinsisch - siehe Folien)
+
+2. Fehlerfeedback bei Anagrammen
+
+-Feedback nur geben wenn auf „Weiter“ gedrückt wird
+
+SPEZIELLE SEITEN / INHALTE
+
+
+
+1. Beispiele
+
+- neue Beispiele einfügen (DONE)
+- Lösungen einfügen (DONE)
+
+2. „Im weiteren Verlauf“ - Änderungen
+
+- „insgesamt werden Ihnen 8“ durch 10 ersetzt (DONE)
+
+3. Erläuterung Fortschrittsbalken
+
+- neuen Text einfügen (DONE)
+- neuen Balken einfügen (DONE)
+
+4. Dabei gibt es drei verschiedene Kategorien von Rätseln… 
+
+- Seite entfernen
+
+5. Kategorie Erklärung
+
+- Text ändern (DONE)
+
+6. Task
+
+- Fortschrittsbalken Bilder ändern
+- 2 Anagramme pro Seite hinzufügen
+
+7. Manipulationscheck
+
+- Auswahl erstellen
+
